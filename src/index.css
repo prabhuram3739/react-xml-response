@@ -76,7 +76,7 @@ section {
 
 body {
     margin: 0;
-    font-family: "courier,arial,helvetica" !important;
+    font-family: "NokiaPureHeadline,Arial,Helvetica,sans-serif" !important;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -178,6 +178,16 @@ li {
 
 .content {
     padding: 15px;
+    /*box-shadow:
+    inset 0 0 15px rgba(var(--content-box-shadow-first-color),0),
+    inset 0 0 20px rgba(var(--content-box-shadow-second-color),0),
+    7px 7px 15px rgba(var(--content-box-shadow-third-color),.15),
+    -7px -7px 20px rgba(var(--content-box-shadow-fourth-color),1),
+    inset 0px 0px 4px rgba(var(--content-box-shadow-fifth-color),.2);*/
+}
+
+.tabContainer,
+.content {
     font-size: 18px;
     min-height: 70vh;
     background-color: #fff;
@@ -191,12 +201,15 @@ li {
     min-height: -webkit-fill-available;
     overflow-y: scroll;
     box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, .15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, .2);
-    /*box-shadow:
-    inset 0 0 15px rgba(var(--content-box-shadow-first-color),0),
-    inset 0 0 20px rgba(var(--content-box-shadow-second-color),0),
-    7px 7px 15px rgba(var(--content-box-shadow-third-color),.15),
-    -7px -7px 20px rgba(var(--content-box-shadow-fourth-color),1),
-    inset 0px 0px 4px rgba(var(--content-box-shadow-fifth-color),.2);*/
+}
+
+.leftPadding {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+}
+
+.noPadding {
+    padding: 3px !important;
 }
 
 
@@ -211,6 +224,7 @@ li {
         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
         border-radius: 12px !important;
         scrollbar-color: auto;
+        border: none;
     }
 }
 
@@ -218,6 +232,7 @@ li {
     width: 10px !important;
     scroll-behavior: smooth !important;
     background-color: #F5F5F5 !important;
+    border: none;
     /*background-color: var(--scroll-bar-background-color) !important;*/
 }
 
@@ -226,13 +241,14 @@ li {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
     border-radius: 10px !important;
     background-color: #F5F5F5 !important;
+    border: none;
     /*background-color: var(--scroll-bar-background-color) !important;*/
 }
 
 ::-webkit-scrollbar-thumb {
-    outline: 1px solid slategrey !important;
     border-radius: 10px !important;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #927878), color-stop(0.72, #F3D54E), color-stop(0.86, #555555)) !important;
+    background: #c1c1c1;
+    border: none;
 }
 
 
@@ -255,9 +271,215 @@ h2 {
     font-weight: 600;
 }
 
+
+/* Custom Nokia CSS */
+
+@-webkit-keyframes v-rotate-360 {
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes v-rotate-360 {
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+@-o-keyframes v-rotate-360 {
+    to {
+        -o-transform: rotate(360deg)
+    }
+}
+
+@keyframes v-rotate-360 {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes v-progress-start {
+    0% {
+        width: 0
+    }
+    100% {
+        width: 100%
+    }
+}
+
+@-moz-keyframes v-progress-start {
+    0% {
+        width: 0
+    }
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes v-progress-start {
+    0% {
+        width: 0
+    }
+    100% {
+        width: 100%
+    }
+}
+
+@-webkit-keyframes v-progress-delay {
+    0% {
+        width: 50%
+    }
+    100% {
+        width: 90%
+    }
+}
+
+@-moz-keyframes v-progress-delay {
+    0% {
+        width: 50%
+    }
+    100% {
+        width: 90%
+    }
+}
+
+@keyframes v-progress-delay {
+    0% {
+        width: 50%
+    }
+    100% {
+        width: 90%
+    }
+}
+
+@-webkit-keyframes v-progress-wait {
+    0% {
+        width: 90%;
+        height: 4px
+    }
+    3% {
+        width: 91%;
+        height: 7px
+    }
+    100% {
+        width: 96%;
+        height: 7px
+    }
+}
+
+@-moz-keyframes v-progress-wait {
+    0% {
+        width: 90%;
+        height: 4px
+    }
+    3% {
+        width: 91%;
+        height: 7px
+    }
+    100% {
+        width: 96%;
+        height: 7px
+    }
+}
+
+@keyframes v-progress-wait {
+    0% {
+        width: 90%;
+        height: 4px
+    }
+    3% {
+        width: 91%;
+        height: 7px
+    }
+    100% {
+        width: 96%;
+        height: 7px
+    }
+}
+
+@-webkit-keyframes v-progress-wait-pulse {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes v-progress-wait-pulse {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes v-progress-wait-pulse {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+
+/* Custom Loader CSS */
+
 .custom-loader {
     margin: 260px auto !important;
 }
+
+.v-loading-indicator[style*="none"] {
+    display: block!important;
+    width: 100%!important;
+    opacity: 0;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    -webkit-transition: opacity 500ms 300ms, width 300ms;
+    -moz-transition: opacity 500ms 300ms, width 300ms;
+    transition: opacity 500ms 300ms, width 300ms;
+}
+
+.v-loading-indicator-delay {
+    width: 90%;
+    -webkit-animation: v-progress-delay 3.8s forwards;
+    -moz-animation: v-progress-delay 3.8s forwards;
+    animation: v-progress-delay 3.8s forwards;
+}
+
+.v-loading-indicator {
+    position: fixed!important;
+    z-index: 99999;
+    left: 0;
+    right: auto;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    height: 4px;
+    background-color: #ff3154;
+    pointer-events: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    -webkit-animation: v-progress-start 1000ms 200ms both;
+    -moz-animation: v-progress-start 1000ms 200ms both;
+    animation: v-progress-start 1000ms 200ms both;
+}
+
+
+/* Custom Loader CSS End */
 
 .caption p {
     text-align: center;

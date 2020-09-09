@@ -30,9 +30,11 @@ export default class ParseXML extends React.Component {
        }
        return (
 
-        <div className="container-fluid">
+        <div className="container-fluid leftPadding">
             {
-                loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
+                //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
+                
+                loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (authors && authors.length > 0) &&
                 authors.map((item) => {
                     return (

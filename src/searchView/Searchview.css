@@ -31,10 +31,7 @@
     cursor: pointer !important;
 }
 
-.noOverflowX {
-    width: 100%;
-    overflow-x: hidden;
-}
+.stickyNav {}
 
 .marginLeftTxt {
     margin-left: 15px;
