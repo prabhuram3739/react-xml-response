@@ -50,11 +50,6 @@ function Home() {
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <div className = "row" >
         <ParseXML />
-        <div className = "d-flex justify-content-center custom-loader" >
-        <div className = "spinner-border text-primary" role = "status" >
-        <span className = "sr-only" > Loading... </span> 
-        </div> 
-        </div> 
         </div>  
         </div> 
         <div className = "tab-pane fade" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
