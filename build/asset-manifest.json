@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-xml-response/static/css/main.b96220fd.chunk.css",
+    "main.js": "/react-xml-response/static/js/main.8afb3d1d.chunk.js",
+    "main.js.map": "/react-xml-response/static/js/main.8afb3d1d.chunk.js.map",
+    "runtime-main.js": "/react-xml-response/static/js/runtime-main.c3e0354d.js",
+    "runtime-main.js.map": "/react-xml-response/static/js/runtime-main.c3e0354d.js.map",
+    "static/css/2.8aa5a7f8.chunk.css": "/react-xml-response/static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.f910ffc8.chunk.js": "/react-xml-response/static/js/2.f910ffc8.chunk.js",
+    "static/js/2.f910ffc8.chunk.js.map": "/react-xml-response/static/js/2.f910ffc8.chunk.js.map",
+    "index.html": "/react-xml-response/index.html",
+    "precache-manifest.400fc469ae1ca68142204f8c642d5fb3.js": "/react-xml-response/precache-manifest.400fc469ae1ca68142204f8c642d5fb3.js",
+    "service-worker.js": "/react-xml-response/service-worker.js",
+    "static/css/2.8aa5a7f8.chunk.css.map": "/react-xml-response/static/css/2.8aa5a7f8.chunk.css.map",
+    "static/css/main.b96220fd.chunk.css.map": "/react-xml-response/static/css/main.b96220fd.chunk.css.map",
+    "static/js/2.f910ffc8.chunk.js.LICENSE.txt": "/react-xml-response/static/js/2.f910ffc8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3e0354d.js",
+    "static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.f910ffc8.chunk.js",
+    "static/css/main.b96220fd.chunk.css",
+    "static/js/main.8afb3d1d.chunk.js"
+  ]
+}
