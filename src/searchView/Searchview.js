@@ -40,7 +40,7 @@ function Searchview() {
         <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
         <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
-        <div className="navbar-collapse nav nav-tabs" id = "nav-tab" role = "tablist">
+        <div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
         <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
         <a className = "nav-item nav-link" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 

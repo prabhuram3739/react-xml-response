@@ -20,6 +20,10 @@
     background-color: #d7d7d7;
 }
 
+.fontReduce {
+    font-size: 17px;
+}
+
 .highlight .caption>p {
     color: #000;
 }

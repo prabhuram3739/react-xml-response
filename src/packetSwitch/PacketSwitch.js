@@ -29,7 +29,7 @@ export default class PacketSwitch extends React.Component {
        }
        return (
 
-        <div className="container-fluid leftPadding">
+        <div className="container-fluid leftPadding fontChange">
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 
@@ -46,7 +46,7 @@ export default class PacketSwitch extends React.Component {
                         <div className="col-3">
                         IMEI: <span>{item.firstName}</span></div>
                         <div className="col-3">
-                       Up Time: <span>{item.lastName}</span></div>
+                        Up Time: <span>{item.lastName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">

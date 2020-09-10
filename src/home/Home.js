@@ -12,7 +12,7 @@ function Home() {
     const [{ disp_data }, dispatch] = useDataLayerValue();
     useEffect(() => {
         axios
-        .get("https://fakerestapi.azurewebsites.net/api/Authors", {
+        .get("http://localhost:8080/api/users", {
             "Content-Type": "application/xml; charset=utf-8"
          }).then((response)=> {
             dispatch({
