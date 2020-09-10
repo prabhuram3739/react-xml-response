@@ -7,6 +7,7 @@ import { useDataLayerValue } from "../DataLayer";
 import axios from 'axios';
 import CircuitSwitch from "../circuitSwitch/CircuitSwitch";
 import PacketSwitch from "../packetSwitch/PacketSwitch";
+import GeneralInfo from '../generalInfo/GeneralInfo';
 
 function Searchview() {
     const [{ disp_data }, dispatch] = useDataLayerValue();
@@ -49,7 +50,7 @@ function Searchview() {
 
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
-        <CircuitSwitch />
+        <GeneralInfo />
         </div> 
         <div className = "tab-pane fade" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
         <PacketSwitch />
