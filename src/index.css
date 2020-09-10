@@ -1038,6 +1038,9 @@ hr {
 .product-shot {
   width: 100%;
 } */
+.tabContainer {
+    height: 72vh;
+}
 }
 
 @media only screen and (min-width: 568px) and (max-width: 695px) {

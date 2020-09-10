@@ -29,7 +29,7 @@ export default class GerneralInfo extends React.Component {
        }
        return (
 
-        <div className="container-fluid leftPadding">
+        <div className="container-fluid leftPadding fontChange">
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 
