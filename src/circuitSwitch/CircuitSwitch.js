@@ -22,7 +22,8 @@ export default class CircuitSwitch extends React.Component {
 
     render() {
        const { users, count, loading } = this.state || {};
-       if(count === 0) {
+       console.log(count);
+       if((count === 0) || (!count)) {
         return (
         <span >Sorry, No Circuit Switch Information available</span>
         )
