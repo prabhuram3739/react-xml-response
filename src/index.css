@@ -133,7 +133,7 @@ header {
 
 footer {
     background-color: #000D25;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     height: 50px;
     width: 100%;
