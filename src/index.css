@@ -660,7 +660,7 @@ input:checked+.slider:before {
 
 @media only screen and (min-width: 1280px) {
     .homePageContainer {
-        height: 76vh;
+        height: 81vh;
     }
     .detailPageContainer {
         min-height: 74vh;
