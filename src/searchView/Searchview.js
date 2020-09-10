@@ -4,8 +4,9 @@ import "./Searchview.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDataLayerValue } from "../DataLayer";
-import ParseXML from '../parseXML/ParseXML';
 import axios from 'axios';
+import CircuitSwitch from "../circuitSwitch/CircuitSwitch";
+import PacketSwitch from "../packetSwitch/PacketSwitch";
 
 function Searchview() {
     const [{ disp_data }, dispatch] = useDataLayerValue();
@@ -39,7 +40,7 @@ function Searchview() {
         <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
         <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
-        <div className="collapse navbar-collapse nav nav-tabs" id = "nav-tab" role = "tablist">
+        <div className="navbar-collapse nav nav-tabs" id = "nav-tab" role = "tablist">
         <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
         <a className = "nav-item nav-link" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
@@ -48,31 +49,14 @@ function Searchview() {
 
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
-        <div className = "row" >
-        <ParseXML />
-        </div>  
+        <CircuitSwitch />
         </div> 
         <div className = "tab-pane fade" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
-         <div className = "row" >
-         <div className="marginLeftTxt">
-                <p> Sorry, no Packet Switch Details records available </p> 
-            </div> 
-        <div className = "d-flex justify-content-center custom-loader" >
-            <div className = "spinner-border text-primary" role = "status" >
-                <span className = "sr-only" > Loading... </span> 
-                </div> 
-                </div> 
-                </div> 
+        <PacketSwitch />
                 
         </div> 
         <div className = "tab-pane fade" id = "nav-profile" role = "tabpanel" aria-labelledby = "nav-profile-tab" >
-        <div className = "row" >
-        <div className="marginLeftTxt">
-        <p> Sorry, no Circuit Switch Details records available </p> 
-        </div> 
-        <div className = "d-flex justify-content-center custom-loader" >
-        <div className = "spinner-border text-primary" role = "status" >
-        <span className = "sr-only" > Loading... </span> </div> </div> </div> 
+        <CircuitSwitch /> 
         </div> 
         </div> 
         </div> 
