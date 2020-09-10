@@ -655,7 +655,7 @@ input:checked+.slider:before {
 
 @media only screen and (min-width: 1023px) and (max-width: 1280px) {
     .homePageContainer {
-        height: 63vh !important;
+        height: 75vh !important;
     }
     .detailPageContainer {
         height: 74vh;
@@ -664,7 +664,7 @@ input:checked+.slider:before {
 
 @media only screen and (min-width: 1280px) {
     .homePageContainer {
-        height: 76vh;
+        height: 81vh;
     }
     .detailPageContainer {
         min-height: 74vh;
