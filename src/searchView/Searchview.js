@@ -42,17 +42,17 @@ function Searchview() {
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
         <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
         <div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
-        <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
-        <a className = "nav-item nav-link" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
+        <a className = "nav-item nav-link" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
+        <a className = "nav-item nav-link active" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
         </div> 
         </nav>
 
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
-        <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
+        <div className = "tab-pane fade" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <GeneralInfo />
         </div> 
-        <div className = "tab-pane fade" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
+        <div className = "tab-pane fade show active" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
         <PacketSwitch />
                 
         </div> 
