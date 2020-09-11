@@ -40,31 +40,31 @@ export default class CircuitSwitch extends React.Component {
                         <>
                         <div className="row">
                             <div className="col-3">
-                        Subscriber Status: <span>{item.firstName}</span></div>
+                            <label class="fontBold">Subscriber Status:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
-                        3G APN List: <span>{item.lastName}</span></div>
+                        <label class="fontBold">3G APN List:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        4G APN List: <span>{item.firstName}</span></div>
+                        <label class="fontBold">4G APN List:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
-                        O/G Call Status: <span>{item.lastName}</span></div>
+                        <label class="fontBold">O/G Call Status:</label> <span>{item.lastName}</span></div>
                         </div>
                         <div className="row">
                             <div className="col-3">
-                        I/C Call Status: <span>{item.firstName}</span></div>
+                            <label class="fontBold">I/C Call Status:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
-                        MO-SMS Status: <span>{item.lastName}</span></div>
+                        <label class="fontBold">MO-SMS Status:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        MT-SMS Status: <span>{item.firstName}</span></div>
+                        <label class="fontBold">MT-SMS Status:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
-                        3G DATA - Status: <span>{item.lastName}</span></div>
+                        <label class="fontBold">3G DATA - Status:</label> <span>{item.lastName}</span></div>
                         </div>
                         <div className="row">
                             <div className="col-3">
-                        3G DATA - ROAM: <span>{item.firstName}</span></div>
+                            <label class="fontBold">3G DATA - ROAM:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
-                        4G DATA - Status: <span>{item.lastName}</span></div>
+                        <label class="fontBold">4G DATA - Status:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        Prepaid/Camel Data: <span>{item.firstName}</span></div>
+                        <label class="fontBold">Prepaid/Camel Data:</label> <span>{item.firstName}</span></div>
                         </div>
                         </>
                     ) 

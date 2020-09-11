@@ -40,93 +40,93 @@ export default class GerneralInfo extends React.Component {
                         <>
                         <div className="row">
                         <div className="col-3">
-                        RAT Type: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">RAT Type:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Network MCC/Network MNC: <span>{item.lastName}</span></div>
+                        <label class="fontBold">Network MCC/Network MNC:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        Cell ID: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Cell ID:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Number of PDN Contexts: <span>{item.lastName}</span></div>
+                        <label class="fontBold">Number of PDN Contexts:</label> <span>{item.lastName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        APN Requested: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">APN Requested:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Virtual APN: <span>{item.lastName}</span></div>
+                        <label class="fontBold">Virtual APN:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        PDN Type: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">PDN Type:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        UL APN AMBR: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">UL APN AMBR:</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        DL APN AMBR: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">DL APN AMBR:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        UE IPV4 Address: <span>{item.lastName}</span></div>
+                        <label class="fontBold">UE IPV4 Address:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        S8 DL Bytes: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">S8 DL Bytes:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        SGL UL Bytes: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">SGL UL Bytes:</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        Primary DNS IPV4 Address: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Primary DNS IPV4 Address:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Secondary DNS IPv4 address: <span>{item.lastName}</span></div>
+                        <label class="fontBold">Secondary DNS IPv4 address:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        Primary DNS IPv6 address: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Primary DNS IPv6 address:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Secondary DNS IPv6 address: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Secondary DNS IPv6 address:</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        S8 PGW Data addr: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">S8 PGW Data addr:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        S8 SGW V4 Ctl Adr: <span>{item.lastName}</span></div>
+                        <label class="fontBold">S8 SGW V4 Ctl Adr:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        S8 SGW Data addr: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">S8 SGW Data addr:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Gx peer profile in use: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Gx peer profile in use:</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        Gx failover count: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Gx failover count:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        PCRF hostname: <span>{item.lastName}</span></div>
+                        <label class="fontBold">PCRF hostname:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        PCRF address: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">PCRF address:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        PCRF destination host: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">PCRF destination host:</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        Rule Base Name: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Rule Base Name:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        SDF rule name: <span>{item.lastName}</span></div>
+                        <label class="fontBold">SDF rule name:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        SDF precedence: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">SDF precedence:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        SDF rule name: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">SDF rule name:</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        SDF precedence: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">SDF precedence:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        DCCA Profile: <span>{item.lastName}</span></div>
+                        <label class="fontBold">DCCA Profile:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        Peer-profile In-use: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Peer-profile In-use:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Failover Count: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Failover Count:</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        OCS Address: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">OCS Address:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        OCS Destination Realm: <span>{item.lastName}</span></div>
+                        <label class="fontBold">OCS Destination Realm:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        OCS Destination Host: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">OCS Destination Host:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        Rating Group: <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Rating Group:</label> <span>{item.FirstName}</span></div>
                         </div>
                         </>
                     ) 
