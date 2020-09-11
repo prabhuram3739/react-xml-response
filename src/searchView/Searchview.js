@@ -62,17 +62,6 @@ function Searchview() {
         </div> 
         </div> 
         </div>
-
-       { /*<div id = "overviewPanel" className = "col-md-5 col-sm-12 col-lg-5 col-xl-4 multi-horizontal" data-for = "" >
-        <div className = "content homePageContainer scrollbar" id = "overviewDetail" >
-        <h4 id = "platformDetailTitle" > General Information </h4>
-        <div className = "d-flex justify-content-center custom-loader" >
-        <div className = "spinner-border text-primary" role = "status" >
-        <span className = "sr-only" > Loading... </span> 
-        </div> 
-        </div> 
-        </div> 
-        </div> */}
         </div>
         </div> 
         </div> 

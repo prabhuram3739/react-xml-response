@@ -22,7 +22,6 @@ export default class PacketSwitch extends React.Component {
 
     render() {
        const { users, count, loading } = this.state || {};
-       console.log(count);
        if((count === 0) || (count === undefined)) {
         return (
         <span >Sorry, No Packet Switch Information available</span>
@@ -39,6 +38,7 @@ export default class PacketSwitch extends React.Component {
                 users.map((item) => {
                     return (
                         <>
+                        <div key={item.id}>
                         <div className="row">
                         <div className="col-3">
                         <label class="fontBold">APN Requested:</label> <span>{item.FirstName}</span></div>
@@ -136,6 +136,7 @@ export default class PacketSwitch extends React.Component {
                         <div className="row">
                         <div className="col-3">
                         <label class="fontBold">Diameter Code:</label> <span>{item.lastName}</span></div>
+                        </div>
                         </div>
                         </>
                     ) 

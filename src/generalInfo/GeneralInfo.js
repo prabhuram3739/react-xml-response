@@ -38,7 +38,8 @@ export default class GerneralInfo extends React.Component {
                 users.map((item) => {
                     return (
                         <>
-                                                <div className="row">
+                        <div key={item.id}>
+                        <div className="row">
                         <div className="col-3">
                         <label class="fontBold">IMSI:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
@@ -57,6 +58,7 @@ export default class GerneralInfo extends React.Component {
                         <label class="fontBold">Cell ID:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
                         <label class="fontBold">Number of PDN Contexts:</label> <span>{item.lastName}</span></div>
+                        </div>
                         </div>
                         </>
                     ) 

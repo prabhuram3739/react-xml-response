@@ -9,8 +9,6 @@ export const initialState = {
 
 //Reducer -> Listens to the data layer
 const reducer = (state, action) => {
-    console.log(action);
-
     //Dispatch the action and listens to the action
     //Action -> type, [payload]
     switch (action.type) {
