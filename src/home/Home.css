@@ -16,6 +16,20 @@
     margin-right: 0px !important;
 }
 
+::-webkit-input-placeholder {
+    /* Edge */
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
+}
+
+ ::placeholder {
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
+}
+
 .highlight {
     background-color: #d7d7d7;
 }

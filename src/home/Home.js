@@ -4,10 +4,9 @@ import "./Home.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDataLayerValue } from "../DataLayer";
-import CircuitSwitch from '../circuitSwitch/CircuitSwitch';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import GeneralInfo from '../generalInfo/GeneralInfo';
+import AdminDefaultView from "../adminDefault/AdminDefaultView";
 
 function Home() {
     const [{ disp_data }, dispatch] = useDataLayerValue();
@@ -48,7 +47,7 @@ function Home() {
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <div className = "row" >
-        <GeneralInfo />
+        <AdminDefaultView />
         </div>  
         </div> 
         </div> 

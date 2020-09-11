@@ -41,26 +41,6 @@ export default class PacketSwitch extends React.Component {
                         <>
                         <div className="row">
                         <div className="col-3">
-                        <label class="fontBold">IMSI:</label> <span>{item.firstName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">MSISDN:</label> <span>{item.lastName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">IMEI:</label> <span>{item.firstName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">Up Time:</label> <span>{item.lastName}</span></div>
-                        </div>
-                        <div className="row">
-                        <div className="col-3">
-                        <label class="fontBold">RAT Type:</label> <span>{item.FirstName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">Network MCC/Network MNC:</label> <span>{item.lastName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">Cell ID:</label> <span>{item.FirstName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">Number of PDN Contexts:</label> <span>{item.lastName}</span></div>
-                        </div>
-                        <div className="row">
-                        <div className="col-3">
                         <label class="fontBold">APN Requested:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
                         <label class="fontBold">Virtual APN:</label> <span>{item.lastName}</span></div>
@@ -77,7 +57,11 @@ export default class PacketSwitch extends React.Component {
                         <div className="col-3">
                         <label class="fontBold">S8 DL Bytes:</label> <span>{item.FirstName}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">SGL UL Bytes:</label> <span>{item.FirstName}</span></div>
+                        <label class="fontBold">SGI UL Bytes:</label> <span>{item.FirstName}</span></div>
+                        </div>
+                        <div className="row">
+                        <div className="col-3">
+                        <label class="fontBold">Total Data Volume Used (MB):</label> <span>{item.FirstName}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">

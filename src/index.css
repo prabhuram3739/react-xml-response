@@ -76,7 +76,7 @@ section {
 
 body {
     margin: 0;
-    font-family: "NokiaPureHeadline,Arial,Helvetica,sans-serif" !important;
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -102,12 +102,27 @@ body {
     padding: 0px;
 }
 
+h4,
+h5 {
+    padding: 0px 0 0px 0px;
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
+    margin-top: 15px !important;
+}
+
+h4 {
+    background: #124191;
+    color: #fff !important;
+}
+
 .fontChange {
-    font-size: 15px;
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif;
 }
 
 .fontBold {
     font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+    color: gray;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -265,6 +280,7 @@ li {
 .appHeading {
     margin: 0 auto;
     /*color: var(--on-background) !important;*/
+    font: 300 30px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
     color: #000 !important;
     font-weight: bold;
     font-style: normal;
@@ -660,6 +676,7 @@ input:checked+.slider:before {
 @media only screen and (min-width: 1023px) and (max-width: 1280px) {
     .homePageContainer {
         height: 75vh !important;
+        overflow: scroll;
     }
     .detailPageContainer {
         height: 74vh;
@@ -669,6 +686,7 @@ input:checked+.slider:before {
 @media only screen and (min-width: 1280px) {
     .homePageContainer {
         height: 81vh;
+        overflow: scroll;
     }
     .detailPageContainer {
         min-height: 74vh;
@@ -691,6 +709,7 @@ input:checked+.slider:before {
     }
     .homePageContainer {
         min-height: 63vh;
+        overflow: scroll;
     }
     .detailPageContainer {
         min-height: 74vh;
@@ -5450,6 +5469,8 @@ input[type="button"].btn-block {
     color: #495057;
     background-color: #FFFFFF;
     border-color: #dee2e6 #dee2e6 #FFFFFF;
+    font: 300 16px/1.55 "Open Sans", sans-serif !important;
+    font-weight: 500 !important;
 }
 
 .nav-tabs .dropdown-menu {

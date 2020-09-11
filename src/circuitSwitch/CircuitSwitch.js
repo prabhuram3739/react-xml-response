@@ -40,31 +40,39 @@ export default class CircuitSwitch extends React.Component {
                         <>
                         <div className="row">
                             <div className="col-3">
-                            <label class="fontBold">Subscriber Status:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Subscriber Status:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">3G APN List:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">3G APN List:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">4G APN List:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">4G APN List:</label> <span>{item.firstName}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">O/G Call Status:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">VLR Number:</label> <span>{item.firstName}</span></div>
                         </div>
                         <div className="row">
+                        <div className="col-3">
+                        <label className="fontBold">SGSN Number:</label> <span>{item.lastName}</span></div>
+                        <div className="col-3">
+                        <label className="fontBold">MME ID:</label> <span>{item.lastName}</span></div>
+                        <div className="col-3">
+                        <label className="fontBold">O/G Call Status:</label> <span>{item.lastName}</span></div>
                             <div className="col-3">
-                            <label class="fontBold">I/C Call Status:</label> <span>{item.firstName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">MO-SMS Status:</label> <span>{item.lastName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">MT-SMS Status:</label> <span>{item.firstName}</span></div>
-                        <div className="col-3">
-                        <label class="fontBold">3G DATA - Status:</label> <span>{item.lastName}</span></div>
+                            <label className="fontBold">I/C Call Status:</label> <span>{item.firstName}</span></div>
                         </div>
                         <div className="row">
+                        <div className="col-3">
+                        <label className="fontBold">MO-SMS Status:</label> <span>{item.lastName}</span></div>
+                        <div className="col-3">
+                        <label className="fontBold">MT-SMS Status:</label> <span>{item.firstName}</span></div>
+                        <div className="col-3">
+                        <label className="fontBold">3G DATA - Status:</label> <span>{item.lastName}</span></div>
                             <div className="col-3">
-                            <label class="fontBold">3G DATA - ROAM:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">3G DATA - ROAM:</label> <span>{item.firstName}</span></div>
+                        </div>
+                        <div className="row">
                         <div className="col-3">
-                        <label class="fontBold">4G DATA - Status:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">4G DATA - Status:</label> <span>{item.lastName}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Prepaid/Camel Data:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Prepaid/Camel Data:</label> <span>{item.firstName}</span></div>
                         </div>
                         </>
                     ) 
