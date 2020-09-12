@@ -10,6 +10,7 @@ export const initialState = {
 //Reducer -> Listens to the data layer
 const reducer = (state, action) => {
     //Dispatch the action and listens to the action
+    console.log(action.data);
     //Action -> type, [payload]
     switch (action.type) {
         case 'DISP_DATA':
