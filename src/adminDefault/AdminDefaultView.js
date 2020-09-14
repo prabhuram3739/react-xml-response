@@ -201,7 +201,13 @@ export default class AdminDefaultView extends React.Component {
                     </div>*/}
 
                         <div key={item.id}>
-                        <div class="accordion" id="accordionExample">
+                       
+                        <div class="accordion pt-3" id="accordionExample">
+                        
+                        <p>
+                        
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
+</p>
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
@@ -215,7 +221,7 @@ export default class AdminDefaultView extends React.Component {
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div id="collapseOne" class="collapse show multi-collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
       <div className="row">
                             <div className="col-4">
@@ -256,7 +262,7 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+    <div id="collapseTwo" class="collapse show multi-collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
       <div className="row">
                             <div className="col-3">
@@ -293,7 +299,7 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+    <div id="collapseThree" class="collapse show multi-collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
       <div className="row">
                             <div className="col-3">
@@ -330,7 +336,7 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div id="collapseFour" class="collapse show multi-collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
       <div class="card-body">
       <div className="row">
                             <div className="col-3">
@@ -367,7 +373,7 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+    <div id="collapseFive" class="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
       <div class="card-body">
       <div className="row">
                             <div className="col-3">
@@ -404,7 +410,7 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+    <div id="collapseSix" class="collapse show multi-collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
       <div class="card-body">
       <div className="row">
                             <div className="col-3">
@@ -430,7 +436,17 @@ export default class AdminDefaultView extends React.Component {
     </div>
   </div>
 </div>
+
 </div>
+<div class="pt-3">
+<p>
+                        
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
+</p>
+</div>
+
+
+
                         </>
                     ) 
                     

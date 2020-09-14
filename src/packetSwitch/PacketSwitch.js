@@ -8,7 +8,7 @@ export default class PacketSwitch extends React.Component {
         var self = this;
         this.setState({ loading: true }, () => {
         axios
-        .get("http://localhost:8080/api/users", {
+        .get("http://localhost:8080/api/diagnosticData", {
             "Content-Type": "application/xml; charset=utf-8"
          })
         .then(function(response) {
