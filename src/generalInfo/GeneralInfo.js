@@ -8,11 +8,12 @@ export default class GerneralInfo extends React.Component {
         var self = this;
         this.setState({ loading: true }, () => {
         axios
-        .get("http://localhost:8080/api/diagnosticData", {
+        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
             "Content-Type": "application/xml; charset=utf-8"
          })
         .then(function(response) {
-            self.setState((state, props) => ({ loading: false, users: response.data, count: response.data.length }));
+            console.log(response.data);
+            self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
         })
         .catch(function(error) {
             console.log(error);
@@ -21,7 +22,9 @@ export default class GerneralInfo extends React.Component {
     }
 
     render() {
-       const { users, count, loading } = this.state || {};
+       const { data, count, loading } = this.state || {};
+       const finalData = [];
+       finalData.push(data);
        if(count === 0) {
         return (
         <span >Sorry, No General Information available</span>
@@ -34,8 +37,8 @@ export default class GerneralInfo extends React.Component {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
-                (users && users.length > 0) &&
-                users.map((item) => {
+                (finalData && finalData.length > 0) &&
+                finalData.map((item) => {
                     return (
                         <>
                         <div key={item.id}>

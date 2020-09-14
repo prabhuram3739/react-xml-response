@@ -14,7 +14,7 @@ function Searchview() {
 
     useEffect(() => {
         axios
-        .get("https://fakerestapi.azurewebsites.net/api/Authors", {
+        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
             "Content-Type": "application/xml; charset=utf-8"
          }).then((response)=> {
             dispatch({

@@ -8,7 +8,7 @@ export default class AdminDefaultView extends React.Component {
         var self = this;
         this.setState({ loading: true }, () => {
         axios
-        .get("http://localhost:8080/api/diagnosticData", {
+        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
             "Content-Type": "application/xml; charset=utf-8"
          })
         .then(function(response) {
