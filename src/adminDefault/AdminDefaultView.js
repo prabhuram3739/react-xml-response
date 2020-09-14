@@ -38,6 +38,7 @@ export default class AdminDefaultView extends React.Component {
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
+                  if(item.userType === "admin") {
                     return (
                         <>
                         {/*<div key={item.id}>
@@ -451,7 +452,7 @@ export default class AdminDefaultView extends React.Component {
 
                         </>
                     ) 
-                    
+                  }
                 }) 
             }
         </div>

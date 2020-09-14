@@ -32,13 +32,14 @@ export default class CircuitSwitch extends React.Component {
        }
        return (
 
-        <div className="container-fluid leftPadding fontChange">
+        <div className="container-fluid noPadding fontChange">
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
+                    if(item.userType === "admin") {
                     return (
                         <>
                         {/*<div key={item.id}>
@@ -108,26 +109,23 @@ export default class CircuitSwitch extends React.Component {
                     </div>*/}
 
                         <div className="table-responsive">
-                        <table className="table table-borderless" key={index}>
+                        <table className="table table-striped table-border" key={index}>
                         <tbody>
                         <tr>
-                        <td>
-                        <label className="fontBold">Subscriber Status:</label> </td>
+                        <td class="textAlignRight"><label className="fontBold">Subscriber Status:</label> </td>
                         <td><span>{item.circuitSwitch.subscriberStatus? 'IMSI Active' : 'IMSI Inactive'}</span></td>
+                        <td class="textAlignRight"><label className="fontBold">3G APN List:</label></td>
                         <td>
-                        <label className="fontBold">3G APN List:</label></td>
-                        <td>
-                        {item.circuitSwitch.threeGApn.map((threeGApnList, index) => {
+                        {item.circuitSwitch.threeGApnDataList.map((threeGApnList, index) => {
                         return(
                         <span key={index}> {threeGApnList.apn};</span>
                         )
                         })}
                         </td>
-                        <td>
-                        <label className="fontBold">4G APN List:</label>
+                        <td class="textAlignRight"><label className="fontBold">4G APN List:</label>
                         </td>
                         <td>
-                        {item.circuitSwitch.threeGApn.map((fourGApnList, index) => {
+                        {item.circuitSwitch.fourGApnDataList.map((fourGApnList, index) => {
                         return(
                         <span key={index}> {fourGApnList.apn};</span>
                         )
@@ -136,77 +134,68 @@ export default class CircuitSwitch extends React.Component {
                         </tr>
 
                         <tr>
-                        <td>
-                        <label className="fontBold">VLR Number:</label>
+                        <td class="textAlignRight"><label className="fontBold">VLR Number:</label>
                         </td>
                         <td><span>{item.circuitSwitch.vlrNumber}</span>
                         </td>
-                        <td>
-                        <label className="fontBold">SGSN Number:</label>
+                        <td class="textAlignRight"><label className="fontBold">SGSN Number:</label>
                         </td>
                         <td> <span>{item.circuitSwitch.sgsnNumber}</span>
                         </td>
-                        <td>
-                        <label className="fontBold">MME ID:</label>
+                        <td class="textAlignRight"><label className="fontBold">MME ID:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.mmeId}</span>
                         </td>
                         </tr>
 
                         <tr>
-                        <td>
-                        <label className="fontBold">O/G Call Status:</label>
+                        <td class="textAlignRight"><label className="fontBold">O/G Call Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.outgoingCallStatus}</span>
                         </td>
-                        <td>
-                        <label className="fontBold">I/C Call Status:</label>
+                        <td class="textAlignRight"><label className="fontBold">I/C Call Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.incomingCallStatus}</span>
                         </td>
-                        <td>
-                        <label className="fontBold">MO-SMS Status:</label>
+                        <td class="textAlignRight"><label className="fontBold">MO-SMS Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.moSmsStatus}</span>
                         </td>
                         </tr>
 
                         <tr>
-                        <td>
-                        <label className="fontBold">MT-SMS Status:</label>
+                        <td class="textAlignRight"><label className="fontBold">MT-SMS Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.mtSmsStatus}</span>
                         </td>
-                        <td>
-                        <label className="fontBold">3G DATA - Status:</label>
+                        <td class="textAlignRight"><label className="fontBold">3G DATA - Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.threeGDataStatus}</span>
                         </td>
-                        <td>
-                        <label className="fontBold">3G DATA - ROAM:</label>
+                        <td class="textAlignRight"><label className="fontBold">3G DATA - ROAM:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.threeGDataRoamStatus}</span>
                         </td>
                         </tr>
 
                         <tr>
-                        <td>
-                        <label className="fontBold">4G DATA - Status:</label>
+                        <td class="textAlignRight"><label className="fontBold">4G DATA - Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.fourGDataStatus}</span>
                         </td>
-                        <td>
-                        <label className="fontBold">Prepaid/Camel Data:</label>
+                        <td class="textAlignRight"><label className="fontBold">Prepaid/Camel Data:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.camelSubscriptionStatus}</span>
                         </td>
+                        <td></td>
+                        <td></td>
                         </tr>
                         </tbody>
                         </table>
                         </div>
                         </>
-                    ) 
-                    
+                    )
+                    }
                 }) 
             }
         </div>

@@ -31,68 +31,73 @@ export default class GeneralInfo extends React.Component {
        }
        return (
 
-        <div className="container-fluid leftPadding fontChange">
+        <div className="container-fluid noPadding fontChange">
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
+                    if(item.userType === "admin") {
                     return (
                         <>
 
                         {/*<div key={index}>
                         <div className="row">
                         <div className="col-3">
-                        <label class="fontBold">IMSI:</label> <span>{item.packetSwitch.imsi}</span></div>
+                        <label className="fontBold">IMSI:</label> <span>{item.packetSwitch.imsi}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">MSISDN:</label> <span>{item.packetSwitch.msisdn}</span></div>
+                        <label className="fontBold">MSISDN:</label> <span>{item.packetSwitch.msisdn}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">IMEI:</label> <span>{item.packetSwitch.imei}</span></div>
+                        <label className="fontBold">IMEI:</label> <span>{item.packetSwitch.imei}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Up Time:</label> <span>{item.packetSwitch.upTime}</span></div>
+                        <label className="fontBold">Up Time:</label> <span>{item.packetSwitch.upTime}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        <label class="fontBold">RAT Type:</label> <span>{item.packetSwitch.ratType}</span></div>
+                        <label className="fontBold">RAT Type:</label> <span>{item.packetSwitch.ratType}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Network MCC/Network MNC:</label> <span>{item.packetSwitch.networkMNC}</span></div>
+                        <label className="fontBold">Network MCC/Network MNC:</label> <span>{item.packetSwitch.networkMNC}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Cell ID:</label> <span>{item.packetSwitch.cellID}</span></div>
+                        <label className="fontBold">Cell ID:</label> <span>{item.packetSwitch.cellID}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Number of PDN Contexts:</label> <span>{item.packetSwitch.numbercontexts}</span></div>
+                        <label className="fontBold">Number of PDN Contexts:</label> <span>{item.packetSwitch.numbercontexts}</span></div>
                         </div>
                         </div>*/}
 
-                        <div className="table-responsive">
-                        <table className="table table-borderless" key={index}>
+                        <div className="table-responsive" key={index}>
+                        <table className="table table-striped table-border" >
+                        <tbody>
                         <tr>
-                            <td><label class="fontBold">IMSI:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">IMSI:</label></td>
                             <td><span>{item.packetSwitch.imsi}</span></td>
-                            <td><label class="fontBold">MSISDN:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">MSISDN:</label></td>
                             <td><span>{item.packetSwitch.msisdn}</span></td>
-                            <td><label class="fontBold">IMEI:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">IMEI:</label></td>
                             <td><span>{item.packetSwitch.imei}</span></td>
                         </tr>
                         <tr>
-                            <td><label class="fontBold">Up Time:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">Up Time:</label></td>
                             <td><span>{item.packetSwitch.upTime}</span></td>
-                            <td><label class="fontBold">RAT Type:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">RAT Type:</label></td>
                             <td><span>{item.packetSwitch.ratType}</span></td>
-                            <td><label class="fontBold">Network MCC/Network MNC:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">Network MCC/Network MNC:</label></td>
                             <td><span>{item.packetSwitch.networkMNC}</span></td>
                         </tr>
                         <tr>
-                            <td><label class="fontBold">Cell ID:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">Cell ID:</label></td>
                             <td><span>{item.packetSwitch.cellID}</span></td>
-                            <td><label class="fontBold">Number of PDN Contexts:</label></td>
+                            <td class="textAlignRight"><label className="fontBold">Number of PDN Contexts:</label></td>
                             <td><span>{item.packetSwitch.numbercontexts}</span></td>
+                            <td></td>
+                            <td></td>
                         </tr>
+                        </tbody>
                         </table>
                         </div>
                         </>
-                    ) 
-                    
+                    )
+                    }
                 }) 
             }
         </div>
