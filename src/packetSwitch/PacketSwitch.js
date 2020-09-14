@@ -200,37 +200,37 @@ export default class PacketSwitch extends React.Component {
                                 <td class="textAlignRight"><label className="fontBold">PCRF destination host:</label></td>
                                 <td><span>{item.packetSwitch.pcrfDestinationHost}</span></td>
                             </tr>
+                            
+                                {item.packetSwitch.ruleData.sDFRulesList.map((rule, index) => {
+                            return(
+                            <>
                             <tr>
                                 <td class="textAlignRight"><label className="fontBold">Rule Base Name:</label></td>
-                                <td><span>{item.packetSwitch.ruleBaseName}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">SDF rule name:</label></td>
-                                <td><span>{item.packetSwitch.sdfRuleName}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">SDF precedence:</label></td>
-                                <td><span>{item.packetSwitch.sdfPrecedence}</span></td>
+                                <td><span>{item.packetSwitch.ruleData.ruleBaseName}</span></td>
+                            <td key={index} class="textAlignRight"><label className="fontBold">SDF rule name:</label></td>
+                            <td><span>{rule.sdfRuleName}</span></td>
+                            <td class="textAlignRight"><label className="fontBold">SDF precedence:</label></td>
+                            <td><span>{rule.precedence}</span></td>
                             </tr>
+                            </>
+                            )})
+                                }
+                            
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">SDF rule name:</label></td>
-                                <td><span>{item.packetSwitch.sdfRuleName}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">SDF precedence:</label></td>
-                                <td><span>{item.packetSwitch.sdfPrecedence}</span></td>
                                 <td class="textAlignRight"><label className="fontBold">DCCA Profile:</label></td>
                                 <td><span>{item.packetSwitch.dccaProfile}</span></td>
-                            </tr>
-                            <tr>
                                 <td class="textAlignRight"><label className="fontBold">Peer-profile In-use:</label></td>
                                 <td><span>{item.packetSwitch.peerProfileInUse}</span></td>
                                 <td class="textAlignRight"><label className="fontBold">Failover Count:</label></td>
                                 <td><span>{item.packetSwitch.failoverCount}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">OCS Address:</label></td>
-                                <td><span>{item.packetSwitch.ocsAddress}</span></td>
                             </tr>
                             <tr>
+                                <td class="textAlignRight"><label className="fontBold">OCS Address:</label></td>
+                                <td><span>{item.packetSwitch.ocsAddress}</span></td>
                                 <td class="textAlignRight"><label className="fontBold">OCS Destination Realm:</label></td>
                                 <td><span>{item.packetSwitch.ocsDestinationRealm}</span></td>
                                 <td class="textAlignRight"><label className="fontBold">OCS Destination Host:</label></td>
                                 <td><span>{item.packetSwitch.ocsDestinationHost}</span></td>
-                                <td></td>
-                                <td></td>
                             </tr>
 
                             {item.packetSwitch.ratingGroupDataList.map((rating, index) => {
