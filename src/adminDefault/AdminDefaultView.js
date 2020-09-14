@@ -12,7 +12,7 @@ export default class AdminDefaultView extends React.Component {
             "Content-Type": "application/xml; charset=utf-8"
          })
         .then(function(response) {
-            self.setState((state, props) => ({ loading: false, data: response.data, count: response.data.length }));
+          self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
         })
         .catch(function(error) {
             console.log(error);
@@ -22,6 +22,8 @@ export default class AdminDefaultView extends React.Component {
 
     render() {
        const { data, count, loading } = this.state || {};
+       const finalData = [];
+       finalData.push(data);
        if((count === 0) || (count === undefined)) {
         return (
         <span >Sorry, No Information available</span>
@@ -34,8 +36,8 @@ export default class AdminDefaultView extends React.Component {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
-                (data && data.length > 0) &&
-                data.map((item) => {
+                (finalData && finalData.length > 0) &&
+                finalData.map((item, index) => {
                     return (
                         <>
                         {/*<div key={item.id}>
@@ -200,7 +202,7 @@ export default class AdminDefaultView extends React.Component {
                         </div>
                     </div>*/}
 
-                        <div key={item.id}>
+                        <div key={index}>
                        
                         <div class="accordion pt-3" id="accordionExample">
                         

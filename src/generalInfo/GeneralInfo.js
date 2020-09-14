@@ -2,7 +2,7 @@ import React  from 'react';
 import axios from 'axios';
 import { authEndpoint } from '../environment';
 
-export default class GerneralInfo extends React.Component {
+export default class GeneralInfo extends React.Component {
     //const [{user}, dispatch] = useDataLayerValue();
     componentDidMount() {
         var self = this;
@@ -12,7 +12,6 @@ export default class GerneralInfo extends React.Component {
             "Content-Type": "application/xml; charset=utf-8"
          })
         .then(function(response) {
-            console.log(response.data);
             self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
         })
         .catch(function(error) {
@@ -25,7 +24,7 @@ export default class GerneralInfo extends React.Component {
        const { data, count, loading } = this.state || {};
        const finalData = [];
        finalData.push(data);
-       if(count === 0) {
+       if((count === 0) || (count === undefined)) {
         return (
         <span >Sorry, No General Information available</span>
         )
@@ -38,30 +37,58 @@ export default class GerneralInfo extends React.Component {
                 
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
-                finalData.map((item) => {
+                finalData.map((item, index) => {
                     return (
                         <>
-                        <div key={item.id}>
+
+                        {/*<div key={index}>
                         <div className="row">
                         <div className="col-3">
-                        <label class="fontBold">IMSI:</label> <span>{item.firstName}</span></div>
+                        <label class="fontBold">IMSI:</label> <span>{item.packetSwitch.imsi}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">MSISDN:</label> <span>{item.lastName}</span></div>
+                        <label class="fontBold">MSISDN:</label> <span>{item.packetSwitch.msisdn}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">IMEI:</label> <span>{item.firstName}</span></div>
+                        <label class="fontBold">IMEI:</label> <span>{item.packetSwitch.imei}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Up Time:</label> <span>{item.lastName}</span></div>
+                        <label class="fontBold">Up Time:</label> <span>{item.packetSwitch.upTime}</span></div>
                         </div>
                         <div className="row">
                         <div className="col-3">
-                        <label class="fontBold">RAT Type:</label> <span>{item.FirstName}</span></div>
+                        <label class="fontBold">RAT Type:</label> <span>{item.packetSwitch.ratType}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Network MCC/Network MNC:</label> <span>{item.lastName}</span></div>
+                        <label class="fontBold">Network MCC/Network MNC:</label> <span>{item.packetSwitch.networkMNC}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Cell ID:</label> <span>{item.FirstName}</span></div>
+                        <label class="fontBold">Cell ID:</label> <span>{item.packetSwitch.cellID}</span></div>
                         <div className="col-3">
-                        <label class="fontBold">Number of PDN Contexts:</label> <span>{item.lastName}</span></div>
+                        <label class="fontBold">Number of PDN Contexts:</label> <span>{item.packetSwitch.numbercontexts}</span></div>
                         </div>
+                        </div>*/}
+
+                        <div className="table-responsive">
+                        <table className="table table-borderless" key={index}>
+                        <tr>
+                            <td><label class="fontBold">IMSI:</label></td>
+                            <td><span>{item.packetSwitch.imsi}</span></td>
+                            <td><label class="fontBold">MSISDN:</label></td>
+                            <td><span>{item.packetSwitch.msisdn}</span></td>
+                            <td><label class="fontBold">IMEI:</label></td>
+                            <td><span>{item.packetSwitch.imei}</span></td>
+                        </tr>
+                        <tr>
+                            <td><label class="fontBold">Up Time:</label></td>
+                            <td><span>{item.packetSwitch.upTime}</span></td>
+                            <td><label class="fontBold">RAT Type:</label></td>
+                            <td><span>{item.packetSwitch.ratType}</span></td>
+                            <td><label class="fontBold">Network MCC/Network MNC:</label></td>
+                            <td><span>{item.packetSwitch.networkMNC}</span></td>
+                        </tr>
+                        <tr>
+                            <td><label class="fontBold">Cell ID:</label></td>
+                            <td><span>{item.packetSwitch.cellID}</span></td>
+                            <td><label class="fontBold">Number of PDN Contexts:</label></td>
+                            <td><span>{item.packetSwitch.numbercontexts}</span></td>
+                        </tr>
+                        </table>
                         </div>
                         </>
                     ) 

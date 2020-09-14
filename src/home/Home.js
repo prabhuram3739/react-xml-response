@@ -12,7 +12,7 @@ function Home() {
     const [{ disp_data }, dispatch] = useDataLayerValue();
     useEffect(() => {
         axios
-        .get("http://localhost:8080/api/users", {
+        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
             "Content-Type": "application/xml; charset=utf-8"
          }).then((response)=> {
             dispatch({

@@ -38,7 +38,7 @@ export default class CircuitSwitch extends React.Component {
                 
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
-                finalData.map((item) => {
+                finalData.map((item, index) => {
                     return (
                         <>
                         {/*<div key={item.id}>
@@ -108,7 +108,8 @@ export default class CircuitSwitch extends React.Component {
                     </div>*/}
 
                         <div className="table-responsive">
-                        <table className="table table-borderless" key={item.id}>
+                        <table className="table table-borderless" key={index}>
+                        <tbody>
                         <tr>
                         <td>
                         <label className="fontBold">Subscriber Status:</label> </td>
@@ -132,13 +133,14 @@ export default class CircuitSwitch extends React.Component {
                         )
                         })}
                         </td>
-                        <td>
-                        <label className="fontBold">VLR Number:</label>
-                        </td><td><span>{item.circuitSwitch.vlrNumber}</span>
-                        </td>
                         </tr>
 
                         <tr>
+                        <td>
+                        <label className="fontBold">VLR Number:</label>
+                        </td>
+                        <td><span>{item.circuitSwitch.vlrNumber}</span>
+                        </td>
                         <td>
                         <label className="fontBold">SGSN Number:</label>
                         </td>
@@ -149,6 +151,9 @@ export default class CircuitSwitch extends React.Component {
                         </td> 
                         <td><span>{item.circuitSwitch.mmeId}</span>
                         </td>
+                        </tr>
+
+                        <tr>
                         <td>
                         <label className="fontBold">O/G Call Status:</label>
                         </td> 
@@ -159,14 +164,14 @@ export default class CircuitSwitch extends React.Component {
                         </td> 
                         <td><span>{item.circuitSwitch.incomingCallStatus}</span>
                         </td>
-                        </tr>
-
-                        <tr>
                         <td>
                         <label className="fontBold">MO-SMS Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.moSmsStatus}</span>
                         </td>
+                        </tr>
+
+                        <tr>
                         <td>
                         <label className="fontBold">MT-SMS Status:</label>
                         </td> 
@@ -196,6 +201,7 @@ export default class CircuitSwitch extends React.Component {
                         <td><span>{item.circuitSwitch.camelSubscriptionStatus}</span>
                         </td>
                         </tr>
+                        </tbody>
                         </table>
                         </div>
                         </>

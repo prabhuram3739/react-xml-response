@@ -54,7 +54,6 @@ function Searchview() {
         </div> 
         <div className = "tab-pane fade" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
         <PacketSwitch />
-                
         </div> 
         <div className = "tab-pane fade" id = "nav-profile" role = "tabpanel" aria-labelledby = "nav-profile-tab" >
         <CircuitSwitch /> 
