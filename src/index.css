@@ -2707,14 +2707,13 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background: var(--table-odd-background);
-    color: var(--table-odd-color);
-    /* background-color: rgba(0,0,0,.05); */
+    background-color: #dbdbdb !important;
+    color: #000;
 }
 
 .table-striped tbody tr:nth-of-type(even) {
-    background: var(--table-even-background);
-    color: var(--table-even-color);
+    background-color: #f4f4f4 !important;
+    color: #000;
 }
 
 .table-hover tbody tr:hover {
@@ -5977,6 +5976,7 @@ input[type="button"].btn-block {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
+    /* background-color: #dbdbdb; */
 }
 
 .card-title {
@@ -6004,6 +6004,7 @@ input[type="button"].btn-block {
     padding: 0.75rem 1.25rem;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);
+    /*background-color: #FFF;*/
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
