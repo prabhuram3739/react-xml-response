@@ -7,7 +7,7 @@ export default class DefaultView extends React.Component {
       finalData.push(data);
        if((count === 0) || (count === undefined)) {
         return (
-        <span >Sorry, No Information available</span>
+        <span className="ml-4">Sorry, No Information available</span>
         )
        }
        return (

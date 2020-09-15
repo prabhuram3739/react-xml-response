@@ -7,7 +7,7 @@ export default class CircuitSwitch extends React.Component {
        finalData.push(data);
        if((count === 0) || (count === undefined)) {
         return (
-        <span >Sorry, No Circuit Switch Information available</span>
+            <span className="ml-4">Sorry, No Circuit Switch Information available</span>
         )
        }
        return (
