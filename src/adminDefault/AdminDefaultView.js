@@ -1,29 +1,10 @@
 import React  from 'react';
-import axios from 'axios';
-import { authEndpoint } from '../environment';
 
 export default class AdminDefaultView extends React.Component {
-    //const [{user}, dispatch] = useDataLayerValue();
-    componentDidMount() {
-        var self = this;
-        this.setState({ loading: true }, () => {
-        axios
-        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
-            "Content-Type": "application/xml; charset=utf-8"
-         })
-        .then(function(response) {
-          self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
-        })
-        .catch(function(error) {
-            console.log(error);
-        });
-    });
-    }
-
     render() {
-       const { data, count, loading } = this.state || {};
-       const finalData = [];
-       finalData.push(data);
+      const { data, count, loading } = this.context || {};
+      const finalData = [];
+      finalData.push(data);
        if((count === 0) || (count === undefined)) {
         return (
         <span >Sorry, No Information available</span>
@@ -205,16 +186,16 @@ export default class AdminDefaultView extends React.Component {
 
                         <div key={index}>
                        
-                        <div class="accordion pt-3" id="accordionExample">
+                        <div className="accordion pt-3" id="accordionExample">
                         
                         <p>
                         
-                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
+                        <button className="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
 </p>
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+  <div className="card">
+    <div className="card-header" id="headingOne">
+      <h5 className="mb-0">
+        <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <div className="row">
                         <div className="col-12">
                             Hostname: AMS_PROD_CMG
@@ -224,8 +205,8 @@ export default class AdminDefaultView extends React.Component {
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show multi-collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseOne" className="collapse show multi-collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div className="card-body">
       <div className="row">
                             <div className="col-4">
                             <label className="fontBold">Homers:</label> <span>{item.firstName}</span></div>
@@ -253,10 +234,10 @@ export default class AdminDefaultView extends React.Component {
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+  <div className="card">
+    <div className="card-header" id="headingTwo">
+      <h5 className="mb-0">
+        <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         <div className="row">
                         <div className="col-12">
                             Gy Statistics
@@ -265,8 +246,8 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse show multi-collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseTwo" className="collapse show multi-collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div className="card-body">
       <div className="row">
                             <div className="col-3">
                             <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName}</span></div>
@@ -290,10 +271,10 @@ export default class AdminDefaultView extends React.Component {
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+  <div className="card">
+    <div className="card-header" id="headingThree">
+      <h5 className="mb-0">
+        <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         <div className="row">
                         <div className="col-12">
                             Gx Statistics
@@ -302,8 +283,8 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse show multi-collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseThree" className="collapse show multi-collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div className="card-body">
       <div className="row">
                             <div className="col-3">
                             <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName}</span></div>
@@ -327,10 +308,10 @@ export default class AdminDefaultView extends React.Component {
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingFour">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+  <div className="card">
+    <div className="card-header" id="headingFour">
+      <h5 className="mb-0">
+        <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
         <div className="row">
                         <div className="col-12">
                             Sx Statistics
@@ -339,8 +320,8 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseFour" class="collapse show multi-collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseFour" className="collapse show multi-collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div className="card-body">
       <div className="row">
                             <div className="col-3">
                             <label className="fontBold">Up Association:</label> <span>{item.firstName}</span></div>
@@ -364,10 +345,10 @@ export default class AdminDefaultView extends React.Component {
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingFive">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+  <div className="card">
+    <div className="card-header" id="headingFive">
+      <h5 className="mb-0">
+        <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
         <div className="row">
                         <div className="col-12">
                             Radius Statistics
@@ -376,8 +357,8 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseFive" class="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div className="card-body">
       <div className="row">
                             <div className="col-3">
                             <label className="fontBold">Group Name:</label> <span>{item.firstName}</span></div>
@@ -401,10 +382,10 @@ export default class AdminDefaultView extends React.Component {
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingSix">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+  <div className="card">
+    <div className="card-header" id="headingSix">
+      <h5 className="mb-0">
+        <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
         <div className="row">
                         <div className="col-12">
                             Ga Statistics
@@ -413,8 +394,8 @@ export default class AdminDefaultView extends React.Component {
         </button>
       </h5>
     </div>
-    <div id="collapseSix" class="collapse show multi-collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseSix" className="collapse show multi-collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div className="card-body">
       <div className="row">
                             <div className="col-3">
                             <label className="fontBold">GTP Prim Grp:</label> <span>{item.firstName}</span></div>
@@ -441,10 +422,10 @@ export default class AdminDefaultView extends React.Component {
 </div>
 
 </div>
-<div class="pt-3">
+<div className="pt-3">
 <p>
                         
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
+  <button className="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
 </p>
 </div>
 

@@ -2707,12 +2707,12 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #dbdbdb !important;
+    /*background-color: #dbdbdb !important;*/
     color: #000;
 }
 
 .table-striped tbody tr:nth-of-type(even) {
-    background-color: #f4f4f4 !important;
+    /*background-color: #f4f4f4 !important;*/
     color: #000;
 }
 

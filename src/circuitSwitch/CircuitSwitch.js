@@ -1,28 +1,8 @@
 import React  from 'react';
-import axios from 'axios';
-import { authEndpoint } from '../environment';
-
 
 export default class CircuitSwitch extends React.Component {
-    //const [{user}, dispatch] = useDataLayerValue();
-    componentDidMount() {
-        var self = this;
-        this.setState({ loading: true }, () => {
-        axios
-        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
-            "Content-Type": "application/xml; charset=utf-8"
-         })
-        .then(function(response) {
-            self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
-        })
-        .catch(function(error) {
-            console.log(error);
-        });
-    });
-    }
-
     render() {
-       const { data, count, loading } = this.state || {};
+       const { data, count, loading } = this.context || {};
        const finalData = [];
        finalData.push(data);
        if((count === 0) || (count === undefined)) {
@@ -112,9 +92,9 @@ export default class CircuitSwitch extends React.Component {
                         <table className="table table-striped table-border" key={index}>
                         <tbody>
                         <tr>
-                        <td class="textAlignRight"><label className="fontBold">Subscriber Status:</label> </td>
+                        <td className="textAlignRight"><label className="fontBold">Subscriber Status:</label> </td>
                         <td><span>{item.circuitSwitch.subscriberStatus? 'IMSI Active' : 'IMSI Inactive'}</span></td>
-                        <td class="textAlignRight"><label className="fontBold">3G APN List:</label></td>
+                        <td className="textAlignRight"><label className="fontBold">3G APN List:</label></td>
                         <td>
                         {item.circuitSwitch.threeGApnDataList.map((threeGApnList, index) => {
                         return(
@@ -122,7 +102,7 @@ export default class CircuitSwitch extends React.Component {
                         )
                         })}
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">4G APN List:</label>
+                        <td className="textAlignRight"><label className="fontBold">4G APN List:</label>
                         </td>
                         <td>
                         {item.circuitSwitch.fourGApnDataList.map((fourGApnList, index) => {
@@ -134,56 +114,56 @@ export default class CircuitSwitch extends React.Component {
                         </tr>
 
                         <tr>
-                        <td class="textAlignRight"><label className="fontBold">VLR Number:</label>
+                        <td className="textAlignRight"><label className="fontBold">VLR Number:</label>
                         </td>
                         <td><span>{item.circuitSwitch.vlrNumber}</span>
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">SGSN Number:</label>
+                        <td className="textAlignRight"><label className="fontBold">SGSN Number:</label>
                         </td>
                         <td> <span>{item.circuitSwitch.sgsnNumber}</span>
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">MME ID:</label>
+                        <td className="textAlignRight"><label className="fontBold">MME ID:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.mmeId}</span>
                         </td>
                         </tr>
 
                         <tr>
-                        <td class="textAlignRight"><label className="fontBold">O/G Call Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">O/G Call Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.outgoingCallStatus}</span>
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">I/C Call Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">I/C Call Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.incomingCallStatus}</span>
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">MO-SMS Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">MO-SMS Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.moSmsStatus}</span>
                         </td>
                         </tr>
 
                         <tr>
-                        <td class="textAlignRight"><label className="fontBold">MT-SMS Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">MT-SMS Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.mtSmsStatus}</span>
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">3G DATA - Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">3G DATA - Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.threeGDataStatus}</span>
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">3G DATA - ROAM:</label>
+                        <td className="textAlignRight"><label className="fontBold">3G DATA - ROAM:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.threeGDataRoamStatus}</span>
                         </td>
                         </tr>
 
                         <tr>
-                        <td class="textAlignRight"><label className="fontBold">4G DATA - Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">4G DATA - Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.fourGDataStatus}</span>
                         </td>
-                        <td class="textAlignRight"><label className="fontBold">Prepaid/Camel Data:</label>
+                        <td className="textAlignRight"><label className="fontBold">Prepaid/Camel Data:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.camelSubscriptionStatus}</span>
                         </td>

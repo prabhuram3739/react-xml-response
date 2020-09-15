@@ -1,27 +1,8 @@
 import React  from 'react';
-import axios from 'axios';
-import { authEndpoint } from '../environment';
 
 export default class PacketSwitch extends React.Component {
-    //const [{user}, dispatch] = useDataLayerValue();
-    componentDidMount() {
-        var self = this;
-        this.setState({ loading: true }, () => {
-        axios
-        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
-            "Content-Type": "application/xml; charset=utf-8"
-         })
-        .then(function(response) {
-            self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
-        })
-        .catch(function(error) {
-            console.log(error);
-        });
-    });
-    }
-
     render() {
-       const { data, count, loading } = this.state || {};
+       const { data, count, loading } = this.context || {};
        const finalData = [];
        finalData.push(data);
        if((count === 0) || (count === undefined)) {
@@ -145,59 +126,59 @@ export default class PacketSwitch extends React.Component {
                         <table className="table table-striped table-border" key={index}>
                             <tbody>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">APN Requested:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">APN Requested:</label></td>
                                 <td><span>{item.packetSwitch.apnRequested}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Virtual APN:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Virtual APN:</label></td>
                                 <td><span>{item.packetSwitch.virtualApn}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">PDN Type:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">PDN Type:</label></td>
                                 <td><span>{item.packetSwitch.pdnType}</span></td>
                             </tr>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">UL APN AMBR:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">UL APN AMBR:</label></td>
                                 <td><span>{item.packetSwitch.ulApnAmbr}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">DL APN AMBR:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">DL APN AMBR:</label></td>
                                 <td><span>{item.packetSwitch.dlApnAmbr}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">UE IPV4 Address:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">UE IPV4 Address:</label></td>
                                 <td><span>{item.packetSwitch.ueIpv4Address}</span></td>
                             </tr>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">S8 DL Bytes:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">S8 DL Bytes:</label></td>
                                 <td><span>{item.packetSwitch.s8DlBytes}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">SGI UL Bytes:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">SGI UL Bytes:</label></td>
                                 <td><span>{item.packetSwitch.sgiUlBytes}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Total Data Volume Used (MB):</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Total Data Volume Used (MB):</label></td>
                                 <td><span>{item.packetSwitch.totalDataVolumeUsed}</span></td>
                             </tr>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">Primary DNS IPV4 Address:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Primary DNS IPV4 Address:</label></td>
                                 <td><span>{item.packetSwitch.primaryDnsIpv4Address}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Secondary DNS IPv4 address:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Secondary DNS IPv4 address:</label></td>
                                 <td><span>{item.packetSwitch.secondaryDnsIpv4Address}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Primary DNS IPv6 address:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Primary DNS IPv6 address:</label></td>
                                 <td><span>{item.packetSwitch.primaryDnsIpv6Address}</span></td>
                             </tr>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">Secondary DNS IPv6 address:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Secondary DNS IPv6 address:</label></td>
                                 <td><span>{item.packetSwitch.secondaryDnsIpv6Address}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">S8 PGW Data addr:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">S8 PGW Data addr:</label></td>
                                 <td><span>{item.packetSwitch.s8PgwDataAddr}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">S8 SGW V4 Ctl Adr:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">S8 SGW V4 Ctl Adr:</label></td>
                                 <td><span>{item.packetSwitch.s8SgwV4CtlAdr}</span></td>
                             </tr>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">S8 SGW Data Addr:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">S8 SGW Data Addr:</label></td>
                                 <td><span>{item.packetSwitch.s8SgwDataAddr}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Gx peer profile in use:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Gx peer profile in use:</label></td>
                                 <td><span>{item.packetSwitch.gxPeerProfileInUse}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Gx failover count:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Gx failover count:</label></td>
                                 <td><span>{item.packetSwitch.gxFailoverCount}</span></td>
                             </tr>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">PCRF hostname:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">PCRF hostname:</label></td>
                                 <td><span>{item.packetSwitch.pcrfHostname}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">PCRF address:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">PCRF address:</label></td>
                                 <td><span>{item.packetSwitch.pcrfAddress}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">PCRF destination host:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">PCRF destination host:</label></td>
                                 <td><span>{item.packetSwitch.pcrfDestinationHost}</span></td>
                             </tr>
                             
@@ -205,11 +186,11 @@ export default class PacketSwitch extends React.Component {
                             return(
                             <>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">Rule Base Name:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Rule Base Name:</label></td>
                                 <td><span>{item.packetSwitch.ruleData.ruleBaseName}</span></td>
-                            <td key={index} class="textAlignRight"><label className="fontBold">SDF rule name:</label></td>
+                            <td key={index} className="textAlignRight"><label className="fontBold">SDF rule name:</label></td>
                             <td><span>{rule.sdfRuleName}</span></td>
-                            <td class="textAlignRight"><label className="fontBold">SDF precedence:</label></td>
+                            <td className="textAlignRight"><label className="fontBold">SDF precedence:</label></td>
                             <td><span>{rule.precedence}</span></td>
                             </tr>
                             </>
@@ -217,19 +198,19 @@ export default class PacketSwitch extends React.Component {
                                 }
                             
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">DCCA Profile:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">DCCA Profile:</label></td>
                                 <td><span>{item.packetSwitch.dccaProfile}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Peer-profile In-use:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Peer-profile In-use:</label></td>
                                 <td><span>{item.packetSwitch.peerProfileInUse}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Failover Count:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Failover Count:</label></td>
                                 <td><span>{item.packetSwitch.failoverCount}</span></td>
                             </tr>
                             <tr>
-                                <td class="textAlignRight"><label className="fontBold">OCS Address:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">OCS Address:</label></td>
                                 <td><span>{item.packetSwitch.ocsAddress}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">OCS Destination Realm:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">OCS Destination Realm:</label></td>
                                 <td><span>{item.packetSwitch.ocsDestinationRealm}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">OCS Destination Host:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">OCS Destination Host:</label></td>
                                 <td><span>{item.packetSwitch.ocsDestinationHost}</span></td>
                             </tr>
 
@@ -237,11 +218,11 @@ export default class PacketSwitch extends React.Component {
                             return(
                             <>
                             <tr key={index}>
-                                <td class="textAlignRight"><label className="fontBold">Rating Group:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Rating Group:</label></td>
                                 <td><span>{rating.ratingGroup}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Used Total Octets:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Used Total Octets:</label></td>
                                 <td><span>{rating.usedTotalOctets}</span></td>
-                                <td class="textAlignRight"><label className="fontBold">Diameter Code:</label></td>
+                                <td className="textAlignRight"><label className="fontBold">Diameter Code:</label></td>
                                 <td><span>{rating.diameterCode}</span></td>
                             </tr>
                             

@@ -3,27 +3,12 @@ import "./Searchview.css";
 // get our fontawesome imports
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useDataLayerValue } from "../DataLayer";
-import axios from 'axios';
 import CircuitSwitch from "../circuitSwitch/CircuitSwitch";
 import PacketSwitch from "../packetSwitch/PacketSwitch";
 import GeneralInfo from '../generalInfo/GeneralInfo';
+import DataLayerContext, { DataProvider } from '../DataLayerContext';
 
 function Searchview() {
-    const [{ disp_data }, dispatch] = useDataLayerValue();
-
-    useEffect(() => {
-        axios
-        .get("http://localhost:8080/api/diagnosticData/724023900000009", {
-            "Content-Type": "application/xml; charset=utf-8"
-         }).then((response)=> {
-            dispatch({
-                type: "DISP_DATA",
-                data: response.data,
-            });
-        });
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
@@ -47,7 +32,7 @@ function Searchview() {
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
         </div> 
         </nav>
-
+        <DataProvider>
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <GeneralInfo />
@@ -58,7 +43,8 @@ function Searchview() {
         <div className = "tab-pane fade" id = "nav-profile" role = "tabpanel" aria-labelledby = "nav-profile-tab" >
         <CircuitSwitch /> 
         </div> 
-        </div> 
+        </div>
+        </DataProvider> 
         </div> 
         </div>
         </div>
@@ -68,5 +54,7 @@ function Searchview() {
     </div>
     );
 }
-
+GeneralInfo.contextType = DataLayerContext;
+PacketSwitch.contextType = DataLayerContext;
+CircuitSwitch.contextType = DataLayerContext;
 export default Searchview;

@@ -1,14 +1,9 @@
 export const initialState = {
-    user: null,
-    playlists: [],
-    playing: false,
-    item: null,
-    //Remove after finished developing
-    //token: 'BQBVXN4xx42NePtdg-90NPkU4qaAs4Z3LwGioTd3pHIV4KDePeZViXJTgz4L9l74twrEDzvopeHMIpMzHo0tt5s098znahfuAVPqHkKZTaaPPvDhn01QE9JEzUJOKLNcxHHmbDeVDiCvktGH1FvgCRWEj86X'
+    data: []
 };
 
 //Reducer -> Listens to the data layer
-const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
     //Dispatch the action and listens to the action
     console.log(action.data);
     //Action -> type, [payload]
@@ -24,4 +19,5 @@ const reducer = (state, action) => {
     }
 }
 
+export const getData = state => state.data;
 export default reducer;
