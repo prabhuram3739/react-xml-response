@@ -7,7 +7,7 @@ export default class PacketSwitch extends React.Component {
        finalData.push(data);
        if((count === 0) || (count === undefined)) {
         return (
-        <span >Sorry, No Packet Switch Information available</span>
+            <span className="ml-4">Sorry, No Packet Switch Information available</span>
         )
        }
        return (
