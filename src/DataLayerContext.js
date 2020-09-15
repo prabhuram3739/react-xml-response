@@ -1,9 +1,4 @@
-import React, {
-    createContext,
-    useContext,
-    useReducer,
-    Component
-} from "react";
+import React, { createContext, Component } from "react";
 import axios from 'axios';
 
 const DataLayerContext = createContext();

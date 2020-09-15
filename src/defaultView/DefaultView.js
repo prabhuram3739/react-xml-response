@@ -1,6 +1,6 @@
 import React  from 'react';
 
-export default class AdminDefaultView extends React.Component {
+export default class DefaultView extends React.Component {
     render() {
       const { data, count, loading } = this.context || {};
       const finalData = [];
@@ -434,7 +434,7 @@ export default class AdminDefaultView extends React.Component {
                         </>
                     ) 
                   }
-                }) 
+                })
             }
         </div>
     );

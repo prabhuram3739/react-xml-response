@@ -18,7 +18,8 @@ export default class GeneralInfo extends React.Component {
                 
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
-                finalData.map((item, index) => {
+                finalData
+                .map((item, index) => {
                     if(item.userType === "admin") {
                     return (
                         <>

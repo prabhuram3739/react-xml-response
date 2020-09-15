@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Searchview.css";
 // get our fontawesome imports
 import { faSearch } from "@fortawesome/free-solid-svg-icons";

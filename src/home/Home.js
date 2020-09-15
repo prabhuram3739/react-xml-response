@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Home.css";
 // get our fontawesome imports
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DataLayerContext, { DataProvider } from '../DataLayerContext';
 import { Link } from 'react-router-dom';
-import AdminDefaultView from "../adminDefault/AdminDefaultView";
+import DefaultView from "../defaultView/DefaultView";
 
 function Home() {
     return (
@@ -34,7 +34,7 @@ function Home() {
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <DataProvider>
         <div className = "row" >
-        <AdminDefaultView />
+        <DefaultView />
         </div>
         </DataProvider> 
         </div> 
@@ -48,5 +48,5 @@ function Home() {
     </div>
     );
 }
-AdminDefaultView.contextType = DataLayerContext;
+DefaultView.contextType = DataLayerContext;
 export default Home;
