@@ -21,7 +21,7 @@ export default class DefaultView extends React.Component {
                 finalData.map((item, index) => {
                   if(item.userType === "admin") {
                     return (
-                        <>
+                      <React.Fragment key={item.id}>
                         {/*<div key={item.id}>
                         <div className="row">
                         <div className="col-12">
@@ -431,7 +431,7 @@ export default class DefaultView extends React.Component {
 
 
 
-                        </>
+</React.Fragment>
                     ) 
                   } else {
                     return(false);
