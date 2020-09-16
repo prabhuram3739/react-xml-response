@@ -433,7 +433,9 @@ export default class DefaultView extends React.Component {
 
                         </>
                     ) 
-                  }
+                  } else {
+                    return(false);
+                }
                 })
             }
         </div>

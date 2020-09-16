@@ -14,14 +14,12 @@ export default class PacketSwitch extends React.Component {
 
         <div className="container-fluid noPadding fontChange">
             {
-                //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
-                
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
                     if(item.userType === "admin") {
                     return (
-                        <>
+                        <React.Fragment key={item.id}>
                         {/*<div key={item.id}>
                         <div className="row">
                         <div className="col-3">
@@ -184,8 +182,7 @@ export default class PacketSwitch extends React.Component {
                             
                                 {item.packetSwitch.ruleData.sDFRulesList.map((rule, index) => {
                             return(
-                            <>
-                            <tr>
+                            <tr key={index}>
                                 <td className="textAlignRight"><label className="fontBold">Rule Base Name:</label></td>
                                 <td><span>{item.packetSwitch.ruleData.ruleBaseName}</span></td>
                             <td key={index} className="textAlignRight"><label className="fontBold">SDF rule name:</label></td>
@@ -193,7 +190,6 @@ export default class PacketSwitch extends React.Component {
                             <td className="textAlignRight"><label className="fontBold">SDF precedence:</label></td>
                             <td><span>{rule.precedence}</span></td>
                             </tr>
-                            </>
                             )})
                                 }
                             
@@ -216,7 +212,6 @@ export default class PacketSwitch extends React.Component {
 
                             {item.packetSwitch.ratingGroupDataList.map((rating, index) => {
                             return(
-                            <>
                             <tr key={index}>
                                 <td className="textAlignRight"><label className="fontBold">Rating Group:</label></td>
                                 <td><span>{rating.ratingGroup}</span></td>
@@ -225,15 +220,15 @@ export default class PacketSwitch extends React.Component {
                                 <td className="textAlignRight"><label className="fontBold">Diameter Code:</label></td>
                                 <td><span>{rating.diameterCode}</span></td>
                             </tr>
-                            
-                            </>
                             )
                             })}
                         </tbody>
                         </table>
                         </div>
-                        </>
+                        </React.Fragment>
                     ) 
+                        } else {
+                            return(false);
                         }
                 }) 
             }

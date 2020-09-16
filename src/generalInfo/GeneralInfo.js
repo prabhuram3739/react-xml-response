@@ -22,32 +22,8 @@ export default class GeneralInfo extends React.Component {
                 .map((item, index) => {
                     if(item.userType === "admin") {
                     return (
-                        <>
-
-                        {/*<div key={index}>
-                        <div className="row">
-                        <div className="col-3">
-                        <label className="fontBold">IMSI:</label> <span>{item.packetSwitch.imsi}</span></div>
-                        <div className="col-3">
-                        <label className="fontBold">MSISDN:</label> <span>{item.packetSwitch.msisdn}</span></div>
-                        <div className="col-3">
-                        <label className="fontBold">IMEI:</label> <span>{item.packetSwitch.imei}</span></div>
-                        <div className="col-3">
-                        <label className="fontBold">Up Time:</label> <span>{item.packetSwitch.upTime}</span></div>
-                        </div>
-                        <div className="row">
-                        <div className="col-3">
-                        <label className="fontBold">RAT Type:</label> <span>{item.packetSwitch.ratType}</span></div>
-                        <div className="col-3">
-                        <label className="fontBold">Network MCC/Network MNC:</label> <span>{item.packetSwitch.networkMNC}</span></div>
-                        <div className="col-3">
-                        <label className="fontBold">Cell ID:</label> <span>{item.packetSwitch.cellID}</span></div>
-                        <div className="col-3">
-                        <label className="fontBold">Number of PDN Contexts:</label> <span>{item.packetSwitch.numbercontexts}</span></div>
-                        </div>
-                        </div>*/}
-
-                        <div className="table-responsive" key={index}>
+                        <React.Fragment key={item.id}>
+                        <div className="table-responsive">
                         <table className="table table-striped table-border" >
                         <tbody>
                         <tr>
@@ -77,8 +53,11 @@ export default class GeneralInfo extends React.Component {
                         </tbody>
                         </table>
                         </div>
-                        </>
+                        </React.Fragment>
                     )
+                    
+                    } else {
+                        return(false);
                     }
                 }) 
             }

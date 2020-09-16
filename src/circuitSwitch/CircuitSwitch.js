@@ -21,7 +21,7 @@ export default class CircuitSwitch extends React.Component {
                 finalData.map((item, index) => {
                     if(item.userType === "admin") {
                     return (
-                        <>
+                        <React.Fragment key={item.id}>
                         {/*<div key={item.id}>
                         <div className="row">
                         <div className="col-4">
@@ -173,8 +173,10 @@ export default class CircuitSwitch extends React.Component {
                         </tbody>
                         </table>
                         </div>
-                        </>
+                        </React.Fragment>
                     )
+                    } else {
+                        return(false);
                     }
                 }) 
             }
