@@ -12,7 +12,7 @@ export default class DefaultView extends React.Component {
        }
        return (
 
-        <div className="container-fluid leftPadding fontChange">
+        <div className="container-fluid fontChange">
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 
