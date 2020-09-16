@@ -5,7 +5,6 @@ export default class GeneralInfo extends React.Component {
        const { data, count, loading } = this.context || {};
        const finalData = [];
        finalData.push(data);
-       console.log(loading);
        if((count === 0) || (count === undefined)) {
         return (
             <span className="ml-4">Sorry, No General Information available</span>
