@@ -6,7 +6,7 @@ export default class DataModifications extends React.Component {
         <div className="container-fluid noPadding fontChange">
             {
                 <React.Fragment>
-                                            <div className="accordion pt-3" id="accordionExample">
+                                            <div className="accordion pt-0" id="accordionExample">
                         
   <div className="card">
     <div className="card-header" id="headingOne">
