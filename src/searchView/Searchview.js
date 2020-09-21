@@ -31,8 +31,46 @@ function Searchview() {
         <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
         <a className = "nav-item nav-link" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
-        <a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modificiations </a> 
+        <a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modifications </a>  
         </div> 
+        <ul className="nav nav-tabs dropleft pull-right">
+        <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-three-dots-vertical" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
+            </a>
+            <div className="dropdown-menu">
+            <a className="dropdown-item" href="test">
+            <button className="btn btn-primary btn-block" type="button">API Enable/Disable</button>
+            </a>
+            <div className="dropdown-divider"></div>
+            <a className="dropdown-item" href="test">
+            <button className="btn btn-primary btn-block" type="button">GI DNS - Add/Modify</button>
+            </a>
+            <div className="dropdown-divider"></div>
+            <a className="dropdown-item" href="test">
+            <button className="btn btn-primary btn-block" type="button">GY Inline</button>
+            </a>
+            <div className="dropdown-divider"></div>
+            <a className="dropdown-item" href="test">
+            <button className="btn btn-primary btn-block" type="button">GY Bypass</button>
+            </a>
+            <div className="dropdown-divider"></div>
+            <a className="dropdown-item" href="test">
+            <button className="btn btn-primary btn-block" type="button">GX Inline</button>
+            </a>
+            <div className="dropdown-divider"></div>
+            <a className="dropdown-item" href="test">
+            <button className="btn btn-primary btn-block" type="button">GX Bypass</button>
+            </a>
+            <div className="dropdown-divider"></div>
+            <a className="dropdown-item" href="test">
+            <button className="btn btn-primary btn-block" type="button">GA Add/Modify</button>
+            </a>
+            </div>
+        </li>
+        </ul>
         </nav>
         <DataProvider>
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
@@ -47,7 +85,7 @@ function Searchview() {
         </div> 
         <div className = "tab-pane fade" id = "nav-data-mod" role = "tabpanel" aria-labelledby = "nav-data-mod-tab" >
         <DataModifications />
-        </div> 
+        </div>
         </div>
         </DataProvider> 
         </div> 

@@ -25,11 +25,11 @@ export default class DataModifications extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-6">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">API Name</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" class="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
@@ -58,32 +58,32 @@ export default class DataModifications extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-4">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">API Name</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" class="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
-        </div>
-        </div>
-        <div className="col-4">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Primary IP</span>
-        </div>
-        <input type="text" class="form-control" placeholder="Primary IP" aria-label="primaryIP" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-4">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Secondary IP</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Primary IP</span>
         </div>
-        <input type="text" class="form-control" placeholder="Secondary IP" aria-label="secondaryIP" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="Primary IP" aria-label="primaryIP" aria-describedby="basic-addon1" />
+        </div>
+        </div>
+        <div className="col-4">
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Secondary IP</span>
+        </div>
+        <input type="text" className="form-control" placeholder="Secondary IP" aria-label="secondaryIP" aria-describedby="basic-addon1" />
         </div>
         </div>
         </div>
 
-        <div class="row pull-right mb-3">
+        <div className="row pull-right mb-3">
         <div className="col-6">
         <button className="btn btn-primary pull-right" type="button">Add</button>
         </div>
@@ -110,40 +110,40 @@ export default class DataModifications extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">API Name</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" class="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
-        </div>
-        </div>
-        <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Home</span>
-        </div>
-        <input type="text" class="form-control" placeholder="Home" aria-label="home" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Visiting</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Home</span>
         </div>
-        <input type="text" class="form-control" placeholder="Visiting" aria-label="visiting" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="Home" aria-label="home" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Roaming</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Visiting</span>
         </div>
-        <input type="text" class="form-control" placeholder="Roaming" aria-label="roaming" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="Visiting" aria-label="visiting" aria-describedby="basic-addon1" />
+        </div>
+        </div>
+        <div className="col-3">
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Roaming</span>
+        </div>
+        <input type="text" className="form-control" placeholder="Roaming" aria-label="roaming" aria-describedby="basic-addon1" />
         </div>
         </div>
         </div>
 
-        <div class="row pull-right mb-3">
+        <div className="row pull-right mb-3">
         <div className="col-4">
         <button className="btn btn-primary pull-right" type="button">Home</button>
         </div>
@@ -173,11 +173,11 @@ export default class DataModifications extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">API Name</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" class="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
@@ -209,50 +209,50 @@ export default class DataModifications extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">API Name</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" class="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
-        </div>
-        </div>
-        <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">GX Profile</span>
-        </div>
-        <input type="text" class="form-control" placeholder="GX Profile" aria-label="gxProfile" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Primary Diameter Peer</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">GX Profile</span>
         </div>
-        <input type="text" class="form-control" placeholder="Primary Diameter Peer" aria-label="primaryDiameterPeer" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="GX Profile" aria-label="gxProfile" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Secondary Diameter Peer</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Primary Diameter Peer</span>
         </div>
-        <input type="text" class="form-control" placeholder="Secondary Diameter Peer" aria-label="secondaryDiameterPeer" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="Primary Diameter Peer" aria-label="primaryDiameterPeer" aria-describedby="basic-addon1" />
+        </div>
+        </div>
+        <div className="col-3">
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Secondary Diameter Peer</span>
+        </div>
+        <input type="text" className="form-control" placeholder="Secondary Diameter Peer" aria-label="secondaryDiameterPeer" aria-describedby="basic-addon1" />
         </div>
         </div>
         </div>
 
-        <div class="row">
+        <div className="row">
         <div className="col-6">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Diameter Group Peer</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">Diameter Group Peer</span>
         </div>
-        <input type="text" class="form-control" placeholder="Diameter Group Peer" aria-label="diameterGroupPeer" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="Diameter Group Peer" aria-label="diameterGroupPeer" aria-describedby="basic-addon1" />
         </div>
         </div>
         </div>
-        <div class="row mb-3">
+        <div className="row mb-3">
         <div className="col-2">
         <button className="btn btn-primary btn-block" type="button">API Shutdown</button>
         </div>
@@ -291,16 +291,16 @@ export default class DataModifications extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-12">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">API Name</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" class="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
         </div>
 
-        <div class="row mb-3">
+        <div className="row mb-3">
         <div className="col-2">
         <button className="btn btn-primary btn-block" type="button">API Shutdown</button>
         </div>
@@ -339,19 +339,19 @@ export default class DataModifications extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-4">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">API Name</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" class="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-4">
-        <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">GA Profile</span>
+        <div className="input-group mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">GA Profile</span>
         </div>
-        <input type="text" class="form-control" placeholder="GA Profile" aria-label="gaProfile" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="GA Profile" aria-label="gaProfile" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-4">
