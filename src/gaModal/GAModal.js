@@ -5,7 +5,7 @@ function GAModal(props) {
     return (
       <Modal
         {...props}
-        size="lg"
+        size="xl"
         aria-labelledby="contained-Modal-title-vcenter"
         centered
       >

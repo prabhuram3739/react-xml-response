@@ -17,7 +17,13 @@ import GXBypassModal from '../gxBypassModal/GXBypassModal';
 import GAModal from '../gaModal/GAModal';
 
 function Searchview() {
-    const [ModalShow, setModalShow] = React.useState(false);
+    const [ModalOneShow, setModalOneShow] = React.useState(false);
+    const [ModalTwoShow, setModalTwoShow] = React.useState(false);
+    const [ModalThreeShow, setModalThreeShow] = React.useState(false);
+    const [ModalFourthShow, setModalFourthShow] = React.useState(false);
+    const [ModalFifthShow, setModalFifthShow] = React.useState(false);
+    const [ModalSixthShow, setModalSixthShow] = React.useState(false);
+    const [ModalSeventhShow, setModalSeventhShow] = React.useState(false);
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
@@ -50,48 +56,48 @@ function Searchview() {
             </a>
             <div className="dropdown-menu">
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>API Enable/Disable</button>
-                <ApiEnableDisableModal show={ModalShow} onHide={() => setModalShow(false)} />
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalOneShow(true)}>API Enable/Disable</button>
+                <ApiEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />
             </span>
             <div className="dropdown-divider"></div>
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GI DNS - Add/Modify</button>
-                <GIDNSModal show={ModalShow} onHide={() => setModalShow(false)} />
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalTwoShow(true)}>GI DNS - Add/Modify</button>
+                <GIDNSModal show={ModalTwoShow} onHide={() => setModalTwoShow(false)} />
             </span>
             
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GY Inline</button>
-                <GYInlineModal show={ModalShow} onHide={() => setModalShow(false)} />
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalThreeShow(true)}>GY Inline</button>
+                <GYInlineModal show={ModalThreeShow} onHide={() => setModalThreeShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
  
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GY Bypass</button>
-                <GYBypassModal show={ModalShow} onHide={() => setModalShow(false)} />
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalFourthShow(true)}>GY Bypass</button>
+                <GYBypassModal show={ModalFourthShow} onHide={() => setModalFourthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GX Inline</button>
-                <GXInlineModal show={ModalShow} onHide={() => setModalShow(false)} />
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalFifthShow(true)}>GX Inline</button>
+                <GXInlineModal show={ModalFifthShow} onHide={() => setModalFifthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GX Bypass</button>
-                <GXBypassModal show={ModalShow} onHide={() => setModalShow(false)} />
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSixthShow(true)}>GX Bypass</button>
+                <GXBypassModal show={ModalSixthShow} onHide={() => setModalSixthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GA - Add/Modify</button>
-                <GAModal show={ModalShow} onHide={() => setModalShow(false)} />
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>GA - Add/Modify</button>
+                <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
             </span>
 
             </div>
