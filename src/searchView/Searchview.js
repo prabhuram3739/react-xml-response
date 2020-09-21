@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CircuitSwitch from "../circuitSwitch/CircuitSwitch";
 import PacketSwitch from "../packetSwitch/PacketSwitch";
 import GeneralInfo from '../generalInfo/GeneralInfo';
+import DataModifications from '../dataModifications/DataModifications';
 import DataLayerContext, { DataProvider } from '../DataLayerContext';
 
 function Searchview() {
@@ -30,6 +31,7 @@ function Searchview() {
         <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
         <a className = "nav-item nav-link" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
+        <a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modificiations </a> 
         </div> 
         </nav>
         <DataProvider>
@@ -42,6 +44,9 @@ function Searchview() {
         </div> 
         <div className = "tab-pane fade" id = "nav-profile" role = "tabpanel" aria-labelledby = "nav-profile-tab" >
         <CircuitSwitch /> 
+        </div> 
+        <div className = "tab-pane fade" id = "nav-data-mod" role = "tabpanel" aria-labelledby = "nav-data-mod-tab" >
+        <DataModifications />
         </div> 
         </div>
         </DataProvider> 
