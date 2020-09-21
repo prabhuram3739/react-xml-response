@@ -8,8 +8,16 @@ import PacketSwitch from "../packetSwitch/PacketSwitch";
 import GeneralInfo from '../generalInfo/GeneralInfo';
 import DataModifications from '../dataModifications/DataModifications';
 import DataLayerContext, { DataProvider } from '../DataLayerContext';
+import ApiEnableDisableModal from '../apiEnableDisableModal/ApiEnableDisableModal';
+import GIDNSModal from '../giDNSModal/GIDNSModal';
+import GYInlineModal from '../gyInlineModal/GYInlineModal';
+import GYBypassModal from '../gyBypassModal/GYBypassModal';
+import GXInlineModal from '../gxInlineModal/GXInlineModal';
+import GXBypassModal from '../gxBypassModal/GXBypassModal';
+import GAModal from '../gaModal/GAModal';
 
 function Searchview() {
+    const [ModalShow, setModalShow] = React.useState(false);
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
@@ -41,33 +49,51 @@ function Searchview() {
             </svg>
             </a>
             <div className="dropdown-menu">
-            <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">API Enable/Disable</button>
-            </a>
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>API Enable/Disable</button>
+                <ApiEnableDisableModal show={ModalShow} onHide={() => setModalShow(false)} />
+            </span>
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">GI DNS - Add/Modify</button>
-            </a>
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GI DNS - Add/Modify</button>
+                <GIDNSModal show={ModalShow} onHide={() => setModalShow(false)} />
+            </span>
+            
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">GY Inline</button>
-            </a>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GY Inline</button>
+                <GYInlineModal show={ModalShow} onHide={() => setModalShow(false)} />
+            </span>
+
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">GY Bypass</button>
-            </a>
+ 
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GY Bypass</button>
+                <GYBypassModal show={ModalShow} onHide={() => setModalShow(false)} />
+            </span>
+
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">GX Inline</button>
-            </a>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GX Inline</button>
+                <GXInlineModal show={ModalShow} onHide={() => setModalShow(false)} />
+            </span>
+
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">GX Bypass</button>
-            </a>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GX Bypass</button>
+                <GXBypassModal show={ModalShow} onHide={() => setModalShow(false)} />
+            </span>
+
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">GA - Add/Modify</button>
-            </a>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalShow(true)}>GA - Add/Modify</button>
+                <GAModal show={ModalShow} onHide={() => setModalShow(false)} />
+            </span>
+
             </div>
         </li>
         </ul>
