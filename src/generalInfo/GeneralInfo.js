@@ -2,9 +2,11 @@ import React from 'react';
 
 export default class GeneralInfo extends React.Component {
     render() {
+        // Get the data from the context api to manipulate the data for the General Information page
        const { data, count, loading } = this.context || {};
        const finalData = [];
        finalData.push(data);
+       // Check if the count is zero or undefined to display the no records message
        if((count === 0) || (count === undefined)) {
         return (
             <span className="ml-4">Sorry, No General Information available</span>
@@ -15,7 +17,7 @@ export default class GeneralInfo extends React.Component {
         <div className="container-fluid noPadding fontChange">
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
-                
+                // Display loader till the response appears and check for the validity of the data If exists
                 loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData
