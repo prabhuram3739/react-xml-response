@@ -66,7 +66,7 @@ function Searchview() {
             </a>
             <div className="dropdown-divider"></div>
             <a className="dropdown-item" href="test">
-            <button className="btn btn-primary btn-block" type="button">GA Add/Modify</button>
+            <button className="btn btn-primary btn-block" type="button">GA - Add/Modify</button>
             </a>
             </div>
         </li>
