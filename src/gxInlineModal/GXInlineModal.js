@@ -15,13 +15,14 @@ function GXInlineModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+            <form>
         <div className="row">
         <div className="col-6">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" required />
         </div>
         </div>
         <div className="col-6">
@@ -29,7 +30,7 @@ function GXInlineModal(props) {
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">GX Profile</span>
         </div>
-        <input type="text" className="form-control" placeholder="GX Profile" aria-label="gxProfile" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="GX Profile" aria-label="gxProfile" aria-describedby="basic-addon1" required />
         </div>
         </div>
         </div>
@@ -63,6 +64,16 @@ function GXInlineModal(props) {
         </div>
         </div>
         </div>
+
+        <div className="row pull-right">
+                <div className="col-6">
+                <button className="btn btn-primary btn-block" type="submit">Submit</button>
+                </div>
+                <div className="col-6">
+                <button className="btn btn-primary btn-block" type="button" onClick={props.onHide}>Cancel</button>
+                </div>
+            </div>
+        </form>
         {/*<div className="row mb-3">
         <div className="col-2">
         <button className="btn btn-primary btn-block" type="button">API Shutdown</button>
@@ -85,14 +96,7 @@ function GXInlineModal(props) {
         </div>*/}
         </Modal.Body>
         <Modal.Footer>
-            <div className="row pull-right">
-                <div className="col-6">
-                <button className="btn btn-primary btn-block" type="button">Submit</button>
-                </div>
-                <div className="col-6">
-                <button className="btn btn-primary btn-block" type="button" onClick={props.onHide}>Cancel</button>
-                </div>
-            </div>
+            
         </Modal.Footer>
       </Modal>
     );

@@ -15,26 +15,30 @@ function GXBypassModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+            <form>
         <div className="row">
         <div className="col-12">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">API Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" required />
         </div>
         </div>
         </div>
-        </Modal.Body>
-        <Modal.Footer>
-        <div className="row mb-3">
+
+        <div className="row pull-right mb-3">
         <div className="col-6">
-        <button className="btn btn-primary btn-block" type="button">Submit</button>
+        <button className="btn btn-primary btn-block" type="submit">Submit</button>
         </div>
         <div className="col-6">
         <button className="btn btn-primary btn-block" type="button" onClick={props.onHide}>Cancel</button>
         </div>
         </div>
+        </form>
+        </Modal.Body>
+        <Modal.Footer>
+        
         </Modal.Footer>
       </Modal>
     );
