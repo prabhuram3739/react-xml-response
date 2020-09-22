@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CircuitSwitch from "../circuitSwitch/CircuitSwitch";
 import PacketSwitch from "../packetSwitch/PacketSwitch";
 import GeneralInfo from '../generalInfo/GeneralInfo';
-import DataModifications from '../dataModifications/DataModifications';
+//import DataModifications from '../dataModifications/DataModifications';
 import DataLayerContext, { DataProvider } from '../DataLayerContext';
-import ApiEnableDisableModal from '../apiEnableDisableModal/ApiEnableDisableModal';
+import ApnEnableDisableModal from '../apnEnableDisableModal/ApnEnableDisableModal';
 import GIDNSModal from '../giDNSModal/GIDNSModal';
 import GYInlineModal from '../gyInlineModal/GYInlineModal';
 import GYBypassModal from '../gyBypassModal/GYBypassModal';
@@ -45,7 +45,7 @@ function Searchview() {
         <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
         <a className = "nav-item nav-link" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
-        <a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modifications </a>  
+        {/*<a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modifications </a>  */}
         </div> 
         <ul className="nav nav-tabs dropleft pull-right">
         <li className="nav-item dropdown">
@@ -57,7 +57,7 @@ function Searchview() {
             <div className="dropdown-menu">
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block" type="button" onClick={() => setModalOneShow(true)}>API Enable/Disable</button>
-                <ApiEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />
+                <ApnEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />
             </span>
             <div className="dropdown-divider"></div>
             <span className="dropdown-item">
@@ -115,9 +115,9 @@ function Searchview() {
         <div className = "tab-pane fade" id = "nav-profile" role = "tabpanel" aria-labelledby = "nav-profile-tab" >
         <CircuitSwitch /> 
         </div> 
-        <div className = "tab-pane fade" id = "nav-data-mod" role = "tabpanel" aria-labelledby = "nav-data-mod-tab" >
+        {/*<div className = "tab-pane fade" id = "nav-data-mod" role = "tabpanel" aria-labelledby = "nav-data-mod-tab" >
         <DataModifications />
-        </div>
+    `   </div>*/}
         </div>
         </DataProvider> 
         </div> 

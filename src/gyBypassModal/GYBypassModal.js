@@ -16,7 +16,7 @@ function GYBypassModal(props) {
         </Modal.Header>
         <Modal.Body>
         <div className="row">
-        <div className="col-3">
+        <div className="col-12">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">API Name</span>
@@ -24,19 +24,17 @@ function GYBypassModal(props) {
         <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
         </div>
         </div>
-        <div className="col-3">
-        <button className="btn btn-primary pull-right" type="button">Home</button>
-        </div>
-        <div className="col-3">
-        <button className="btn btn-primary pull-right" type="button">Visiting</button>
-        </div>
-        <div className="col-3">
-        <button className="btn btn-primary pull-right" type="button">Roaming</button>
-        </div>
         </div>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={props.onHide}>Close</button>
+            <div className="row pull-right">
+            <div className="col-6">
+        <button className="btn btn-primary pull-right" type="button">Submit</button>
+        </div>
+        <div className="col-6">
+        <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Cancel</button>
+        </div>
+            </div>
         </Modal.Footer>
       </Modal>
     );

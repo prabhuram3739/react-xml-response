@@ -25,30 +25,16 @@ function GXBypassModal(props) {
         </div>
         </div>
         </div>
-
-        <div className="row mb-3">
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">API Shutdown</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">No Dynamic PCC</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">No Primary Diameter peer</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">No Secondary Diam. Peer</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">No Diameter Group Peer</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">API No Shutdown</button>
-        </div>
-        </div>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={props.onHide}>Close</button>
+        <div className="row mb-3">
+        <div className="col-6">
+        <button className="btn btn-primary btn-block" type="button">Submit</button>
+        </div>
+        <div className="col-6">
+        <button className="btn btn-primary btn-block" type="button" onClick={props.onHide}>Cancel</button>
+        </div>
+        </div>
         </Modal.Footer>
       </Modal>
     );

@@ -49,21 +49,16 @@ function GYInlineModal(props) {
         </div>
         </div>
         </div>
-
-        <div className="row pull-right mb-3">
-        <div className="col-4">
-        <button className="btn btn-primary pull-right" type="button">Home</button>
-        </div>
-        <div className="col-4">
-        <button className="btn btn-primary pull-right" type="button">Visiting</button>
-        </div>
-        <div className="col-4">
-        <button className="btn btn-primary pull-right" type="button">Roaming</button>
-        </div>
-        </div>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={props.onHide}>Close</button>
+        <div className="row pull-right mb-3">
+        <div className="col-6">
+        <button className="btn btn-primary pull-right" type="button">Submit</button>
+        </div>
+        <div className="col-6">
+        <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Cancel</button>
+        </div>
+        </div>
         </Modal.Footer>
       </Modal>
     );
