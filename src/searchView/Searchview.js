@@ -12,9 +12,9 @@ import ApnEnableDisableModal from '../apnEnableDisableModal/ApnEnableDisableModa
 import GIDNSModal from '../giDNSModal/GIDNSModal';
 import GYInlineModal from '../gyInlineModal/GYInlineModal';
 import GYBypassModal from '../gyBypassModal/GYBypassModal';
-import GXInlineModal from '../gxInlineModal/GXInlineModal';
-import GXBypassModal from '../gxBypassModal/GXBypassModal';
 import GAModal from '../gaModal/GAModal';
+import ApnShutdownInlineModal from '../apnShutdownInlineModal/APNShutdownInlineModal';
+import APNShutdownBypassModal from '../apnShutdownBypassModal/APNShutdownBypassModal';
 
 function Searchview() {
     const [ModalOneShow, setModalOneShow] = React.useState(false);
@@ -83,14 +83,14 @@ function Searchview() {
 
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block" type="button" onClick={() => setModalFifthShow(true)}>GX Inline</button>
-                <GXInlineModal show={ModalFifthShow} onHide={() => setModalFifthShow(false)} />
+                <ApnShutdownInlineModal show={ModalFifthShow} onHide={() => setModalFifthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSixthShow(true)}>GX Bypass</button>
-                <GXBypassModal show={ModalSixthShow} onHide={() => setModalSixthShow(false)} />
+                <APNShutdownBypassModal show={ModalSixthShow} onHide={() => setModalSixthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
