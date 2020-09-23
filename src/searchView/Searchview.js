@@ -48,7 +48,7 @@ function Searchview() {
         {/*<a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modifications </a>  */}
         </div> 
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
-        <li className="nav-item dropdown">
+        <li className="nav-item dropdown" style={{marginTop: -3}}>
             <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
             <svg viewBox="0 0 100 80" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <rect width="100" height="20"></rect>
@@ -56,7 +56,7 @@ function Searchview() {
                 <rect y="60" width="100" height="20"></rect>
             </svg>
             </a>
-            <div className="dropdown-menu">
+            <div className="dropdown-menu collapse">
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block" type="button" onClick={() => setModalOneShow(true)}>APN Enable/Disable</button>
                 <ApnEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />

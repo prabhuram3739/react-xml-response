@@ -170,6 +170,27 @@ td span {
     color: #FFF !important;
 }
 
+.dropdown-menu {
+    height:auto!important;
+    transition: transform 1.2s ease!important;
+}
+
+.dropdown-menu.collapse, .dropdown-menu.sliding {
+    transform: translate(0,-100%);
+}
+
+.dropdown-menu.collapse:not(.show) {
+    display:block;
+}
+
+.dropdown-menu.collapse.show {
+    transform: translate(0,0);
+    margin-top: 0px !important;
+}
+.nav-tabs .dropdown-menu {
+    margin-top: -3px !important;
+}
+
 header {
     background-color: #FFF;
     /*background-color: var(--content-background) !important;*/
