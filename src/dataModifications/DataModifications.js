@@ -27,9 +27,9 @@ export default class DataModifications extends React.Component {
         <div className="col-6">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
@@ -60,9 +60,9 @@ export default class DataModifications extends React.Component {
         <div className="col-4">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-4">
@@ -112,9 +112,9 @@ export default class DataModifications extends React.Component {
         <div className="col-3">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
@@ -175,9 +175,9 @@ export default class DataModifications extends React.Component {
         <div className="col-3">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
@@ -211,9 +211,9 @@ export default class DataModifications extends React.Component {
         <div className="col-3">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-3">
@@ -293,9 +293,9 @@ export default class DataModifications extends React.Component {
         <div className="col-12">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" />
         </div>
         </div>
         </div>
@@ -341,9 +341,9 @@ export default class DataModifications extends React.Component {
         <div className="col-4">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" />
         </div>
         </div>
         <div className="col-4">

@@ -56,7 +56,7 @@ function Searchview() {
             </a>
             <div className="dropdown-menu">
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalOneShow(true)}>API Enable/Disable</button>
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalOneShow(true)}>APN Enable/Disable</button>
                 <ApnEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />
             </span>
             <div className="dropdown-divider"></div>

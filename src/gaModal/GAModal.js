@@ -20,9 +20,9 @@ function GAModal(props) {
         <div className="col-6">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">API Name</span>
+            <span className="input-group-text" id="basic-addon1">APN Name*</span>
         </div>
-        <input type="text" className="form-control" placeholder="API Name" aria-label="apiName" aria-describedby="basic-addon1" required />
+        <input type="text" className="form-control" placeholder="APN Name" aria-label="apnName" aria-describedby="basic-addon1" required />
         </div>
         </div>
         <div className="col-6">
@@ -30,7 +30,7 @@ function GAModal(props) {
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">GA Profile</span>
         </div>
-        <input type="text" className="form-control" placeholder="GA Profile" aria-label="gaProfile" aria-describedby="basic-addon1" required />
+        <input type="text" className="form-control" placeholder="GA Profile" aria-label="gaProfile" aria-describedby="basic-addon1"  />
         </div>
         </div>
         </div>

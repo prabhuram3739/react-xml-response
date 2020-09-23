@@ -19,18 +19,18 @@ function ApnBypassShutdownModal(props) {
         <Modal.Body>
         <div className="row">
         <div className="col-12">
-            <p className="alert alert-danger">APN Shut require for this Action. existing sessions need to remove manually.</p>
+            <p className="alert alert-danger">APN Shut require for this Action. Existing sessions need to remove manually. Do you want to continue?.</p>
         </div>
         </div>
         </Modal.Body>
         <Modal.Footer>
           <div className="row pull-right">
           <div className="col-6">
-        <button className="btn btn-primary pull-right" type="button" onClick={() => setModalShow(true)}>Agree</button>
+        <button className="btn btn-primary pull-right" type="button" onClick={() => setModalShow(true)}>Continue</button>
         <GXBypassModal show={ModalShow} onHide={() => setModalShow(false)} />
         </div>
         <div className="col-6">
-        <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Disagree</button>
+        <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Cancel</button>
         </div>
           </div>
         </Modal.Footer>
