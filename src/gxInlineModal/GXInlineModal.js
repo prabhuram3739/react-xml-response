@@ -16,6 +16,11 @@ function GXInlineModal(props) {
         </Modal.Header>
         <Modal.Body>
             <form>
+            <div className="row">
+                    <div className="col-12">
+                        <p className="alert alert-danger">Either, Primary Diameter Peer or Secondary Diameter Peer or only Diameter Peer Group at least needs to be entered along with the APN Name</p>
+                    </div>
+                </div>
         <div className="row">
         <div className="col-6">
         <div className="input-group mb-3">
@@ -74,26 +79,6 @@ function GXInlineModal(props) {
                 </div>
             </div>
         </form>
-        {/*<div className="row mb-3">
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">API Shutdown</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">Dynamic PCC</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">Primary Diameter peer</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">Secondary Diameter Peer</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">Diameter Group Peer</button>
-        </div>
-        <div className="col-2">
-        <button className="btn btn-primary btn-block" type="button">API No Shutdown</button>
-        </div>
-        </div>*/}
         </Modal.Body>
         <Modal.Footer>
             

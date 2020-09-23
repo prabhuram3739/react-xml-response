@@ -47,11 +47,13 @@ function Searchview() {
         <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
         {/*<a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modifications </a>  */}
         </div> 
-        <ul className="nav nav-tabs dropleft pull-right">
+        <ul className="nav nav-bar nav-tabs dropleft pull-right">
         <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
-            <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-three-dots-vertical" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            <svg viewBox="0 0 100 80" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
             </svg>
             </a>
             <div className="dropdown-menu">
@@ -83,14 +85,14 @@ function Searchview() {
 
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block" type="button" onClick={() => setModalFifthShow(true)}>GX Inline</button>
-                <ApnShutdownInlineModal show={ModalFifthShow} onHide={() => setModalFifthShow(false)} />
+                <ApnShutdownInlineModal show={ModalFifthShow} onHide={(value) => setModalFifthShow(value)}  />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSixthShow(true)}>GX Bypass</button>
-                <APNShutdownBypassModal show={ModalSixthShow} onHide={() => setModalSixthShow(false)} />
+                <APNShutdownBypassModal show={ModalSixthShow} onHide={(value) => setModalSixthShow(value)} />
             </span>
 
             <div className="dropdown-divider"></div>

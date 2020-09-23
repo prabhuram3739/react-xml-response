@@ -16,6 +16,11 @@ function GYInlineModal(props) {
         </Modal.Header>
         <Modal.Body>
             <form>
+                <div className="row">
+                    <div className="col-12">
+                        <p className="alert alert-danger">At least, Home or Visiting or Roaming needs to be entered.</p>
+                    </div>
+                </div>
         <div className="row">
         <div className="col-3">
         <div className="input-group mb-3">

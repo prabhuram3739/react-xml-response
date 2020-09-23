@@ -27,7 +27,7 @@ function ApnBypassShutdownModal(props) {
           <div className="row pull-right">
           <div className="col-6">
         <button className="btn btn-primary pull-right" type="button" onClick={() => setModalShow(true)}>Continue</button>
-        <GXBypassModal show={ModalShow} onHide={() => setModalShow(false)} />
+        <GXBypassModal show={ModalShow} onHide={() => { setModalShow(false);  props.onHide(false); }} />
         </div>
         <div className="col-6">
         <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Cancel</button>
