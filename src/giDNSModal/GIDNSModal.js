@@ -43,13 +43,10 @@ function GIDNSModal(props) {
         </div>
         </div>
         <div className="row pull-right mb-3">
-        <div className="col-4">
-        <button className="btn btn-primary pull-right" type="submit">Add</button>
-        </div>
-        <div className="col-4">
+        <div className="col-6">
         <button className="btn btn-primary pull-right" type="submit">Modify</button>
         </div>
-        <div className="col-4">
+        <div className="col-6">
         <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Cancel</button>
         </div>
         </div>
