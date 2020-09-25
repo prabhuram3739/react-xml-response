@@ -3,7 +3,7 @@ import "./Home.css";
 // get our fontawesome imports
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import DataLayerContext, { DataProvider } from '../DataLayerContext';
+import DefaultViewDataLayerContext, { DefaultViewDataProvider } from '../DefaultViewDataLayerContext';
 import { Link } from 'react-router-dom';
 import DefaultView from "../defaultView/DefaultView";
 
@@ -32,11 +32,11 @@ function Home() {
     </nav>*/}
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
-        <DataProvider>
+        <DefaultViewDataProvider>
         <div className = "row" >
         <DefaultView />
         </div>
-        </DataProvider> 
+        </DefaultViewDataProvider> 
         </div> 
         </div> 
         </div> 
@@ -48,5 +48,5 @@ function Home() {
     </div>
     );
 }
-DefaultView.contextType = DataLayerContext;
+DefaultView.contextType = DefaultViewDataLayerContext;
 export default Home;
