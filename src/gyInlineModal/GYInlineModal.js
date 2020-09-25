@@ -19,6 +19,9 @@ function GYInlineModal(props) {
     const visitingRef = createRef();
     const roamingRef = createRef();
 
+    const onSubmitClick = (e) => {
+        e.preventDefault();
+    };
     return (
       <Modal
         {...props}
@@ -32,7 +35,7 @@ function GYInlineModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <form>
+            <form  onSubmit={onSubmitClick}>
         <div className="row">
         <div className="col-3">
         <div className="input-group mb-3">
