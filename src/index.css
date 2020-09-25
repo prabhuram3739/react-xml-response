@@ -118,6 +118,18 @@ h4 {
     font: 300 13px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif;
 }
 
+.msgText {
+    color: red;
+    margin-top: -14px;
+    font-size: 12px;
+    width: 100%;
+    text-align: justify;
+}
+
+.asterixColor {
+    color: red;
+}
+
 .fontBold {
     font-size: 15px;
     color: gray;
@@ -171,22 +183,24 @@ td span {
 }
 
 .dropdown-menu {
-    height:auto!important;
+    height: auto!important;
     transition: transform 1.2s ease!important;
 }
 
-.dropdown-menu.collapse, .dropdown-menu.sliding {
-    transform: translate(0,-100%);
+.dropdown-menu.collapse,
+.dropdown-menu.sliding {
+    transform: translate(0, -100%);
 }
 
 .dropdown-menu.collapse:not(.show) {
-    display:block;
+    display: block;
 }
 
 .dropdown-menu.collapse.show {
-    transform: translate(0,0);
+    transform: translate(0, 0);
     margin-top: 0px !important;
 }
+
 .nav-tabs .dropdown-menu {
     margin-top: -3px !important;
 }
