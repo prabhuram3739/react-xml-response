@@ -183,7 +183,7 @@ export default class PacketSwitch extends React.Component {
                                 <td><span>{item.packetSwitch.pcrfDestinationHost}</span></td>
                             </tr>
                             
-                                {item.packetSwitch.ruleData.sDFRulesList.map((rule, index) => {
+                                {(item.packetSwitch.ruleData !== null && item.packetSwitch.ruleData.length > 0) && item.packetSwitch.ruleData.sDFRulesList.map((rule, index) => {
                             return(
                             <tr key={index}>
                                 <td className="textAlignRight"><label className="fontBold">Rule Base Name:</label></td>

@@ -14,7 +14,7 @@ export class DataProvider extends Component {
     var self = this;
     this.setState({ loading: true }, () => {
     axios
-    .get("http://localhost:8080/api/diagnosticData/724023900000009", {
+    .get("http://localhost:8080/api/diagnosticData/searchView/724023900000009", {
         "Content-Type": "application/xml; charset=utf-8"
      })
     .then(function(response) {
