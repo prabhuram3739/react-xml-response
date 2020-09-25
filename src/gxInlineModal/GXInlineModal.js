@@ -15,12 +15,18 @@ function GXInlineModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <form>
-            <div className="row">
-                    <div className="col-12">
-                        <p className="alert alert-danger">Either, Primary Diameter Peer or Secondary Diameter Peer or only Diameter Peer Group at least needs to be entered along with the APN Name</p>
-                    </div>
-                </div>
+        <form>
+        <div className="row">
+            <div className="col-12">
+                <p className="alert alert-danger">
+                    1. GX Profile is optional
+                    2. a. At least one of Primary or Secondary Diameter peer IP requuired OR Diameter Peer Group name is required.
+                        b. At least one of Primary or Secondary Diameter peer IP required OR Diameter Peer Group name is required.
+                    3. At least one of Primary or Secondary Diameter peer IP is required.
+                    4. Diameter group peer is not required if at least one of Primary or Secondary Diameter peer is provided.
+                </p>
+            </div>
+        </div>
         <div className="row">
         <div className="col-6">
         <div className="input-group mb-3">
@@ -71,13 +77,13 @@ function GXInlineModal(props) {
         </div>
 
         <div className="row pull-right">
-                <div className="col-6">
-                <button className="btn btn-primary btn-block" type="submit">Submit</button>
-                </div>
-                <div className="col-6">
-                <button className="btn btn-primary btn-block" type="button" onClick={props.onHide}>Cancel</button>
-                </div>
+            <div className="col-6">
+            <button className="btn btn-primary btn-block" type="submit">Submit</button>
             </div>
+            <div className="col-6">
+            <button className="btn btn-primary btn-block" type="button" onClick={props.onHide}>Cancel</button>
+            </div>
+        </div>
         </form>
         </Modal.Body>
         <Modal.Footer>
