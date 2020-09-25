@@ -100,7 +100,7 @@ export default class CircuitSwitch extends React.Component {
                         <td>
                         {item.circuitSwitch.threeGApnDataList.map((threeGApnList, index) => {
                         return(
-                        <span key={index}> {threeGApnList.apn ? threeGApnList.apn : 'No Data'};</span>
+                        <span key={index}> {threeGApnList.apn ? threeGApnList.apn : 'No Data Available'};</span>
                         )
                         })}
                         </td>
@@ -109,7 +109,7 @@ export default class CircuitSwitch extends React.Component {
                         <td>
                         {item.circuitSwitch.fourGApnDataList.map((fourGApnList, index) => {
                         return(
-                        <span key={index}> {fourGApnList.apn ? fourGApnList.apn : 'No Data'};</span>
+                        <span key={index}> {fourGApnList.apn ? fourGApnList.apn : 'No Data Available'};</span>
                         )
                         })}
                         </td>
@@ -118,56 +118,56 @@ export default class CircuitSwitch extends React.Component {
                         <tr>
                         <td className="textAlignRight"><label className="fontBold">VLR Number:</label>
                         </td>
-                        <td><span>{item.circuitSwitch.vlrNumber ? item.circuitSwitch.vlrNumber : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.vlrNumber ? item.circuitSwitch.vlrNumber : 'No Data Available'}</span>
                         </td>
                         <td className="textAlignRight"><label className="fontBold">SGSN Number:</label>
                         </td>
-                        <td> <span>{item.circuitSwitch.sgsnNumber ? item.circuitSwitch.sgsnNumber : 'No Data'}</span>
+                        <td> <span>{item.circuitSwitch.sgsnNumber ? item.circuitSwitch.sgsnNumber : 'No Data Available'}</span>
                         </td>
                         <td className="textAlignRight"><label className="fontBold">MME ID:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.mmeId ? item.circuitSwitch.mmeId : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.mmeId ? item.circuitSwitch.mmeId : 'No Data Available'}</span>
                         </td>
                         </tr>
 
                         <tr>
                         <td className="textAlignRight"><label className="fontBold">O/G Call Status:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}</span>
                         </td>
                         <td className="textAlignRight"><label className="fontBold">I/C Call Status:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.incomingCallStatus ? item.circuitSwitch.incomingCallStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.incomingCallStatus ? item.circuitSwitch.incomingCallStatus : 'No Data Available'}</span>
                         </td>
                         <td className="textAlignRight"><label className="fontBold">MO-SMS Status:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.moSmsStatus ? item.circuitSwitch.moSmsStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.moSmsStatus ? item.circuitSwitch.moSmsStatus : 'No Data Available'}</span>
                         </td>
                         </tr>
 
                         <tr>
                         <td className="textAlignRight"><label className="fontBold">MT-SMS Status:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.mtSmsStatus ? item.circuitSwitch.mtSmsStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.mtSmsStatus ? item.circuitSwitch.mtSmsStatus : 'No Data Available'}</span>
                         </td>
                         <td className="textAlignRight"><label className="fontBold">3G DATA - Status:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.threeGDataStatus ? item.circuitSwitch.threeGDataStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.threeGDataStatus ? item.circuitSwitch.threeGDataStatus : 'No Data Available'}</span>
                         </td>
                         <td className="textAlignRight"><label className="fontBold">3G DATA - ROAM:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.threeGDataRoamStatus ? item.circuitSwitch.threeGDataRoamStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.threeGDataRoamStatus ? item.circuitSwitch.threeGDataRoamStatus : 'No Data Available'}</span>
                         </td>
                         </tr>
 
                         <tr>
                         <td className="textAlignRight"><label className="fontBold">4G DATA - Status:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.fourGDataStatus ? item.circuitSwitch.fourGDataStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.fourGDataStatus ? item.circuitSwitch.fourGDataStatus : 'No Data Available'}</span>
                         </td>
                         <td className="textAlignRight"><label className="fontBold">Prepaid/Camel Data:</label>
                         </td> 
-                        <td><span>{item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data'}</span>
+                        <td><span>{item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}</span>
                         </td>
                         <td></td>
                         <td></td>
