@@ -19,7 +19,7 @@ function ApnShutdownInlineModal(props) {
         <Modal.Body>
         <div className="row">
         <div className="col-12">
-            <p className="alert alert-danger">APN Shut require for this Action. Existing sessions need to remove manually. Do you want to continue?.</p>
+            <p className="alert alert-danger">APN shutdown required for this action. Existing sessions need to be removed manually. Do you want to continue?</p>
         </div>
         </div>
         </Modal.Body>

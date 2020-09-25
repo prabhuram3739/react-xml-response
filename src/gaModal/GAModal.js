@@ -30,7 +30,7 @@ function GAModal(props) {
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">GA Profile</span>
         </div>
-        <input type="text" className="form-control" placeholder="GA Profile" aria-label="gaProfile" aria-describedby="basic-addon1"  />
+        <input type="text" className="form-control" placeholder="GA Profile" aria-label="gaProfile" aria-describedby="basic-addon1" required />
         </div>
         </div>
         </div>

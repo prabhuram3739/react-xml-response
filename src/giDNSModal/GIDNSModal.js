@@ -17,6 +17,11 @@ function GIDNSModal(props) {
         <Modal.Body>
         <form>
         <div className="row">
+          <div className="col-12">
+              <p className="alert alert-danger">At least one of Primary or Secondary IP required</p>
+          </div>
+        </div>
+        <div className="row">
         <div className="col-4">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
