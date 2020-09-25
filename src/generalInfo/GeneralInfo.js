@@ -30,25 +30,25 @@ export default class GeneralInfo extends React.Component {
                         <tbody>
                         <tr>
                             <td className="textAlignRight"><label className="fontBold">IMSI:</label></td>
-                            <td><span>{item.packetSwitch.imsi}</span></td>
+                            <td><span>{item.packetSwitch.imsi ? item.packetSwitch.imsi : 'No Data'}</span></td>
                             <td className="textAlignRight"><label className="fontBold">MSISDN:</label></td>
-                            <td><span>{item.packetSwitch.msisdn}</span></td>
+                            <td><span>{item.packetSwitch.msisdn ? item.packetSwitch.msisdn : 'No Data'}</span></td>
                             <td className="textAlignRight"><label className="fontBold">IMEI:</label></td>
-                            <td><span>{item.packetSwitch.imei}</span></td>
+                            <td><span>{item.packetSwitch.imei ? item.packetSwitch.imei : 'No Data'}</span></td>
                         </tr>
                         <tr>
                             <td className="textAlignRight"><label className="fontBold">Up Time:</label></td>
-                            <td><span>{item.packetSwitch.upTime}</span></td>
+                            <td><span>{item.packetSwitch.upTime ? item.packetSwitch.upTime : 'No Data'}</span></td>
                             <td className="textAlignRight"><label className="fontBold">RAT Type:</label></td>
-                            <td><span>{item.packetSwitch.ratType}</span></td>
+                            <td><span>{item.packetSwitch.ratType ? item.packetSwitch.ratType : 'No Data'}</span></td>
                             <td className="textAlignRight"><label className="fontBold">Network MCC/Network MNC:</label></td>
-                            <td><span>{item.packetSwitch.networkMNC}</span></td>
+                            <td><span>{item.packetSwitch.networkMNC ? item.packetSwitch.networkMNC : 'No Data'}</span></td>
                         </tr>
                         <tr>
                             <td className="textAlignRight"><label className="fontBold">Cell ID:</label></td>
-                            <td><span>{item.packetSwitch.cellID}</span></td>
+                            <td><span>{item.packetSwitch.cellID ? item.packetSwitch.cellID : 'No Data'}</span></td>
                             <td className="textAlignRight"><label className="fontBold">Number of PDN Contexts:</label></td>
-                            <td><span>{item.packetSwitch.numbercontexts}</span></td>
+                            <td><span>{item.packetSwitch.numbercontexts ? item.packetSwitch.numbercontexts : 'No Data'}</span></td>
                             <td></td>
                             <td></td>
                         </tr>
