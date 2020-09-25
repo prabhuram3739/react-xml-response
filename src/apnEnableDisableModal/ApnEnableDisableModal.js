@@ -1,7 +1,9 @@
 import React from "react";
 import { Modal } from 'react-bootstrap';
+import ApnDisableModal from '../apnDisableModal/APNDisableModal';
 
 function ApnEnableDisableModal(props) {
+  const [ModalShow, setModalShow] = React.useState(false);
     return (
       <Modal
         {...props}
@@ -32,7 +34,8 @@ function ApnEnableDisableModal(props) {
         <button className="btn btn-primary pull-right" type="submit">Enable</button>
         </div>
         <div className="col-4">
-        <button className="btn btn-primary pull-right" type="submit">Disable</button>
+        <button className="btn btn-primary pull-right" type="button" onClick={() => setModalShow(true)}>Disable</button>
+        <ApnDisableModal show={ModalShow} onHide={() => { setModalShow(false);  props.onHide(false); }} />
         </div>
         <div className="col-4">
         <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Cancel</button>
