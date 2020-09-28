@@ -73,26 +73,20 @@ function GXInlineModal(props) {
     });
 
     const onSubmitClick = (e) => {
-        const apnName = apnInputRef.current.value;
         const gxProfileName = gxProfileRef.current.value;
         const primaryPeerName = primaryPeerRef.current.value;
         const secondaryPeerName = secondaryPeerRef.current.value;
         const diameterPeerName = diameterPeerRef.current.value;
 
-        if((apnName !== "") && ((gxProfileName && primaryPeerName && secondaryPeerName && diameterPeerName) === "")) {
+         if(!primaryPeerName.trim() && !secondaryPeerName.trim() && !diameterPeerName.trim()) {
           setShowSubmitOnlyAPNGXProfileMsg(false);
           setShowSubmitOnlyAPNMsg(true);
           e.preventDefault();
         } 
-        if(((apnName && gxProfileName) !== "") && ((primaryPeerName && secondaryPeerName && diameterPeerName) === "")) {
-          console.log("Inside Second condition");
+        if((!gxProfileName.trim()) && (primaryPeerName && secondaryPeerName && diameterPeerName)) {
           setShowSubmitOnlyAPNMsg(false);
           setShowSubmitOnlyAPNGXProfileMsg(true);
           e.preventDefault();
-        } 
-        if(((apnName) && (primaryPeerName || secondaryPeerName || diameterPeerName)) !== "") {
-          setShowSubmitOnlyAPNMsg(false);
-          setShowSubmitOnlyAPNGXProfileMsg(false);
         }
     };
     return (
@@ -105,9 +99,8 @@ function GXInlineModal(props) {
         <Modal.Header closeButton>
           <Modal.Title id="contained-Modal-title-vcenter">
             GX Inline
-
             { showSubmitOnlyAPNMsg ? <div className="headerMsgText mt-0">At least one of Primary or Secondary Diameter peer name required OR Diameter Peer Group name is required.</div> : null }
-        { showSubmitOnlyAPNGXPriofileMsg ? <div className="headerMsgText mt-0">At least one of Primary or Secondary Diameter peer name required OR Diameter Peer Group name is required.</div> : null }
+            { showSubmitOnlyAPNGXPriofileMsg ? <div className="headerMsgText mt-0">At least one of Primary or Secondary Diameter peer name required OR Diameter Peer Group name is required.</div> : null }
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
