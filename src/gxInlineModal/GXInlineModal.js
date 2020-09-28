@@ -4,24 +4,75 @@ import { Modal } from 'react-bootstrap';
 function GXInlineModal(props) {
     const [showGXProfileMsg, setShowGXProfileMsg] = React.useState(false);
     const [showPrimaryPeerMsg, setShowPrimaryPeerMsg] = React.useState(false);
+    const [showSecondaryPeerMsg, setShowSecondaryPeerMsg] = React.useState(false);
     const [showDiameterPeerMsg, setShowDiameterPeerMsg] = React.useState(false);
     const [showSubmitOnlyAPNMsg, setShowSubmitOnlyAPNMsg] = React.useState(false);
     const [showSubmitOnlyAPNGXPriofileMsg, setShowSubmitOnlyAPNGXProfileMsg] = React.useState(false);
     const onGXProfileClick = () => setShowGXProfileMsg(true);
     const onGXProfileInput = () => setShowGXProfileMsg(false);
 
-    const onPrimaryPeerClick = () => setShowPrimaryPeerMsg(true);
-    const onPrimaryPeerInput = () => setShowPrimaryPeerMsg(false);
-
-    const onDiameterPeerClick = () => setShowDiameterPeerMsg(true);
-    const onDiameterPeerInput = () => setShowDiameterPeerMsg(false);
     const apnInputRef = createRef();
     const gxProfileRef = createRef();
     const primaryPeerRef = createRef();
     const secondaryPeerRef = createRef();
     const diameterPeerRef = createRef();
+
+    const onPrimaryPeerClick = (() => { 
+      setShowPrimaryPeerMsg(true);
+
+      const primaryValue = primaryPeerRef.current.value;
+
+      if(primaryValue !== "") {
+          return setShowPrimaryPeerMsg(false);
+      } else {
+        return setShowPrimaryPeerMsg(true);
+      }
+    });
+    const onPrimaryPeerInput = (() => { 
+      setShowPrimaryPeerMsg(false);
+      setShowSecondaryPeerMsg(false);
+      setShowDiameterPeerMsg(false);
+      setShowSubmitOnlyAPNMsg(false);
+    });
+
+    const onSecondaryPeerClick = (() => { 
+      setShowSecondaryPeerMsg(true);
+
+      const secondaryValue = secondaryPeerRef.current.value;
+
+      if(secondaryValue !== "") {
+          return setShowSecondaryPeerMsg(false);
+      } else {
+        return setShowSecondaryPeerMsg(true);
+      }
+    });
+    const onSecondaryPeerInput = (() => { 
+      setShowPrimaryPeerMsg(false);
+      setShowSecondaryPeerMsg(false);
+      setShowDiameterPeerMsg(false);
+      setShowSubmitOnlyAPNMsg(false);
+    });
+
+
+    const onDiameterPeerClick = (() => { 
+      setShowDiameterPeerMsg(true);
+
+      const diameterValue = diameterPeerRef.current.value;
+
+      if(diameterValue !== "") {
+          return setShowDiameterPeerMsg(false);
+      } else {
+        return setShowDiameterPeerMsg(true);
+      }
+    });
+    const onDiameterPeerInput = (() => { 
+      setShowPrimaryPeerMsg(false);
+      setShowSecondaryPeerMsg(false);
+      setShowDiameterPeerMsg(false);
+      setShowSubmitOnlyAPNMsg(false);
+    });
+
     const onSubmitClick = (e) => {
-        e.preventDefault();
         const apnName = apnInputRef.current.value;
         const gxProfileName = gxProfileRef.current.value;
         const primaryPeerName = primaryPeerRef.current.value;
@@ -29,11 +80,19 @@ function GXInlineModal(props) {
         const diameterPeerName = diameterPeerRef.current.value;
 
         if((apnName !== "") && ((gxProfileName && primaryPeerName && secondaryPeerName && diameterPeerName) === "")) {
-            setShowSubmitOnlyAPNGXProfileMsg(false);
-            return setShowSubmitOnlyAPNMsg(true);
-        } else if(((apnName && gxProfileName) !== "") && ((primaryPeerName && secondaryPeerName && diameterPeerName) === "")) {
-            setShowSubmitOnlyAPNMsg(false);
-            return setShowSubmitOnlyAPNGXProfileMsg(true);
+          setShowSubmitOnlyAPNGXProfileMsg(false);
+          setShowSubmitOnlyAPNMsg(true);
+          e.preventDefault();
+        } 
+        if(((apnName && gxProfileName) !== "") && ((primaryPeerName && secondaryPeerName && diameterPeerName) === "")) {
+          console.log("Inside Second condition");
+          setShowSubmitOnlyAPNMsg(false);
+          setShowSubmitOnlyAPNGXProfileMsg(true);
+          e.preventDefault();
+        } 
+        if(((apnName) && (primaryPeerName || secondaryPeerName || diameterPeerName)) !== "") {
+          setShowSubmitOnlyAPNMsg(false);
+          setShowSubmitOnlyAPNGXProfileMsg(false);
         }
     };
     return (
@@ -47,8 +106,8 @@ function GXInlineModal(props) {
           <Modal.Title id="contained-Modal-title-vcenter">
             GX Inline
 
-            { showSubmitOnlyAPNMsg ? <div className="msgText mt-0">At least one of Primary or Secondary Diameter peer name requuired OR Diameter Peer Group name is required.</div> : null }
-        { showSubmitOnlyAPNGXPriofileMsg ? <div className="msgText mt-0">At least one of Primary or Secondary Diameter peer name required OR Diameter Peer Group name is required.</div> : null }
+            { showSubmitOnlyAPNMsg ? <div className="headerMsgText mt-0">At least one of Primary or Secondary Diameter peer name required OR Diameter Peer Group name is required.</div> : null }
+        { showSubmitOnlyAPNGXPriofileMsg ? <div className="headerMsgText mt-0">At least one of Primary or Secondary Diameter peer name required OR Diameter Peer Group name is required.</div> : null }
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -69,7 +128,7 @@ function GXInlineModal(props) {
         </div>
         <input type="text" className="form-control" placeholder="GX Profile" aria-label="gxProfile" aria-describedby="basic-addon1" ref={gxProfileRef} onClick={onGXProfileClick} onInput={onGXProfileInput} />
         </div>
-        { showGXProfileMsg ? <div className="msgText">GX Profile is optional</div> : null }
+        { showGXProfileMsg ? <div className="msgText">! GX Profile is optional</div> : null }
         </div>
         </div>
 
@@ -81,15 +140,16 @@ function GXInlineModal(props) {
         </div>
         <input type="text" className="form-control" placeholder="Primary Diameter Peer" aria-label="primaryDiameterPeer" aria-describedby="basic-addon1" ref={primaryPeerRef} onClick={onPrimaryPeerClick} onInput={onPrimaryPeerInput} />
         </div>
-        { showPrimaryPeerMsg ? <div className="msgText">At least one of Primary or Secondary Diameter peer name is required.</div> : null }
+        { showPrimaryPeerMsg ? <div className="msgText">! At least one of Primary or Secondary Diameter peer name is required.</div> : null }
         </div>
         <div className="col-6">
         <div className="input-group mb-3">
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">Secondary Diameter Peer</span>
         </div>
-        <input type="text" className="form-control" placeholder="Secondary Diameter Peer" aria-label="secondaryDiameterPeer" ref={secondaryPeerRef} aria-describedby="basic-addon1" />
+        <input type="text" className="form-control" placeholder="Secondary Diameter Peer" aria-label="secondaryDiameterPeer" ref={secondaryPeerRef} aria-describedby="basic-addon1" onClick={onSecondaryPeerClick} onInput={onSecondaryPeerInput} />
         </div>
+        { showSecondaryPeerMsg ? <div className="msgText">! At least one of Primary or Secondary Diameter peer name is required.</div> : null }
         </div>
         </div>
 

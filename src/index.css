@@ -119,11 +119,16 @@ h4 {
 }
 
 .msgText {
-    color: red;
+    color: #000;
     margin-top: -14px;
     font-size: 12px;
     width: 100%;
     text-align: justify;
+}
+
+.headerMsgText {
+    color: red;
+    font-size: 12px;
 }
 
 .asterixColor {
