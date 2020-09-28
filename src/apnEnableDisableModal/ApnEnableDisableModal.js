@@ -35,7 +35,7 @@ function ApnEnableDisableModal(props) {
         </div>
         <div className="col-4">
         <button className="btn btn-primary pull-right" type="submit" onClick={() => setModalShow(true)}>Disable</button>
-        <ApnDisableModal show={ModalShow} onHide={() => { setModalShow(false);  props.onHide(false); }} />
+        <ApnDisableModal show={ModalShow} onHide={() => { setModalShow(false); }} />
         </div>
         <div className="col-4">
         <button className="btn btn-primary pull-right" type="button" onClick={props.onHide}>Cancel</button>
