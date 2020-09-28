@@ -89,23 +89,23 @@ export default class DefaultView extends React.Component {
       <div className="card-body">
       <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Detail State:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Detail State:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
                         <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Detail State:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Detail State:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
       </div>
     </div>
@@ -126,23 +126,23 @@ export default class DefaultView extends React.Component {
       <div className="card-body">
       <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Detail State:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Detail State:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
                         <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Dia Peer Prof:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Detail State:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Detail State:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
       </div>
     </div>
@@ -163,23 +163,23 @@ export default class DefaultView extends React.Component {
       <div className="card-body">
       <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Up Association:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Up Association:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Last Change Time:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Last Change Time:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
                         <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Up Association:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Up Association:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Path Mgmt State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Last Change Time:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Last Change Time:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
       </div>
     </div>
@@ -200,23 +200,23 @@ export default class DefaultView extends React.Component {
       <div className="card-body">
       <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Group Name:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Group Name:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Operation State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Operation State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Admin State:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Admin State:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
                         <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">Group Name:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">Group Name:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Operation State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Operation State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Admin State:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Admin State:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
       </div>
     </div>
@@ -237,23 +237,23 @@ export default class DefaultView extends React.Component {
       <div className="card-body">
       <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">GTP Prim Grp:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">GTP Prim Grp:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Operation State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Operation State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Up Time:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Up Time:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
                         <div className="row">
                             <div className="col-3">
-                            <label className="fontBold">GTP Prim Grp:</label> <span>{item.firstName}</span></div>
+                            <label className="fontBold">GTP Prim Grp:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Peer Address:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Peer Address:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Operation State:</label> <span>{item.firstName}</span></div>
+                        <label className="fontBold">Operation State:</label> <span>{item.firstName ? item.firstName : 'No Data Available'}</span></div>
                         <div className="col-3">
-                        <label className="fontBold">Up Time:</label> <span>{item.lastName}</span></div>
+                        <label className="fontBold">Up Time:</label> <span>{item.lastName ? item.lastName : 'No Data Available'}</span></div>
                         </div>
       </div>
     </div>
