@@ -154,7 +154,7 @@ function GXInlineModal(props) {
         </div>
         <input type="text" className="form-control" placeholder="Diameter Group Peer" aria-label="diameterGroupPeer" aria-describedby="basic-addon1" ref={diameterPeerRef} onClick={onDiameterPeerClick} onInput={onDiameterPeerInput} />
         </div>
-        { showDiameterPeerMsg ? <div className="msgText">Diameter group peer is not required if at least one of Primary or Secondary Diameter peer name is provided.</div> : null }
+        { showDiameterPeerMsg ? <div className="msgText">! Diameter group peer is not required if at least one of Primary or Secondary Diameter peer name is provided.</div> : null }
         </div>
         </div>
 
