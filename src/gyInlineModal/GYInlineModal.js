@@ -25,6 +25,7 @@ function GYInlineModal(props) {
       setShowHomeMsg(false);
       setShowVisitingMsg(false);
       setShowRoamingMsg(false);
+      setSubmitMsg(false);
     });
 
     const onVisitingClick = (() => { 
@@ -40,6 +41,7 @@ function GYInlineModal(props) {
       setShowHomeMsg(false);
       setShowVisitingMsg(false);
       setShowRoamingMsg(false);
+      setSubmitMsg(false);
     });
 
     const onRoamingClick = (() => { 
@@ -55,6 +57,7 @@ function GYInlineModal(props) {
       setShowHomeMsg(false);
       setShowVisitingMsg(false);
       setShowRoamingMsg(false);
+      setSubmitMsg(false);
     });
 
     const onSubmitClick = (e) => {
