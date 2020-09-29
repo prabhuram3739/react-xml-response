@@ -7,6 +7,10 @@
     border: none !important;
 }
 
+.searchIcon:focus {
+    outline: none !important;
+}
+
 .topSearchBox {
     margin-top: 3px;
     border-radius: 3rem;
