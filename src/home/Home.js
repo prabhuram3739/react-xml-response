@@ -4,7 +4,6 @@ import "./Home.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DefaultViewDataLayerContext, { DefaultViewDataProvider } from '../DefaultViewDataLayerContext';
-import { Link } from 'react-router-dom';
 import DefaultView from "../defaultView/DefaultView";
 import { useLocation } from 'react-router';
 import queryString from 'query-string';
@@ -13,13 +12,13 @@ function Home() {
     const location = useLocation();
     return (
     <div className = "home" >
-        <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
+        <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
         <div className = "row topSearchBox" >
         <div className = "col-12 searchBoxDiv" >
-        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "searchBox" autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" / >
-        <Link to='/search'><div className = "searchIcon" >
+        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" / >
+        <button className = "searchIcon" type="submit">
         <FontAwesomeIcon icon = { faSearch } /> 
-        </div> </Link>
+        </button>
         </div> 
         </div>
 
