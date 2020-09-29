@@ -19,7 +19,7 @@ function Home() {
         <button className = "searchIcon" type="submit">
         <FontAwesomeIcon icon = { faSearch } /> 
         </button>
-        </div> 
+        </div>
         </div>
 
         <div className = "tab-content" id = "myTabContent" >
