@@ -1,5 +1,6 @@
 import React, { createContext, Component } from "react";
 import axios from 'axios';
+import { authEndpoint } from './environment';
 
 const DataLayerContext = createContext();
 
@@ -11,20 +12,36 @@ export class DataProvider extends Component {
   }
 
   componentDidMount() {
-    var self = this;
     this.setState({ loading: true }, () => {
+      this.getSearchViewData();
+    });
+  }
+
+  componentWillUnmount() {
+    /*
+      stop getData() from continuing to run even
+      after unmounting this component. Notice we are calling
+      'clearTimeout()` here rather than `clearInterval()` as
+      in the previous example.
+    */
+    clearTimeout(this.intervalID);
+  }
+
+  getSearchViewData = () => {
+    var self = this;
     axios
-    .get("http://localhost:8080/api/diagnosticData/searchView/724023900000009", {
+    .get(authEndpoint + "/api/diagnosticData/searchView/724023900000009", {
         "Content-Type": "application/xml; charset=utf-8"
      })
     .then(function(response) {
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
+        self.intervalID = setTimeout(self.getSearchViewData.bind(this), 5000);
     })
     .catch(function(error) {
         console.log(error);
     });
-});
-}
+
+  }
 
   render() {
     const {data, count, loading} = this.state || {};

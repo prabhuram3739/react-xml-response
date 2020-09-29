@@ -1,5 +1,6 @@
 import React, { createContext, Component } from "react";
 import axios from 'axios';
+import { authEndpoint } from './environment';
 
 const DefaultViewDataLayerContext = createContext();
 
@@ -9,7 +10,6 @@ export class DefaultViewDataProvider extends Component {
     count: 0,
     loading: true
   }
-  apiURL = "http://localhost:8080";
 
   componentDidMount() {
     this.setState({ loading: true }, () => {
@@ -30,7 +30,7 @@ componentWillUnmount() {
 getDefaultViewData = () => {
   var self = this;
   axios
-    .get(this.apiURL + "/api/diagnosticData/defaultView/724023900000009", {
+    .get(authEndpoint + "/api/diagnosticData/defaultView/724023900000009", {
         "Content-Type": "application/xml; charset=utf-8"
      })
     .then(function(response) {

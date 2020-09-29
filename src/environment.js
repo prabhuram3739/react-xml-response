@@ -1,1 +1,1 @@
-export const authEndpoint = "https://fakerestapi.azurewebsites.net/api/Authors";
+export const authEndpoint = "http://localhost:8080";
