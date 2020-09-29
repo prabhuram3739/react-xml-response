@@ -537,16 +537,16 @@ h2 {
     -webkit-animation: none;
     -moz-animation: none;
     animation: none;
-    -webkit-transition: opacity 500ms 300ms, width 300ms;
-    -moz-transition: opacity 500ms 300ms, width 300ms;
-    transition: opacity 500ms 300ms, width 300ms;
+    -webkit-transition: opacity 5s 3s, width 3s;
+    -moz-transition: opacity 5s 3s, width 3s;
+    transition: opacity 5s 3s, width 3s;
 }
 
 .v-loading-indicator-delay {
-    width: 90%;
-    -webkit-animation: v-progress-delay 3.8s forwards;
-    -moz-animation: v-progress-delay 3.8s forwards;
-    animation: v-progress-delay 3.8s forwards;
+    width: 100%;
+    -webkit-animation: v-progress-delay 5.8s forwards;
+    -moz-animation: v-progress-delay 5.8s forwards;
+    animation: v-progress-delay 5.8s forwards;
 }
 
 .v-loading-indicator {

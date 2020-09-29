@@ -7,11 +7,13 @@ export default class CircuitSwitch extends React.Component {
        const finalData = [];
        finalData.push(data);
        // Check if the count is zero or undefined to display the no records message
+       if(!loading) {
        if((count === 0) || (count === undefined)) {
         return (
             <span className="ml-4">Sorry, No Circuit Switch Information available</span>
         )
        }
+    }
        return (
 
         <div className="container-fluid noPadding fontChange">
@@ -131,22 +133,22 @@ export default class CircuitSwitch extends React.Component {
                         </tr>
 
                         <tr>
-                        <td className="textAlignRight"><label className="fontBold">O/G Call Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">Voice MO Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}</span>
                         </td>
-                        <td className="textAlignRight"><label className="fontBold">I/C Call Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">Voice MT Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.incomingCallStatus ? item.circuitSwitch.incomingCallStatus : 'No Data Available'}</span>
                         </td>
-                        <td className="textAlignRight"><label className="fontBold">MO-SMS Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">SMS-Mo Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.moSmsStatus ? item.circuitSwitch.moSmsStatus : 'No Data Available'}</span>
                         </td>
                         </tr>
 
                         <tr>
-                        <td className="textAlignRight"><label className="fontBold">MT-SMS Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">SMS-MT Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.mtSmsStatus ? item.circuitSwitch.mtSmsStatus : 'No Data Available'}</span>
                         </td>

@@ -7,11 +7,13 @@ export default class PacketSwitch extends React.Component {
        const finalData = [];
        finalData.push(data);
        // Check if the count is zero or undefined to display the no records message
+       if(!loading) {
        if((count === 0) || (count === undefined)) {
         return (
             <span className="ml-4">Sorry, No Packet Switch Information available</span>
         )
        }
+    }
        return (
 
         <div className="container-fluid noPadding fontChange">

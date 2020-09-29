@@ -7,11 +7,13 @@ export default class DefaultView extends React.Component {
       const finalData = [];
       finalData.push(data.packetSwitchAdminDefaultViewVO);
       // Check if the count is zero or undefined to display the no records message
+      if(!loading) {
        if((count === 0) || (count === undefined)) {
         return (
         <span className="ml-4">Sorry, No Information available</span>
         )
        }
+      }
        return (
 
         <div className="container-fluid fontChange">

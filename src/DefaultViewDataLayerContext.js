@@ -9,21 +9,37 @@ export class DefaultViewDataProvider extends Component {
     count: 0,
     loading: true
   }
+  apiURL = "http://localhost:8080";
 
   componentDidMount() {
-    var self = this;
     this.setState({ loading: true }, () => {
-    axios
-    .get("http://localhost:8080/api/diagnosticData/defaultView/724023900000009", {
+      this.getDefaultViewData();
+    });
+}
+
+componentWillUnmount() {
+  /*
+    stop getData() from continuing to run even
+    after unmounting this component. Notice we are calling
+    'clearTimeout()` here rather than `clearInterval()` as
+    in the previous example.
+  */
+  clearTimeout(this.intervalID);
+}
+
+getDefaultViewData = () => {
+  var self = this;
+  axios
+    .get(this.apiURL + "/api/diagnosticData/defaultView/724023900000009", {
         "Content-Type": "application/xml; charset=utf-8"
      })
     .then(function(response) {
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
+        self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 5000);
     })
     .catch(function(error) {
         console.log(error);
     });
-});
 }
 
   render() {
