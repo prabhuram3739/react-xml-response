@@ -6,8 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DefaultViewDataLayerContext, { DefaultViewDataProvider } from '../DefaultViewDataLayerContext';
 import { Link } from 'react-router-dom';
 import DefaultView from "../defaultView/DefaultView";
+import { useLocation } from 'react-router';
+import queryString from 'query-string';
 
 function Home() {
+    const location = useLocation();
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
@@ -32,7 +35,7 @@ function Home() {
     </nav>*/}
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
-        <DefaultViewDataProvider>
+        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  >
         <div className = "row" >
         <DefaultView />
         </div>

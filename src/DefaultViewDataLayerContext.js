@@ -13,7 +13,7 @@ export class DefaultViewDataProvider extends Component {
 
   componentDidMount() {
     this.setState({ loading: true }, () => {
-      this.getDefaultViewData();
+      this.getDefaultViewData(this.props.imsi);
     });
 }
 
@@ -27,10 +27,11 @@ componentWillUnmount() {
   clearTimeout(this.intervalID);
 }
 
-getDefaultViewData = () => {
+getDefaultViewData = (imsi) => {
   var self = this;
+  imsi ="234500010400205";
   axios
-    .get(authEndpoint + "/api/diagnosticData/defaultView/724023900000009", {
+    .get(authEndpoint + "/api/diagnosticData/defaultView/" + imsi, {
         "Content-Type": "application/xml; charset=utf-8"
      })
     .then(function(response) {

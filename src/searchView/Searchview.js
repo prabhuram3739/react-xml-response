@@ -1,4 +1,4 @@
-import React, {createRef} from "react";
+import React from "react";
 import "./Searchview.css";
 // get our fontawesome imports
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -26,18 +26,14 @@ function Searchview() {
     const [ModalFifthShow, setModalFifthShow] = React.useState(false);
     const [ModalSixthShow, setModalSixthShow] = React.useState(false);
     const [ModalSeventhShow, setModalSeventhShow] = React.useState(false);
-    let [imsi, setImsi] = React.useState("");
-
-    const imsiInputRef = createRef();
     const location = useLocation();
-    const onSubmitClick = ((props) => {
-    });
+
     return (
     <div className = "home" >
-        <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" onSubmit={onSubmitClick}>
+        <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
         <div className = "row topSearchBox" >
         <div className = "col-12 searchBoxDiv" >
-        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" ref={imsiInputRef} autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" / >
+        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" / >
         <button className = "searchIcon" type="submit"><FontAwesomeIcon icon = { faSearch } /></button>
         </div> </div>
 
