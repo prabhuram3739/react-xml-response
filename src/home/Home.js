@@ -37,10 +37,9 @@ function Home() {
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <div className="row">
-        <div className="col-6"></div>
-        <div className="col-6">
-        <button type="button" className="btn btn-primary pull-right" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
-        <button type="button" className="btn btn-primary pull-right" onClick={ () => { setRefreshBoolean(true); setRefreshStatus(true); }}>Enable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        <div className="col-12">
+        <button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        <button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(true); setRefreshStatus(true); }}>Enable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
         </div>
         </div>
         <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} >
