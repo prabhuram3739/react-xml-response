@@ -38,7 +38,7 @@ export default class DefaultView extends React.Component {
       <h5 className="mb-0">
         <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 removePaddingLeft">
                             Hostname: AMS_PROD_CMG
                             </div>
                         </div>
@@ -80,7 +80,7 @@ export default class DefaultView extends React.Component {
       <h5 className="mb-0">
         <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 removePaddingLeft">
                             Gy Statistics
                             </div>
                         </div>
@@ -117,7 +117,7 @@ export default class DefaultView extends React.Component {
       <h5 className="mb-0">
         <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 removePaddingLeft">
                             Gx Statistics
                             </div>
                         </div>
@@ -154,7 +154,7 @@ export default class DefaultView extends React.Component {
       <h5 className="mb-0">
         <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
         <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 removePaddingLeft">
                             Sx Statistics
                             </div>
                         </div>
@@ -191,7 +191,7 @@ export default class DefaultView extends React.Component {
       <h5 className="mb-0">
         <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
         <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 removePaddingLeft">
                             Radius Statistics
                             </div>
                         </div>
@@ -228,7 +228,7 @@ export default class DefaultView extends React.Component {
       <h5 className="mb-0">
         <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
         <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 removePaddingLeft">
                             Ga Statistics
                             </div>
                         </div>
