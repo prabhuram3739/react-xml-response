@@ -29,18 +29,6 @@ componentWillUnmount() {
   clearTimeout(this.intervalID);
 }
 
-/*componentWillReceiveProps(nextProps){
-  this.setState({refresh: nextProps.refresh, refreshStatus: nextProps.refreshStatus});
-  console.log("Initial Values:", nextProps.refresh, nextProps.refreshStatus);
-  console.log("Initial Refresh Status:", this.state.refreshStatus);
-  if(this.state.refreshStatus === false) {
-    this.getDefaultViewData(this.props.imsi, nextProps.refresh, nextProps.refreshStatus);
-  } else {
-    this.getDefaultViewData(this.props.imsi, nextProps.refresh, this.state.refreshStatus);
-  }
-  
-}*/
-
 static getDerivedStateFromProps(nextProps, prevState) {
   if(nextProps.refreshStatus !== prevState.refreshStatus) {
     return {refresh: nextProps.refresh, refreshStatus: nextProps.refreshStatus};
@@ -51,11 +39,10 @@ static getDerivedStateFromProps(nextProps, prevState) {
 
 componentDidUpdate(prevProps, prevState) {
  if(prevProps.refreshStatus !== this.props.refreshStatus) {
-   console.log("Inside the ComponentdidUpdate:", prevProps.refreshStatus, this.props.refreshStatus);
    //Perform some operation here
    this.setState({refresh: prevProps.refresh, refreshStatus: prevState.refreshStatus});
    if(this.state.refreshStatus === false) {
-    this.getDefaultViewData(this.props.imsi, prevProps.refresh, prevProps.refreshStatus);
+    this.getDefaultViewData(this.props.imsi, prevProps.refresh, prevState.refreshStatus);
   } else {
     this.getDefaultViewData(this.props.imsi, this.state.refresh, this.state.refreshStatus);
   }
@@ -65,30 +52,22 @@ componentDidUpdate(prevProps, prevState) {
 getDefaultViewData = (imsi, refresh, status) => {
   var self = this;
   imsi ="234500010400205";
-  console.log(this.state.refresh);
-  console.log(this.state.refreshStatus);
-  if(refresh === undefined) {
-    refresh = true;
-  }
-  if(status === undefined) {
-    status = true;
-  }
-  if(refresh !== undefined && status !== undefined) {
+  refresh = this.state.refresh;
+  status = this.state.refreshStatus;
+
   axios
     .get(authEndpoint + "/api/diagnosticData/defaultView/" + imsi, {
         "Content-Type": "application/xml; charset=utf-8"
      })
     .then(function(response) {
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length, refresh: refresh, refreshStatus: status }));
-        console.log("Inside the method:", refresh, status);
-        if((status === true && refresh === true) || (status === undefined && refresh === undefined)) {
-            self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 3000);
+        if(status === true && refresh === true) {
+            self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 60000);
         }
     })
     .catch(function(error) {
         console.log(error);
     });
-  }
 }
 
   render() {
