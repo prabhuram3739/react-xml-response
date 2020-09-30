@@ -11,12 +11,13 @@ import queryString from 'query-string';
 function Home() {
     const location = useLocation();
     let [refreshBoolean, setRefreshBoolean] = useState(false);
+    let [refreshStatus, setRefreshStatus] = useState(false);
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
         <div className = "row topSearchBox" >
         <div className = "col-12 searchBoxDiv" >
-        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" required / >
+        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI Search" id = "search-box" aria-label = "Search" required / >
         <button className = "searchIcon" type="submit">
         <FontAwesomeIcon icon = { faSearch } /> 
         </button>
@@ -38,10 +39,11 @@ function Home() {
         <div className="row">
         <div className="col-6"></div>
         <div className="col-6">
-        <button type="button" className="btn btn-primary pull-right" onClick={ () => setRefreshBoolean(true) }>Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        <button type="button" className="btn btn-primary pull-right" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        <button type="button" className="btn btn-primary pull-right" onClick={ () => { setRefreshBoolean(true); setRefreshStatus(true); }}>Enable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
         </div>
         </div>
-        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} >
+        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} >
         <div className = "row" >
         <DefaultView />
         </div>

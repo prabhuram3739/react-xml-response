@@ -19,6 +19,7 @@ import { useLocation } from 'react-router';
 import queryString from 'query-string';
 
 function Searchview() {
+    //Primary Core Details Data Enrichment Modals
     const [ModalOneShow, setModalOneShow] = React.useState(false);
     const [ModalTwoShow, setModalTwoShow] = React.useState(false);
     const [ModalThreeShow, setModalThreeShow] = React.useState(false);
@@ -26,14 +27,36 @@ function Searchview() {
     const [ModalFifthShow, setModalFifthShow] = React.useState(false);
     const [ModalSixthShow, setModalSixthShow] = React.useState(false);
     const [ModalSeventhShow, setModalSeventhShow] = React.useState(false);
-    const location = useLocation();
 
+    //Circuit Core Details Data Enrichment Modals
+    const [ModalEightShow, setModalEigthShow] = React.useState(false);
+    const [ModalNinthShow, setModalNinthShow] = React.useState(false);
+    const [ModalTenthShow, setModalTenthShow] = React.useState(false);
+    const [ModalEleventhShow, setModalEleventhShow] = React.useState(false);
+    const [ModalTwenlthShow, setModalTwenlthShow] = React.useState(false);
+    const [ModalThirteenthShow, setModalThirteenthShow] = React.useState(false);
+    const [ModalFourteenthShow, setModalFourteenthShow] = React.useState(false);
+    const [ModalFIfteenthShow, setModalFIfteenthShow] = React.useState(false);
+    const [ModalSixteenthShow, setModalSixteenthShow] = React.useState(false);
+    const [ModalSeventeenthShow, setModalSeventeenthShow] = React.useState(false);
+    const [ModalEighteenthShow, setModalEighteenthShow] = React.useState(false);
+    const [ModalNinteenthShow, setModalNinteenthShow] = React.useState(false);
+    const [ModalTwentyShow, setModalTwentyShow] = React.useState(false);
+    const [ModalTwentyFirstShow, setModalTwentyFirstShow] = React.useState(false);
+
+    const location = useLocation();
+    let [tabIndex, setTabIndex] = React.useState(0);
+    let handleTabSelect = (index) => {
+        tabIndex = index;
+        setTabIndex(tabIndex);
+        return tabIndex;
+    }
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
         <div className = "row topSearchBox" >
         <div className = "col-12 searchBoxDiv" >
-        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" required / >
+        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI Search" id = "search-box" aria-label = "Search" required / >
         <button className = "searchIcon" type="submit"><FontAwesomeIcon icon = { faSearch } /></button>
         </div> </div>
 
@@ -45,11 +68,12 @@ function Searchview() {
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
         <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
         <div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
-        <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
-        <a className = "nav-item nav-link" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Switch Details </a> 
-        <a className = "nav-item nav-link" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Switch Details </a> 
+        <a className = "nav-item nav-link active" onClick={() => handleTabSelect(0)} id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
+        <a className = "nav-item nav-link" onClick={() => handleTabSelect(1)} id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Packet Core Details </a> 
+        <a className = "nav-item nav-link" onClick={() => handleTabSelect(2)} id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Core Details </a> 
         {/*<a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modifications </a>  */}
-        </div> 
+        </div>
+        { (tabIndex === 1) ?
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
         <li className="nav-item dropdown" style={{marginTop: -3}}>
             <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
@@ -107,7 +131,115 @@ function Searchview() {
 
             </div>
         </li>
-        </ul>
+        </ul> : (tabIndex === 2) ?
+        <ul className="nav nav-bar nav-tabs dropleft pull-right">
+        <li className="nav-item dropdown" style={{marginTop: -3}}>
+            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 100 80" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+            </svg>
+            </a>
+            <div className="dropdown-menu collapse">
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalOneShow(true)}>Subscriber Status - Activate/Deactive</button>
+                <ApnEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />
+            </span>
+            <div className="dropdown-divider"></div>
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalTwoShow(true)}>Voice - Provision/Deprovision</button>
+                <GIDNSModal show={ModalTwoShow} onHide={() => setModalTwoShow(false)} />
+            </span>
+            
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalThreeShow(true)}>Voice MO - Activate/Deactivate</button>
+                <GYInlineModal show={ModalThreeShow} onHide={() => setModalThreeShow(false)} />
+            </span>
+
+            <div className="dropdown-divider"></div>
+ 
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalFourthShow(true)}>Voice MT - Activate/Deactivate</button>
+                <GYBypassModal show={ModalFourthShow} onHide={() => setModalFourthShow(false)} />
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalFifthShow(true)}>SMS MO - Provision/Deprovision</button>
+                <ApnShutdownInlineModal show={ModalFifthShow} onHide={(value) => setModalFifthShow(value)}  />
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSixthShow(true)}>SMS MT - Provision/Deprovision</button>
+                <APNShutdownBypassModal show={ModalSixthShow} onHide={(value) => setModalSixthShow(value)} />
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>SMS MO - Activate/Deactivate</button>
+                <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+<span className="dropdown-item">
+    <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>3G Data - Activate/Deactivate</button>
+    <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+</span>
+
+<div className="dropdown-divider"></div>
+
+<span className="dropdown-item">
+    <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>3G Data Roam - Activate/Deactivate</button>
+    <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+</span>
+
+<div className="dropdown-divider"></div>
+
+<span className="dropdown-item">
+    <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>4G Data - Activate/Deactivate</button>
+    <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+</span>
+
+<div className="dropdown-divider"></div>
+
+<span className="dropdown-item">
+    <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>SIM Purge</button>
+    <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+</span>
+
+<div className="dropdown-divider"></div>
+
+<span className="dropdown-item">
+    <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>SIM Swap</button>
+    <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+</span>
+
+<div className="dropdown-divider"></div>
+
+<span className="dropdown-item">
+    <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>3G APN - Provision/Deprovision</button>
+    <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+</span>
+
+<div className="dropdown-divider"></div>
+
+<span className="dropdown-item">
+    <button className="btn btn-primary btn-block" type="button" onClick={() => setModalSeventhShow(true)}>4G APN - Provision/Deprovision</button>
+    <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
+</span>
+
+            </div>
+        </li>
+        </ul> : ""
+}
         </nav>
         <DataProvider imsi={queryString.parse(location.search).imsi} >
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >

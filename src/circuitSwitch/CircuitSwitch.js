@@ -96,8 +96,19 @@ export default class CircuitSwitch extends React.Component {
                         <table className="table table-striped table-border" key={index}>
                         <tbody>
                         <tr>
+                        <td className="textAlignRight"><label className="fontBold">IMSI:</label>
+                        </td>
+                        <td><span>{item.circuitSwitch.imsi ? item.circuitSwitch.imsi : 'No Data Available'}</span>
+                        </td>
+                        <td className="textAlignRight"><label className="fontBold">MSIDN:</label>
+                        </td>
+                        <td> <span>{item.circuitSwitch.msidn ? item.circuitSwitch.msidn : 'No Data Available'}</span>
+                        </td>
                         <td className="textAlignRight"><label className="fontBold">Subscriber Status:</label> </td>
                         <td><span>{item.circuitSwitch.subscriberStatus? 'IMSI Active' : 'IMSI Inactive'}</span></td>
+                        </tr>
+                        <tr>
+                        
                         <td className="textAlignRight"><label className="fontBold">3G APN List:</label></td>
                         <td>
                         {item.circuitSwitch.threeGApnDataList.map((threeGApnList, index) => {
@@ -115,13 +126,14 @@ export default class CircuitSwitch extends React.Component {
                         )
                         })}
                         </td>
-                        </tr>
-
-                        <tr>
                         <td className="textAlignRight"><label className="fontBold">VLR Number:</label>
                         </td>
                         <td><span>{item.circuitSwitch.vlrNumber ? item.circuitSwitch.vlrNumber : 'No Data Available'}</span>
                         </td>
+                        </tr>
+
+                        <tr>
+                        
                         <td className="textAlignRight"><label className="fontBold">SGSN Number:</label>
                         </td>
                         <td> <span>{item.circuitSwitch.sgsnNumber ? item.circuitSwitch.sgsnNumber : 'No Data Available'}</span>
@@ -130,13 +142,14 @@ export default class CircuitSwitch extends React.Component {
                         </td> 
                         <td><span>{item.circuitSwitch.mmeId ? item.circuitSwitch.mmeId : 'No Data Available'}</span>
                         </td>
-                        </tr>
-
-                        <tr>
                         <td className="textAlignRight"><label className="fontBold">Voice MO Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}</span>
                         </td>
+                        </tr>
+
+                        <tr>
+                        
                         <td className="textAlignRight"><label className="fontBold">Voice MT Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.incomingCallStatus ? item.circuitSwitch.incomingCallStatus : 'No Data Available'}</span>
@@ -145,13 +158,14 @@ export default class CircuitSwitch extends React.Component {
                         </td> 
                         <td><span>{item.circuitSwitch.moSmsStatus ? item.circuitSwitch.moSmsStatus : 'No Data Available'}</span>
                         </td>
-                        </tr>
-
-                        <tr>
                         <td className="textAlignRight"><label className="fontBold">SMS-MT Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.mtSmsStatus ? item.circuitSwitch.mtSmsStatus : 'No Data Available'}</span>
                         </td>
+                        </tr>
+
+                        <tr>
+                        
                         <td className="textAlignRight"><label className="fontBold">3G DATA - Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.threeGDataStatus ? item.circuitSwitch.threeGDataStatus : 'No Data Available'}</span>
@@ -160,13 +174,13 @@ export default class CircuitSwitch extends React.Component {
                         </td> 
                         <td><span>{item.circuitSwitch.threeGDataRoamStatus ? item.circuitSwitch.threeGDataRoamStatus : 'No Data Available'}</span>
                         </td>
-                        </tr>
-
-                        <tr>
                         <td className="textAlignRight"><label className="fontBold">4G DATA - Status:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.fourGDataStatus ? item.circuitSwitch.fourGDataStatus : 'No Data Available'}</span>
                         </td>
+                        </tr>
+
+                        <tr>
                         <td className="textAlignRight"><label className="fontBold">Prepaid/Camel Data:</label>
                         </td> 
                         <td><span>{item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}</span>

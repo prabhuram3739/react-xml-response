@@ -9,12 +9,13 @@ export class DefaultViewDataProvider extends Component {
     data: [],
     count: 0,
     loading: true,
-    refresh: false
+    refresh: false,
+    refreshStatus: false
   }
 
   componentDidMount() {
     this.setState({ loading: true }, () => {
-      this.getDefaultViewData(this.props.imsi, this.state.refresh);
+      this.getDefaultViewData(this.props.imsi, this.state.refresh, this.state.refreshStatus);
     });
 }
 
@@ -29,12 +30,18 @@ componentWillUnmount() {
 }
 
 componentWillReceiveProps(nextProps){
-  this.setState({refresh: nextProps.refresh});
-  //console.log(nextProps.refresh);
-  this.getDefaultViewData(this.props.imsi, true);
+  this.setState({refresh: nextProps.refresh, refreshStatus: nextProps.refreshStatus});
+  console.log("Initial Values:", nextProps.refresh, nextProps.refreshStatus);
+  console.log("Initial Refresh Status:", this.state.refreshStatus);
+  if(this.state.refreshStatus === false) {
+    this.getDefaultViewData(this.props.imsi, nextProps.refresh, nextProps.refreshStatus);
+  } else {
+    this.getDefaultViewData(this.props.imsi, nextProps.refresh, this.state.refreshStatus);
+  }
+  
 }
 
-getDefaultViewData = (imsi, refresh) => {
+getDefaultViewData = (imsi, refresh, status) => {
   var self = this;
   imsi ="234500010400205";
   axios
@@ -43,9 +50,11 @@ getDefaultViewData = (imsi, refresh) => {
      })
     .then(function(response) {
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
-        //console.log(refresh);
-        if((refresh === true) || (refresh === undefined)) {
-          self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 60000);
+        console.log("Inside the method:", refresh, status);
+        if((status === true && refresh === true) || (status === undefined && refresh === undefined)) {
+          if((refresh === true) || (refresh === undefined)) {
+            self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 3000);
+          }
         }
     })
     .catch(function(error) {
