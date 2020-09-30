@@ -15,7 +15,7 @@ function Home() {
         <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
         <div className = "row topSearchBox" >
         <div className = "col-12 searchBoxDiv" >
-        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" / >
+        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI/MSDN Search" id = "search-box" aria-label = "Search" required / >
         <button className = "searchIcon" type="submit">
         <FontAwesomeIcon icon = { faSearch } /> 
         </button>
