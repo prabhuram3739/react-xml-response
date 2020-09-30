@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 // get our fontawesome imports
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DefaultViewDataLayerContext, { DefaultViewDataProvider } from '../DefaultViewDataLayerContext';
 import DefaultView from "../defaultView/DefaultView";
@@ -10,6 +10,7 @@ import queryString from 'query-string';
 
 function Home() {
     const location = useLocation();
+    let [refreshBoolean, setRefreshBoolean] = useState(false);
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
@@ -34,7 +35,13 @@ function Home() {
     </nav>*/}
         <div className = "tab-content noOverflowX" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
-        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  >
+        <div className="row">
+        <div className="col-6"></div>
+        <div className="col-6">
+        <button type="button" className="btn btn-primary pull-right" onClick={ () => setRefreshBoolean(true) }>Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        </div>
+        </div>
+        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} >
         <div className = "row" >
         <DefaultView />
         </div>

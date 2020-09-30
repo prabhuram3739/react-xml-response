@@ -8,12 +8,13 @@ export class DefaultViewDataProvider extends Component {
   state = {
     data: [],
     count: 0,
-    loading: true
+    loading: true,
+    refresh: false
   }
 
   componentDidMount() {
     this.setState({ loading: true }, () => {
-      this.getDefaultViewData(this.props.imsi);
+      this.getDefaultViewData(this.props.imsi, this.state.refresh);
     });
 }
 
@@ -27,7 +28,13 @@ componentWillUnmount() {
   clearTimeout(this.intervalID);
 }
 
-getDefaultViewData = (imsi) => {
+componentWillReceiveProps(nextProps){
+  this.setState({refresh: nextProps.refresh});
+  //console.log(nextProps.refresh);
+  this.getDefaultViewData(this.props.imsi, true);
+}
+
+getDefaultViewData = (imsi, refresh) => {
   var self = this;
   imsi ="234500010400205";
   axios
@@ -36,7 +43,10 @@ getDefaultViewData = (imsi) => {
      })
     .then(function(response) {
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
-        self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 60000);
+        //console.log(refresh);
+        if((refresh === true) || (refresh === undefined)) {
+          self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 60000);
+        }
     })
     .catch(function(error) {
         console.log(error);
@@ -44,10 +54,10 @@ getDefaultViewData = (imsi) => {
 }
 
   render() {
-    const {data, count, loading} = this.state || {};
+    const {data, count, loading, refresh} = this.state || {};
     const {componentDidMount} = this;
     return(
-      <DefaultViewDataLayerContext.Provider value = {{ data, count, loading, componentDidMount }} > { this.props.children } 
+      <DefaultViewDataLayerContext.Provider value = {{ data, count, loading, refresh, componentDidMount }} > { this.props.children } 
       </DefaultViewDataLayerContext.Provider>
     )
   }
