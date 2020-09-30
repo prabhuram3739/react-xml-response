@@ -25,6 +25,15 @@
     background-color: #d7d7d7;
 }
 
+.reducedPaddingTop {
+    padding: 0rem 0.75rem !important;
+}
+
+.dropdown-item {
+    padding: 0rem 1.5rem !important;
+    height: 19px !important;
+}
+
 .fontReduce {
     font-size: 17px;
 }
