@@ -1,4 +1,4 @@
-import React, {createRef} from "react";
+import React, {useState, createRef} from "react";
 import { Modal } from 'react-bootstrap';
 
 function GXInlineModal(props) {
@@ -17,6 +17,9 @@ function GXInlineModal(props) {
     const secondaryPeerRef = createRef();
     const diameterPeerRef = createRef();
 
+    const [disabled, setDiameterPeerGroupDisabled] = useState(false);
+    const [priSecDisabled, setPrimarySecondaryDisabled] = useState(false);
+
     const onPrimaryPeerClick = (() => { 
       setShowPrimaryPeerMsg(true);
 
@@ -33,6 +36,7 @@ function GXInlineModal(props) {
       setShowSecondaryPeerMsg(false);
       setShowDiameterPeerMsg(false);
       setShowSubmitOnlyAPNMsg(false);
+      handleDiameterPeerGroupDisableInput();
     });
 
     const onSecondaryPeerClick = (() => { 
@@ -51,6 +55,7 @@ function GXInlineModal(props) {
       setShowSecondaryPeerMsg(false);
       setShowDiameterPeerMsg(false);
       setShowSubmitOnlyAPNMsg(false);
+      handleDiameterPeerGroupDisableInput();
     });
 
 
@@ -70,7 +75,16 @@ function GXInlineModal(props) {
       setShowSecondaryPeerMsg(false);
       setShowDiameterPeerMsg(false);
       setShowSubmitOnlyAPNMsg(false);
+      handlePriSecDisableInput();
     });
+
+    function handleDiameterPeerGroupDisableInput() {
+      setDiameterPeerGroupDisabled(!disabled);
+    }
+
+    function handlePriSecDisableInput() {
+      setPrimarySecondaryDisabled(!priSecDisabled);
+    }
 
     const onSubmitClick = (e) => {
         const gxProfileName = gxProfileRef.current.value;
@@ -131,7 +145,7 @@ function GXInlineModal(props) {
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">Primary Diameter Peer</span>
         </div>
-        <input type="text" className="form-control" placeholder="Primary Diameter Peer" aria-label="primaryDiameterPeer" aria-describedby="basic-addon1" ref={primaryPeerRef} onClick={onPrimaryPeerClick} onInput={onPrimaryPeerInput} />
+        <input type="text" className="form-control" placeholder="Primary Diameter Peer" aria-label="primaryDiameterPeer" disabled={priSecDisabled} aria-describedby="basic-addon1" ref={primaryPeerRef} onClick={onPrimaryPeerClick} onInput={onPrimaryPeerInput} />
         </div>
         { showPrimaryPeerMsg ? <div className="msgText">! At least one of Primary or Secondary Diameter peer name is required.</div> : null }
         </div>
@@ -140,7 +154,7 @@ function GXInlineModal(props) {
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">Secondary Diameter Peer</span>
         </div>
-        <input type="text" className="form-control" placeholder="Secondary Diameter Peer" aria-label="secondaryDiameterPeer" ref={secondaryPeerRef} aria-describedby="basic-addon1" onClick={onSecondaryPeerClick} onInput={onSecondaryPeerInput} />
+        <input type="text" className="form-control" placeholder="Secondary Diameter Peer" aria-label="secondaryDiameterPeer" disabled={priSecDisabled} ref={secondaryPeerRef} aria-describedby="basic-addon1" onClick={onSecondaryPeerClick} onInput={onSecondaryPeerInput} />
         </div>
         { showSecondaryPeerMsg ? <div className="msgText">! At least one of Primary or Secondary Diameter peer name is required.</div> : null }
         </div>
@@ -152,7 +166,7 @@ function GXInlineModal(props) {
         <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">Diameter Group Peer</span>
         </div>
-        <input type="text" className="form-control" placeholder="Diameter Group Peer" aria-label="diameterGroupPeer" aria-describedby="basic-addon1" ref={diameterPeerRef} onClick={onDiameterPeerClick} onInput={onDiameterPeerInput} />
+        <input type="text" className="form-control" placeholder="Diameter Group Peer" aria-label="diameterGroupPeer" disabled={disabled} aria-describedby="basic-addon1" ref={diameterPeerRef} onClick={onDiameterPeerClick} onInput={onDiameterPeerInput} />
         </div>
         { showDiameterPeerMsg ? <div className="msgText">! Diameter group peer is not required if at least one of Primary or Secondary Diameter peer name is provided.</div> : null }
         </div>
