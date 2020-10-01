@@ -93,13 +93,13 @@ export default class DefaultView extends React.Component {
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">Dia Peer Prof:</label> <span>{gyStatistics.gyStatisticsList.diaPeerProf ? gyStatistics.gyStatisticsList.diaPeerProf : 'No Data Available'}</span></div>
+    <label className="fontBold">Dia Peer Prof:</label> <span>{gyStatistics.diaPeerProf ? gyStatistics.diaPeerProf : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gyStatistics.gyStatisticsListpeerAddress ? gyStatistics.gyStatisticsList.peerAddress : 'No Data Available'}</span></div>
+    <label className="fontBold">Peer Address:</label> <span>{gyStatistics.peerAddress ? gyStatistics.peerAddress : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{gyStatistics.gyStatisticsListpathMgmtState ? gyStatistics.gyStatisticsList.pathMgmtState : 'No Data Available'}</span></div>
+    <label className="fontBold">Path Mgmt State:</label> <span>{gyStatistics.pathMgmtState ? gyStatistics.pathMgmtState : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Detail State:</label> <span>{gyStatistics.gyStatisticsListdetailState ? gyStatistics.gyStatisticsList.detailState : 'No Data Available'}</span></div>
+    <label className="fontBold">Detail State:</label> <span>{gyStatistics.detailState ? gyStatistics.detailState : 'No Data Available'}</span></div>
     </div>
     )})
     }
@@ -124,13 +124,13 @@ export default class DefaultView extends React.Component {
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">Dia Peer Prof:</label> <span>{gxStatistics.gxStatisticsList.diaPeerProf ? gxStatistics.gxStatisticsList.diaPeerProf : 'No Data Available'}</span></div>
+    <label className="fontBold">Dia Peer Prof:</label> <span>{gxStatistics.diaPeerProf ? gxStatistics.diaPeerProf : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gxStatistics.gxStatisticsList.peerAddress ? gxStatistics.gxStatisticsList.peerAddress : 'No Data Available'}</span></div>
+    <label className="fontBold">Peer Address:</label> <span>{gxStatistics.peerAddress ? gxStatistics.peerAddress : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{gxStatistics.gxStatisticsList.pathMgmtState ? gxStatistics.gxStatisticsList.pathMgmtState : 'No Data Available'}</span></div>
+    <label className="fontBold">Path Mgmt State:</label> <span>{gxStatistics.pathMgmtState ? gxStatistics.pathMgmtState : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Detail State:</label> <span>{gxStatistics.gxStatisticsList.detailState ? gxStatistics.gxStatisticsList.detailState : 'No Data Available'}</span></div>
+    <label className="fontBold">Detail State:</label> <span>{gxStatistics.detailState ? gxStatistics.detailState : 'No Data Available'}</span></div>
     </div>
     )})
     }
@@ -155,13 +155,13 @@ export default class DefaultView extends React.Component {
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">UP Assosication:</label> <span>{sxStatistics.sxStatisticsList.uPAssociation ? sxStatistics.sxStatisticsList.uPAssociation : 'No Data Available'}</span></div>
+    <label className="fontBold">UP Assosication:</label> <span>{sxStatistics.uPAssociation ? sxStatistics.uPAssociation : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{sxStatistics.sxStatisticsList.peerAddress ? sxStatistics.sxStatisticsList.peerAddress : 'No Data Available'}</span></div>
+    <label className="fontBold">Peer Address:</label> <span>{sxStatistics.peerAddress ? sxStatistics.peerAddress : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{sxStatistics.sxStatisticsList.pathMgmtState ? sxStatistics.sxStatisticsList.pathMgmtState : 'No Data Available'}</span></div>
+    <label className="fontBold">Path Mgmt State:</label> <span>{sxStatistics.pathMgmtState ? sxStatistics.pathMgmtState : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Last Change Time:</label> <span>{sxStatistics.sxStatisticsList.lastChangeTime ? sxStatistics.sxStatisticsList.lastChangeTime : 'No Data Available'}</span></div>
+    <label className="fontBold">Last Change Time:</label> <span>{sxStatistics.lastChangeTime ? sxStatistics.lastChangeTime : 'No Data Available'}</span></div>
     </div>
     )})
     }
@@ -186,13 +186,13 @@ export default class DefaultView extends React.Component {
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">Group Name:</label> <span>{radStatistics.radStatisticsList.groupName ? radStatistics.radStatisticsList.groupName : 'No Data Available'}</span></div>
+    <label className="fontBold">Group Name:</label> <span>{radStatistics.groupName ? radStatistics.groupName : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{radStatistics.radStatisticsList.peerAddress ? radStatistics.radStatisticsList.peerAddress : 'No Data Available'}</span></div>
+    <label className="fontBold">Peer Address:</label> <span>{radStatistics.peerAddress ? radStatistics.peerAddress : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Operation State:</label> <span>{radStatistics.radStatisticsList.operationState ? radStatistics.radStatisticsList.operationState : 'No Data Available'}</span></div>
+    <label className="fontBold">Operation State:</label> <span>{radStatistics.operationState ? radStatistics.operationState : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Admin State:</label> <span>{radStatistics.radStatisticsList.adminState ? radStatistics.radStatisticsList.adminState : 'No Data Available'}</span></div>
+    <label className="fontBold">Admin State:</label> <span>{radStatistics.adminState ? radStatistics.adminState : 'No Data Available'}</span></div>
     </div>
     )})
     }
@@ -217,13 +217,13 @@ export default class DefaultView extends React.Component {
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">GTP Prim Grp:</label> <span>{gaStatistics.gaStatisticsList.gtpPrimGrp ? gaStatistics.gaStatisticsList.gtpPrimGrp : 'No Data Available'}</span></div>
+    <label className="fontBold">GTP Prim Grp:</label> <span>{gaStatistics.gtpPrimGrp ? gaStatistics.gtpPrimGrp : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gaStatistics.gaStatisticsList.peerAddress ? gaStatistics.gaStatisticsList.peerAddress : 'No Data Available'}</span></div>
+    <label className="fontBold">Peer Address:</label> <span>{gaStatistics.peerAddress ? gaStatistics.peerAddress : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Operation State:</label> <span>{gaStatistics.gaStatisticsList.operState ? gaStatistics.gaStatisticsList.operState : 'No Data Available'}</span></div>
+    <label className="fontBold">Operation State:</label> <span>{gaStatistics.operState ? gaStatistics.operState : 'No Data Available'}</span></div>
     <div className="col-3">
-    <label className="fontBold">Up Time:</label> <span>{gaStatistics.gaStatisticsList.upTime ? gaStatistics.gaStatisticsList.upTime : 'No Data Available'}</span></div>
+    <label className="fontBold">Up Time:</label> <span>{gaStatistics.upTime ? gaStatistics.upTime : 'No Data Available'}</span></div>
     </div>
     )})
     }
