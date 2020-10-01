@@ -12,6 +12,7 @@ function Home() {
     const location = useLocation();
     let [refreshBoolean, setRefreshBoolean] = useState(false);
     let [refreshStatus, setRefreshStatus] = useState(false);
+    let [buttonText, setButtonText] = useState("Enable");
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
@@ -38,8 +39,8 @@ function Home() {
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <div className="row">
         <div className="col-12">
-        <button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
-        <button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(true); setRefreshStatus(true); }}>Enable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        {/*<button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>*/}
+        <button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); }}>{ buttonText } Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>
         </div>
         </div>
         <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} >
