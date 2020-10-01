@@ -5,6 +5,7 @@
     margin-right: 10px;
     color: #495057 !important;
     border: none !important;
+    background: none;
 }
 
 .searchIcon:focus {
