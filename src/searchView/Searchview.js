@@ -76,9 +76,9 @@ function Searchview() {
         </div>
         { (tabIndex === 1) ?
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
-        <li className="nav-item dropdown" style={{marginTop: -3}}>
+        <li className="nav-item dropdown" style={{marginTop: -6}}>
             <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
-            <svg viewBox="0 0 100 80" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 100 80" width="20" height="31" xmlns="http://www.w3.org/2000/svg">
                 <rect width="100" height="20"></rect>
                 <rect y="30" width="100" height="20"></rect>
                 <rect y="60" width="100" height="20"></rect>
@@ -134,9 +134,9 @@ function Searchview() {
         </li>
         </ul> : (tabIndex === 2) ?
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
-        <li className="nav-item dropdown" style={{marginTop: -3}}>
+        <li className="nav-item dropdown" style={{marginTop: -6}}>
             <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
-            <svg viewBox="0 0 100 80" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 100 80" width="20" height="31" xmlns="http://www.w3.org/2000/svg">
                 <rect width="100" height="20"></rect>
                 <rect y="30" width="100" height="20"></rect>
                 <rect y="60" width="100" height="20"></rect>

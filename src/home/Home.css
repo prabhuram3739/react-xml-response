@@ -1,5 +1,5 @@
 .searchIcon {
-    margin-top: -31px;
+    margin-top: -36px;
     float: right;
     font-size: 20px;
     margin-right: 10px;
@@ -65,7 +65,7 @@ input.searchBox,
 .form-control.searchBox {
     border: none !important;
     height: calc(1.5em + 0.75rem + 2px) !important;
-    width: 97%;
+    width: 100%;
     border-radius: 10px !important;
 }
 
