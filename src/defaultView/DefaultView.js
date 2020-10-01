@@ -27,7 +27,7 @@ export default class DefaultView extends React.Component {
                       <React.Fragment key={item.id}>
                         <div key={index}>
                        
-                        <div className="accordion pt-3" id="accordionExample">
+                        <div className="accordion" id="accordionExample">
                         
                         <p>
                         
