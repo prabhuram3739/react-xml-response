@@ -44,7 +44,7 @@ export default class GeneralInfo extends React.Component {
                             <td className="textAlignRight"><label className="fontBold">RAT Type:</label></td>
                             <td><span>{item.packetSwitch.ratType ? item.packetSwitch.ratType : 'No Data Available'}</span></td>
                             <td className="textAlignRight"><label className="fontBold">Network MCC/Network MNC:</label></td>
-                            <td><span>{item.packetSwitch.networkMNC ? item.packetSwitch.networkMNC : 'No Data Available'}</span></td>
+                            <td><span>{item.packetSwitch.networkMCCMNC ? item.packetSwitch.networkMCCMNC : 'No Data Available'}</span></td>
                         </tr>
                         <tr>
                             <td className="textAlignRight"><label className="fontBold">Cell ID:</label></td>
