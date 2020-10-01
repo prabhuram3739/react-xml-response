@@ -77,7 +77,7 @@ function Searchview() {
         { (tabIndex === 1) ?
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
         <li className="nav-item dropdown" style={{marginTop: -3}}>
-            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
+            <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
             <svg viewBox="0 0 100 80" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                 <rect width="100" height="20"></rect>
                 <rect y="30" width="100" height="20"></rect>
@@ -135,7 +135,7 @@ function Searchview() {
         </ul> : (tabIndex === 2) ?
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
         <li className="nav-item dropdown" style={{marginTop: -3}}>
-            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
+            <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
             <svg viewBox="0 0 100 80" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                 <rect width="100" height="20"></rect>
                 <rect y="30" width="100" height="20"></rect>
