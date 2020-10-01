@@ -29,13 +29,11 @@ export class DataProvider extends Component {
 
   getSearchViewData = (imsi) => {
     var self = this;
-    console.log("Data Layer File IMSI:", imsi);
     axios
     .get(authEndpoint + "/api/diagnosticData/searchView/" + imsi, {
         "Content-Type": "application/xml; charset=utf-8"
      })
     .then(function(response) {
-      console.log(response);
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length }));
         //self.intervalID = setTimeout(self.getSearchViewData.bind(this), 60000);
     })
