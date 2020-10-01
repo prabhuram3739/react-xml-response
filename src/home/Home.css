@@ -18,6 +18,22 @@
     margin-right: 0px !important;
 }
 
+.centerAlignText {
+    text-align: center;
+}
+
+.marginLeftAlign {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.centerAlignText,
+.marginLeftAlign {
+    background: none !important;
+    color: #000 !important;
+    font-weight: bold !important;
+}
+
 ::-webkit-input-placeholder {
     /* Edge */
     font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;

@@ -62,7 +62,7 @@ getDefaultViewData = (imsi, refresh, status) => {
     .then(function(response) {
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length, refresh: refresh, refreshStatus: status }));
         if(status === true && refresh === true) {
-            self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 60000);
+            self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 3000);
         }
     })
     .catch(function(error) {
