@@ -89,7 +89,7 @@ export default class DefaultView extends React.Component {
     </div>
     <div id="collapseTwo" className="collapse show multi-collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
     <div className="card-body">
-    {(item.gyStatisticsList !== null && item.gyStatisticsList.gyStatisticsList.length > 0) && item.gyStatisticsList.gyStatisticsList.map((gyStatistics, index) => {
+    {(item.gyStatisticsList !== null) && item.gyStatisticsList.gyStatisticsList.map((gyStatistics, index) => {
     return(
     <div className="row" key={index}>
     <div className="col-3">
@@ -120,7 +120,7 @@ export default class DefaultView extends React.Component {
     </div>
     <div id="collapseThree" className="collapse show multi-collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div className="card-body">
-      {(item.gxStatisticsList !== null && item.gxStatisticsList.gxStatisticsList.length > 0) && item.gxStatisticsList.gxStatisticsList.map((gxStatistics, index) => {
+      {(item.gxStatisticsList !== null) && item.gxStatisticsList.gxStatisticsList.map((gxStatistics, index) => {
     return(
     <div className="row" key={index}>
     <div className="col-3">
@@ -151,7 +151,7 @@ export default class DefaultView extends React.Component {
     </div>
     <div id="collapseFour" className="collapse show multi-collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
       <div className="card-body">
-      {(item.sxStatisticsList !== null && item.sxStatisticsList.sxStatisticsList.length > 0) && item.sxStatisticsList.sxStatisticsList.map((sxStatistics, index) => {
+      {(item.sxStatisticsList !== null) && item.sxStatisticsList.sxStatisticsList.map((sxStatistics, index) => {
     return(
     <div className="row" key={index}>
     <div className="col-3">
@@ -182,7 +182,7 @@ export default class DefaultView extends React.Component {
     </div>
     <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
       <div className="card-body">
-      {(item.radStatisticsList !== null && item.radStatisticsList.radStatisticsList.length > 0) && item.radStatisticsList.radStatisticsList.map((radStatistics, index) => {
+      {(item.radStatisticsList !== null) && item.radStatisticsList.radStatisticsList.map((radStatistics, index) => {
     return(
     <div className="row" key={index}>
     <div className="col-3">
@@ -213,7 +213,7 @@ export default class DefaultView extends React.Component {
     </div>
     <div id="collapseSix" className="collapse show multi-collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
       <div className="card-body">
-      {(item.gaStatisticsList !== null && item.gaStatisticsList.gaStatisticsList.length > 0) && item.gaStatisticsList.gaStatisticsList.map((gaStatistics, index) => {
+      {(item.gaStatisticsList !== null) && item.gaStatisticsList.gaStatisticsList.map((gaStatistics, index) => {
     return(
     <div className="row" key={index}>
     <div className="col-3">
