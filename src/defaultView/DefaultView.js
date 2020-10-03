@@ -14,63 +14,63 @@ export default class DefaultView extends React.Component {
         )
        }
       }
-       return (
+    return (
 
-        <div className="container-fluid fontChange">
-            {
-                //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
-                // Display loader till the response appears and check for the validity of the data If exists
-                loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
-                (finalData && finalData.length > 0) &&
-                finalData.map((item, index) => {
-                    return (
-                      <React.Fragment key={item.id}>
-                        <div key={index}>
-                       
-                        <div className="accordion" id="accordionExample">
-                        
-                        <p>
-                        
-                        <button className="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
-                        </p>
-                          <div className="card">
-                            <div className="card-header" id="headingOne">
-                              <h5 className="mb-0">
-                                <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <div className="row">
-                                  <div className="col-12 removePaddingLeft">
-                                      Hostname: AMS_PROD_CMG
-                                      </div>
-                                  </div>
-                                </button>
-                              </h5>
-                            </div>
+<div className="container-fluid fontChange">
+{
+//loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
+// Display loader till the response appears and check for the validity of the data If exists
+loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
+(finalData && finalData.length > 0) &&
+finalData.map((item, index) => {
+return (
+<React.Fragment key={item.id}>
+<div key={index}>
+
+<div className="accordion" id="accordionExample">
+
+<p>
+
+<button className="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
+</p>
+<div className="card">
+<div className="card-header" id="headingOne">
+<h5 className="mb-0">
+<button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+<div className="row">
+<div className="col-12 removePaddingLeft">
+Hostname: AMS_PROD_CMG
+</div>
+</div>
+</button>
+</h5>
+</div>
 
     <div id="collapseOne" className="collapse show multi-collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div className="card-body">
       <div className="row">
         <div className="col-4">
-        <label className="fontBold textAlignRight">Homers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}</span></div>
+        <label className="fontBold">Homers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold textAlignRight">LTE PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}</span></div>
+        <label className="fontBold">LTE PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold textAlignRight">Real APNs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}</span></div>
+        <label className="fontBold">Real APNs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}</span></div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold textAlignRight">Roamers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}</span></div>
+        <label className="fontBold">Roamers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold textAlignRight">2G/3G PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}</span></div>
+        <label className="fontBold">2G/3G PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold textAlignRight">Ga CDRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered : 'No Data Available'}</span></div>
+        <label className="fontBold">Ga CDRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered : 'No Data Available'}</span></div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold textAlignRight">Visitors:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.visitors ? item.packetSwitchAdminDefaultHeaderVO.visitors : 'No Data Available'}</span></div>
+        <label className="fontBold">Visitors:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.visitors ? item.packetSwitchAdminDefaultHeaderVO.visitors : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold textAlignRight">Total Number of UEs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</span></div>
+        <label className="fontBold">Total Number of UEs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold textAlignRight">Gy CCRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered : 'No Data Available'}</span></div>
+        <label className="fontBold">Gy CCRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered : 'No Data Available'}</span></div>
         </div>
       </div>
     </div>
