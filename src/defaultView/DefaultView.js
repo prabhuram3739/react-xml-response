@@ -50,27 +50,27 @@ export default class DefaultView extends React.Component {
       <div className="card-body">
       <div className="row">
         <div className="col-4">
-        <label className="fontBold">Homers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">Homers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold">LTE PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">LTE PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold">Real APNs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">Real APNs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}</span></div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold">Roamers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">Roamers:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold">2G/3G PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">2G/3G PDN Sessions:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold">Ga CDRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">Ga CDRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered : 'No Data Available'}</span></div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold">Visitors:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.visitors ? item.packetSwitchAdminDefaultHeaderVO.visitors : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">Visitors:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.visitors ? item.packetSwitchAdminDefaultHeaderVO.visitors : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold">Total Number of UEs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">Total Number of UEs:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</span></div>
         <div className="col-4">
-        <label className="fontBold">Gy CCRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered : 'No Data Available'}</span></div>
+        <label className="fontBold textAlignRight">Gy CCRs Buffered:</label> <span>{item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered : 'No Data Available'}</span></div>
         </div>
       </div>
     </div>
