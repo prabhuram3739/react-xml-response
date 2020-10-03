@@ -32,19 +32,19 @@ export default class DefaultView extends React.Component {
                         <p>
                         
                         <button className="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
-</p>
-  <div className="card">
-    <div className="card-header" id="headingOne">
-      <h5 className="mb-0">
-        <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <div className="row">
-                        <div className="col-12 removePaddingLeft">
-                            Hostname: AMS_PROD_CMG
+                        </p>
+                          <div className="card">
+                            <div className="card-header" id="headingOne">
+                              <h5 className="mb-0">
+                                <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div className="row">
+                                  <div className="col-12 removePaddingLeft">
+                                      Hostname: AMS_PROD_CMG
+                                      </div>
+                                  </div>
+                                </button>
+                              </h5>
                             </div>
-                        </div>
-        </button>
-      </h5>
-    </div>
 
     <div id="collapseOne" className="collapse show multi-collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div className="card-body">
