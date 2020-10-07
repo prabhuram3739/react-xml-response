@@ -126,6 +126,11 @@ h4 {
     text-align: justify;
 }
 
+.marginLeft5 {
+    display: inline-flex !important;
+    justify-content: center;
+}
+
 .headerMsgText {
     color: red;
     font-size: 12px;
@@ -137,7 +142,27 @@ h4 {
 
 .fontBold {
     font-size: 15px;
-    color: gray;
+    color: #007bff;
+}
+
+.txtBoxHeight {
+    height: 25px !important;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #fff;
+    padding: 5px;
+    width: 100%;
+}
+
+.noBorderTableTD td {
+    border: none !important;
+}
+
+.boldFont {
+    font-weight: bold;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -155,6 +180,14 @@ td {
     color: gray;
     text-align: right;
     font-weight: 400;
+}
+
+.marginLeftAlignCards {
+    display: inline-flex !important;
+}
+
+.shadow-soft {
+    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff!important;
 }
 
 td span {

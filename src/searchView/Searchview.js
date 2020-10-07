@@ -250,7 +250,7 @@ function Searchview() {
 }
         </nav>
         <DataProvider imsi={queryString.parse(location.search).imsi} >
-        <div className = "tab-content noOverflowX" id = "nav-tabContent" >
+        <div className = "tab-content" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <GeneralInfo />
         </div> 
