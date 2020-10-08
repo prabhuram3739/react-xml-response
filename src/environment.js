@@ -1,1 +1,1 @@
-export const authEndpoint = "http://localhost:8080";
+export const authEndpoint = "http://18.185.117.167:8080";
