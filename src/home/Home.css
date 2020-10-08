@@ -13,7 +13,6 @@
     border-radius: 3rem;
     box-shadow: 0.5rem 0.5rem 0.5rem var('--box-shadow-first-color'), -0.5rem -0.5rem 0.5rem var('--box-shadow-second-color');
     transition: all 250ms ease-in-out;
-    border: none;
     margin-left: 0px !important;
     margin-right: 0px !important;
 }
@@ -74,12 +73,12 @@
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-    border-bottom: 2px solid #cd040b !important;
+    border-bottom: none !important;
 }
 
 input.searchBox,
 .form-control.searchBox {
-    border: none !important;
+    border: 1px solid !important;
     height: calc(1.5em + 0.75rem + 2px) !important;
     width: 100%;
     border-radius: 10px !important;
@@ -87,6 +86,16 @@ input.searchBox,
 
 .clickMoreDetails {
     font-size: 1.5rem;
+}
+
+.greenTxt {
+    color: #00be3b;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.fontCursorPointer {
+    cursor: pointer;
 }
 
 .searchBoxDiv {

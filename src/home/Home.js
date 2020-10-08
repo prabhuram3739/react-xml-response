@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 // get our fontawesome imports
-import { faSearch, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DefaultViewDataLayerContext, { DefaultViewDataProvider } from '../DefaultViewDataLayerContext';
 import DefaultView from "../defaultView/DefaultView";
@@ -16,15 +16,6 @@ function Home() {
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
-        <div className = "row topSearchBox" >
-        <div className = "col-12 searchBoxDiv" >
-        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI Search" id = "search-box" aria-label = "Search" required / >
-        <button className = "searchIcon" type="submit">
-        <FontAwesomeIcon icon = { faSearch } /> 
-        </button>
-        </div>
-        </div>
-
         <div className = "row row-sm-offset" >
         <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
@@ -34,15 +25,15 @@ function Home() {
       </div>
     </nav>*/}
         <div className="row">
-            <div className="col-4">
+            {/*<div className="col-4">
                 <h4 className="marginLeftAlign">Statistical Data</h4>
             </div>
             <div className="col-4">
                 <h4 className="centerAlignText">Dashboard</h4>
-            </div>
-        <div className="col-4">
+</div>*/}
+        <div className="col-12">
         {/*<button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>*/}
-        <button type="button" className={ refreshBoolean ? 'btn btn-danger pull-right mr-1' : 'btn btn-primary pull-right mr-1' } onClick={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); }}><FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        {/* <button type="button" className={ refreshBoolean ? 'btn btn-danger pull-right mr-1' : 'btn btn-primary pull-right mr-1' } onClick={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); }}><FontAwesomeIcon icon = { faSyncAlt } /> </button>*/}
         </div>
         </div>
         <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} >
