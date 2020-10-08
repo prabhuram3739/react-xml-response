@@ -25,8 +25,6 @@ function Home() {
         </div>
         </div>
 
-        <div className = "tab-content" id = "myTabContent" >
-        <div className = "tab-pane fade show active" id = "platform" role = "tabpanel" aria-labelledby = "platform-tab" >
         <div className = "row row-sm-offset" >
         <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
@@ -35,8 +33,6 @@ function Home() {
       <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
       </div>
     </nav>*/}
-        <div className = "tab-content noOverflowX" id = "nav-tabContent" >
-        <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <div className="row">
             <div className="col-4">
                 <h4 className="marginLeftAlign">Statistical Data</h4>
@@ -53,14 +49,10 @@ function Home() {
         <div className = "row" >
         <DefaultView />
         </div>
-        </DefaultViewDataProvider> 
-        </div> 
-        </div> 
+        </DefaultViewDataProvider>   
         </div> 
         </div>
         </div>
-        </div> 
-        </div> 
         </form> 
     </div>
     );

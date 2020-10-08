@@ -25,7 +25,7 @@ loading ? <div className="v-loading-indicator second v-loading-indicator-delay" 
 finalData.map((item, index) => {
 return (
 <React.Fragment key={item.id}>
-<div key={index}>
+{/*<div key={index}>
 
 <div className="accordion" id="accordionExample">
 
@@ -238,8 +238,84 @@ Hostname: AMS_PROD_CMG
                         
   <button className="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
 </p>
-</div>
+</div>*/}
 
+
+
+{/* Tab panel */}
+<div className="tabSection">
+<div className = "tab-content" id = "myTabContent" >
+        <div className = "tab-pane fade show active" id = "platform" role = "tabpanel" aria-labelledby = "platform-tab" >
+        <div className = "row row-sm-offset" >
+        {/*<div className = "col-md-7 col-sm-12 col-lg-7 col-xl-8 multi-horizontal" data-for = "" > */}
+        <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
+        <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
+        <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
+        <div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
+        <a className = "nav-item nav-link greyColorTxt active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> Inventory </a> 
+        <a className = "nav-item nav-link greyColorTxt" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Provisioning </a> 
+        <a className = "nav-item nav-link greyColorTxt" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> ESIM Inventory </a> 
+        </div>
+        </nav>
+
+        <div className = "tab-content" id = "nav-tabContent" >
+        <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
+        <div className="card-deck">
+                        <div className="col-3 mt-3">
+                        <div className="card shadow-soft border-light text-center py-4 mb-5">
+                        <div className="boldFont">Total number of UEs</div>
+                        <div className="card-body">
+                        <p className="card-text"></p>
+                        </div>
+                        </div>
+                        </div>
+                        <div className="col-2 mt-3">
+                        <div className="card shadow-soft border-light text-center py-4 mb-5">
+                        <div className="boldFont">LTE PDN Sessions</div>
+                        <div className="card-body">
+                            <p className="card-text"></p>
+                        </div>
+                        </div>
+                        </div>
+                        <div className="col-2 mt-3">
+                        <div className="card shadow-soft border-light text-center py-4 mb-5">
+                        <div className="boldFont">2G/3G PDN Sessions</div>
+                        <div className="card-body">
+                            <p className="card-text"></p>
+                        </div>
+                        </div>
+                        </div>
+                        <div className="col-3 mt-3">
+                        <div className="card shadow-soft border-light text-center py-4 mb-5" >
+                        <div className="boldFont">Total number of APNs</div>
+                        <div className="card-body">
+                            <p className="card-text"></p>
+                        </div>
+                        </div>
+                        </div>
+                        <div className="col-2 mt-3">
+                        <div className="card shadow-soft border-light text-center py-4 mb-5" >
+                        <div className="boldFont">System Uptime</div>
+                        <div className="card-body">
+                            <p className="card-text"></p>
+                        </div>
+                        </div>
+                        </div>
+</div>
+        </div> 
+        <div className = "tab-pane fade" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
+
+        </div> 
+        <div className = "tab-pane fade" id = "nav-profile" role = "tabpanel" aria-labelledby = "nav-profile-tab" >
+
+        </div> 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
 
 
 </React.Fragment>

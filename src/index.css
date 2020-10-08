@@ -339,6 +339,18 @@ li {
 }
 
 
+/* Dashboard Page CSS*/
+
+.greyColorTxt {
+    color: #878080 !important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: #000 !important;
+}
+
+
 /* Scrollbar with the smooth transition */
 
 @-moz-document url-prefix() {
