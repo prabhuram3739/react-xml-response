@@ -263,7 +263,7 @@ Hostname: AMS_PROD_CMG
         <div className="card-deck">
                         <div className="col-3 mt-3">
                         <div className="card shadow-soft border-light text-center py-4 mb-5">
-                        <div className="boldFont">Total number of UEs</div>
+                        <div>Total number of UEs</div>
                         <div className="card-body">
                         <p className="card-text"></p>
                         </div>
@@ -271,7 +271,7 @@ Hostname: AMS_PROD_CMG
                         </div>
                         <div className="col-2 mt-3">
                         <div className="card shadow-soft border-light text-center py-4 mb-5">
-                        <div className="boldFont">LTE PDN Sessions</div>
+                        <div>LTE PDN Sessions</div>
                         <div className="card-body">
                             <p className="card-text"></p>
                         </div>
@@ -279,7 +279,7 @@ Hostname: AMS_PROD_CMG
                         </div>
                         <div className="col-2 mt-3">
                         <div className="card shadow-soft border-light text-center py-4 mb-5">
-                        <div className="boldFont">2G/3G PDN Sessions</div>
+                        <div>2G/3G PDN Sessions</div>
                         <div className="card-body">
                             <p className="card-text"></p>
                         </div>
@@ -287,7 +287,7 @@ Hostname: AMS_PROD_CMG
                         </div>
                         <div className="col-3 mt-3">
                         <div className="card shadow-soft border-light text-center py-4 mb-5" >
-                        <div className="boldFont">Total number of APNs</div>
+                        <div>Total number of APNs</div>
                         <div className="card-body">
                             <p className="card-text"></p>
                         </div>
@@ -295,7 +295,7 @@ Hostname: AMS_PROD_CMG
                         </div>
                         <div className="col-2 mt-3">
                         <div className="card shadow-soft border-light text-center py-4 mb-5" >
-                        <div className="boldFont">System Uptime</div>
+                        <div>System Uptime</div>
                         <div className="card-body">
                             <p className="card-text"></p>
                         </div>
