@@ -1234,7 +1234,7 @@ Hostname: AMS_PROD_CMG
 <div className="card-deck shadowDeck mt-2">
 <div className="col-4 mt-3 border-right mb-3">
 <div className="text-center py-4 ">
-<div className="boldFont">IMSI Search</div>
+<div className="boldFont"></div>
 <div className="card-body">
 <div className="card-text">
 <div className = "row topSearchBox" >
