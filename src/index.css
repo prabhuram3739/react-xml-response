@@ -5616,6 +5616,7 @@ input[type="button"].btn-block {
 
 .refreshBtn {
     position: absolute;
+    /* top: 281px; */
     top: 303px;
     right: 10%;
     z-index: 99999;
