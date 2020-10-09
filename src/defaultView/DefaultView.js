@@ -281,7 +281,7 @@ Hostname: AMS_PROD_CMG
                         <div className="card shadow-soft border-light text-center py-4 ">
                         <div className="boldFont">Total number of UEs</div>
                         <div className="card-body">
-                        <p className="card-text greenTxt">{item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}</p>
+                        <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</p>
                         </div>
                         </div>
                         </div>
@@ -289,7 +289,7 @@ Hostname: AMS_PROD_CMG
                         <div className="card shadow-soft border-light text-center py-4 ">
                         <div className="boldFont">LTE PDN Sessions</div>
                         <div className="card-body">
-                            <p className="card-text greenTxt">{item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}</p>
+                            <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}</p>
                         </div>
                         </div>
                         </div>
@@ -297,7 +297,7 @@ Hostname: AMS_PROD_CMG
                         <div className="card shadow-soft border-light text-center py-4 ">
                         <div className="boldFont">2G/3G PDN Sessions</div>
                         <div className="card-body">
-                            <p className="card-text greenTxt">{item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}</p>
+                            <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}</p>
                         </div>
                         </div>
                         </div>
@@ -313,7 +313,7 @@ Hostname: AMS_PROD_CMG
                         <div className="card shadow-soft border-light text-center py-4 " >
                         <div className="boldFont">System Uptime</div>
                         <div className="card-body">
-                            <p className="card-text greenTxt">{item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}</p>
+                            <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</p>
                         </div>
                         </div>
                         </div>
@@ -626,7 +626,7 @@ Hostname: AMS_PROD_CMG
   </div>
   <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
   <div className="card-body">
-  {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
+  {(item.radStatisticsList !== null) && item.radStatisticsList.map((radStatistics, index) => {
   return(
   <div className="row" key={index}>
   <div className="col-3">
@@ -688,7 +688,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Homers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.homers ? item.homers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -696,7 +696,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">LTE PDN Sessions:</label>
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -704,7 +704,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Real APNs:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.realApns ? item.realApns : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
@@ -714,7 +714,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Roamers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.roamers ? item.roamers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -722,7 +722,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">2G/3G PDN Sessions:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -748,7 +748,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Total Number of UEs:</label>
         </div>
         <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -789,7 +789,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Homers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.homers ? item.homers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -797,7 +797,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">LTE PDN Sessions:</label>
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -805,7 +805,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Real APNs:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.realApns ? item.realApns : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
@@ -815,7 +815,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Roamers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.roamers ? item.roamers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -823,7 +823,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">2G/3G PDN Sessions:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -849,7 +849,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Total Number of UEs:</label>
         </div>
         <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1043,7 +1043,7 @@ Hostname: AMS_PROD_CMG
     </div>
     <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
     <div className="card-body">
-  {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
+  {(item.radStatisticsList !== null) && item.radStatisticsList.map((radStatistics, index) => {
   return(
   <div className="row" key={index}>
   <div className="col-3">
@@ -1185,7 +1185,7 @@ Hostname: AMS_PROD_CMG
 <div className="text-center py-4 ">
 <div className="boldFont">Total number of UEs</div>
 <div className="card-body">
-<p className="card-text greenTxt">{item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}</p>
+<p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</p>
 </div>
 </div>
 </div>
@@ -1193,7 +1193,7 @@ Hostname: AMS_PROD_CMG
 <div className="text-center py-4 ">
 <div className="boldFont">LTE PDN Sessions</div>
 <div className="card-body">
-    <p className="card-text greenTxt">{item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}</p>
+    <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}</p>
 </div>
 </div>
 </div>
@@ -1201,7 +1201,7 @@ Hostname: AMS_PROD_CMG
 <div className="text-center py-4 ">
 <div className="boldFont">2G/3G PDN Sessions</div>
 <div className="card-body">
-    <p className="card-text greenTxt">{item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}</p>
+    <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}</p>
 </div>
 </div>
 </div>
@@ -1217,7 +1217,7 @@ Hostname: AMS_PROD_CMG
 <div className="border-light text-center py-4 " >
 <div className="boldFont">System Uptime</div>
 <div className="card-body">
-    <p className="card-text greenTxt">{item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}</p>
+    <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</p>
 </div>
 </div>
 </div>
@@ -1550,7 +1550,7 @@ Hostname: AMS_PROD_CMG
   </div>
   <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
   <div className="card-body">
-  {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
+  {(item.radStatisticsList !== null) && item.radStatisticsList.map((radStatistics, index) => {
   return(
   <div className="row" key={index}>
   <div className="col-3">
@@ -1616,7 +1616,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Homers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.homers ? item.homers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1624,7 +1624,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">LTE PDN Sessions:</label>
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1632,7 +1632,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Real APNs:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.realApns ? item.realApns : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
@@ -1642,7 +1642,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Roamers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.roamers ? item.roamers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1650,7 +1650,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">2G/3G PDN Sessions:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1676,7 +1676,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Total Number of UEs:</label>
         </div>
         <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1717,7 +1717,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Homers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.homers ? item.homers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.homers ? item.packetSwitchAdminDefaultHeaderVO.homers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1725,7 +1725,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">LTE PDN Sessions:</label>
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1733,7 +1733,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Real APNs:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.realApns ? item.realApns : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
@@ -1743,7 +1743,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Roamers:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.roamers ? item.roamers : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.roamers ? item.packetSwitchAdminDefaultHeaderVO.roamers : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1751,7 +1751,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">2G/3G PDN Sessions:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1777,7 +1777,7 @@ Hostname: AMS_PROD_CMG
         <label className="fontBold">Total Number of UEs:</label>
         </div>
         <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1971,7 +1971,7 @@ Hostname: AMS_PROD_CMG
     </div>
     <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
     <div className="card-body">
-  {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
+  {(item.radStatisticsList !== null) && item.radStatisticsList.map((radStatistics, index) => {
   return(
   <div className="row" key={index}>
   <div className="col-3">
