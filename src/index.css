@@ -195,6 +195,61 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: -5px;
 }
 
+.searchIcon {
+    margin-top: -36px;
+    float: right;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #495057 !important;
+    border: none !important;
+    cursor: pointer;
+    background: none;
+}
+
+.searchIcon:focus {
+    outline: none !important;
+}
+
+.topSearchBox {
+    margin-top: 3px;
+    border-radius: 3rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem var('--box-shadow-first-color'), -0.5rem -0.5rem 0.5rem var('--box-shadow-second-color');
+    transition: all 250ms ease-in-out;
+    border: none;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+input.searchBox,
+.form-control.searchBox {
+    border: 1px solid #d3d3d3!important;
+    height: calc(1.5em + 0.75rem + 2px) !important;
+    width: 100%;
+    border-radius: 10px !important;
+}
+
+.searchBoxDiv {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.form-control.searchBox:focus {
+    border-radius: 3rem;
+}
+
+.topSearchBox:hover,
+.topSearchBox:focus {
+    outline: none;
+    box-shadow: 1rem 1rem 1rem var('--box-shadow-first-color'), -1rem -1rem 1rem var('--box-shadow-second-color');
+}
+
+.clear-selection {
+    font-size: 1.2rem;
+    color: #fc060f;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 td {
     width: 10vw !important;
 }
