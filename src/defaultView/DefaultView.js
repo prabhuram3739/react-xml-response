@@ -382,7 +382,7 @@ Hostname: AMS_PROD_CMG
 <div className="card-body">
 <div className="card-text">
 <button type="button" className="btn btn-primary"><FontAwesomeIcon icon = { faSyncAlt } /> </button>
-
+<button type="button" className="btn btn-primary ml-2" onClick={ () => this.handleBtnSelect(6) }> All Data </button>
 </div>
 </div>
 </div>
@@ -593,7 +593,7 @@ Hostname: AMS_PROD_CMG
       </div>
     </div>
   </div>
-  : 
+  : ((this.state.btnIndex === 6) || (this.state.btnIndex === null)) ?
 <div className="accordion" id="accordionExample">
 <p className="col-12 pull-right">
 <button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
@@ -795,7 +795,7 @@ Hostname: AMS_PROD_CMG
       </div>
     </div>
   </div>
-</div>
+</div> : "Sorry No Data Available"
 }
 </div>
 <div className="pt-3">
