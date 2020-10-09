@@ -1279,7 +1279,7 @@ Hostname: AMS_PROD_CMG
 
 <div className="col-2 mt-3 mb-3">
 <div className="text-center py-4 ">
-<div className="boldFont">Operations</div>
+<div className="boldFont"></div>
 <div className="card-body">
 <div className="card-text">
 <button type="button" className="btn btn-primary marginLeftBtnAlign" onClick={ () => this.handleBtnSelect(6) }> All Data </button>
