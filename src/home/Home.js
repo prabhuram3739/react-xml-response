@@ -33,7 +33,7 @@ function Home() {
 </div>*/}
         <div className="col-12">
         {/*<button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>*/}
-        {/* <button type="button" className={ refreshBoolean ? 'btn btn-danger pull-right mr-1' : 'btn btn-primary pull-right mr-1' } onClick={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); }}><FontAwesomeIcon icon = { faSyncAlt } /> </button>*/}
+        <button type="button" className={ refreshBoolean ? 'btn btn-danger pull-right refreshBtn' : 'btn btn-primary pull-right refreshBtn' } onClick={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); }}><FontAwesomeIcon icon = { faSyncAlt } /> </button>
         </div>
         </div>
         <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} >

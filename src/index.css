@@ -5611,6 +5611,17 @@ input[type="button"].btn-block {
     font-weight: 900 !important;
 }
 
+.refreshBtn {
+    position: absolute;
+    top: 281px;
+    right: 10%;
+    z-index: 99999;
+}
+
+.marginLeftBtnAlign {
+    margin-left: 4rem !important;
+}
+
 .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
