@@ -266,9 +266,7 @@ Hostname: AMS_PROD_CMG
         <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
         <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
         <div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
-        <a className = "nav-item nav-link greyColorTxt active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> Inventory </a> 
-        <a className = "nav-item nav-link greyColorTxt" id = "nav-home-tab" data-toggle = "tab" href = "#nav-home" role = "tab" aria-controls = "nav-home" aria-selected = "true"> Provisioning </a> 
-        <a className = "nav-item nav-link greyColorTxt" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> ESIM Inventory </a> 
+        <a className = "nav-item nav-link greyColorTxt active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> Inventory </a>
         </div>
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
         <li className="nav-item dropdown" style={{marginTop: -6, marginRight: 18}}>
@@ -414,17 +412,41 @@ Hostname: AMS_PROD_CMG
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">Dia Peer Prof:</label> <span>{gyStatistics.diaPeerProf ? gyStatistics.diaPeerProf : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Dia Peer Prof:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gyStatistics.diaPeerProf ? gyStatistics.diaPeerProf : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gyStatistics.peerAddress ? gyStatistics.peerAddress : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Peer Address:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gyStatistics.peerAddress ? gyStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{gyStatistics.pathMgmtState ? gyStatistics.pathMgmtState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Path Mgmt State:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gyStatistics.pathMgmtState ? gyStatistics.pathMgmtState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Detail State:</label> <span>{gyStatistics.detailState ? gyStatistics.detailState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Detail State:</label>
+    </div>
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gyStatistics.detailState ? gyStatistics.detailState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     </div>
     )})
     }
-      </div>
+    </div>
     </div>
   </div> : (this.state.btnIndex === 1) ? 
     <div className="card animated fadeIn">
@@ -440,22 +462,46 @@ Hostname: AMS_PROD_CMG
       </h5>
     </div>
     <div id="collapseThree" className="collapse show multi-collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div className="card-body">
-      {(item.gxStatisticsList !== null) && item.gxStatisticsList.map((gxStatistics, index) => {
+    <div className="card-body">
+    {(item.gxStatisticsList !== null) && item.gxStatisticsList.map((gxStatistics, index) => {
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">Dia Peer Prof:</label> <span>{gxStatistics.diaPeerProf ? gxStatistics.diaPeerProf : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Dia Peer Prof:</label>
+    </div>
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.diaPeerProf ? gxStatistics.diaPeerProf : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gxStatistics.peerAddress ? gxStatistics.peerAddress : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Peer Address:</label>
+    </div>
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.peerAddress ? gxStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{gxStatistics.pathMgmtState ? gxStatistics.pathMgmtState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Path Mgmt State:</label>
+    </div>
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.pathMgmtState ? gxStatistics.pathMgmtState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Detail State:</label> <span>{gxStatistics.detailState ? gxStatistics.detailState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Detail State:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.detailState ? gxStatistics.detailState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     </div>
     )})
     }
-      </div>
+    </div>
     </div>
   </div> : (this.state.btnIndex === 2) ? 
   <div className="card animated fadeIn">
@@ -471,22 +517,46 @@ Hostname: AMS_PROD_CMG
     </h5>
   </div>
   <div id="collapseFour" className="collapse show multi-collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div className="card-body">
-    {(item.sxStatisticsList !== null) && item.sxStatisticsList.map((sxStatistics, index) => {
+  <div className="card-body">
+  {(item.sxStatisticsList !== null) && item.sxStatisticsList.map((sxStatistics, index) => {
   return(
   <div className="row" key={index}>
   <div className="col-3">
-  <label className="fontBold">UP Assosication:</label> <span>{sxStatistics.uPAssociation ? sxStatistics.uPAssociation : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">UP Assosication:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.uPAssociation ? sxStatistics.uPAssociation : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Peer Address:</label> <span>{sxStatistics.peerAddress ? sxStatistics.peerAddress : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Peer Address:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.peerAddress ? sxStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Path Mgmt State:</label> <span>{sxStatistics.pathMgmtState ? sxStatistics.pathMgmtState : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Path Mgmt State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.pathMgmtState ? sxStatistics.pathMgmtState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Last Change Time:</label> <span>{sxStatistics.lastChangeTime ? sxStatistics.lastChangeTime : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Last Change Time:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.lastChangeTime ? sxStatistics.lastChangeTime : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   </div>
   )})
   }
-    </div>
+  </div>
   </div>
 </div> : (this.state.btnIndex === 3) ? 
   <div className="card animated fadeIn">
@@ -502,22 +572,46 @@ Hostname: AMS_PROD_CMG
     </h5>
   </div>
   <div id="collapseSix" className="collapse show multi-collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-    <div className="card-body">
-    {(item.gaStatisticsList !== null) && item.gaStatisticsList.map((gaStatistics, index) => {
+  <div className="card-body">
+  {(item.gaStatisticsList !== null) && item.gaStatisticsList.map((gaStatistics, index) => {
   return(
   <div className="row" key={index}>
   <div className="col-3">
-  <label className="fontBold">GTP Prim Grp:</label> <span>{gaStatistics.gtpPrimGrp ? gaStatistics.gtpPrimGrp : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">GTP Prim Grp:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.gtpPrimGrp ? gaStatistics.gtpPrimGrp : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Peer Address:</label> <span>{gaStatistics.peerAddress ? gaStatistics.peerAddress : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Peer Address:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.peerAddress ? gaStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Operation State:</label> <span>{gaStatistics.operState ? gaStatistics.operState : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Operation State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.operState ? gaStatistics.operState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Up Time:</label> <span>{gaStatistics.upTime ? gaStatistics.upTime : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Up Time:</label>
+  </div> 
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.upTime ? gaStatistics.upTime : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   </div>
   )})
   }
-    </div>
+  </div>
   </div>
 </div> : (this.state.btnIndex === 4) ?
   <div className="card animated fadeIn">
@@ -533,22 +627,46 @@ Hostname: AMS_PROD_CMG
     </h5>
   </div>
   <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-    <div className="card-body">
-    {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
+  <div className="card-body">
+  {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
   return(
   <div className="row" key={index}>
   <div className="col-3">
-  <label className="fontBold">Group Name:</label> <span>{radStatistics.groupName ? radStatistics.groupName : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Group Name:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.groupName ? radStatistics.groupName : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Peer Address:</label> <span>{radStatistics.peerAddress ? radStatistics.peerAddress : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Peer Address:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.peerAddress ? radStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Operation State:</label> <span>{radStatistics.operationState ? radStatistics.operationState : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Operation State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.operationState ? radStatistics.operationState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   <div className="col-3">
-  <label className="fontBold">Admin State:</label> <span>{radStatistics.adminState ? radStatistics.adminState : 'No Data Available'}</span></div>
+  <div className="left">
+  <label className="fontBold">Admin State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.adminState ? radStatistics.adminState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
   </div>
   )})
   }
-    </div>
+  </div>
   </div>
 </div>  : (this.state.btnIndex === 5) ?
 <div className="card animated fadeIn">
@@ -568,27 +686,81 @@ Hostname: AMS_PROD_CMG
       <div className="card-body">
       <div className="row">
         <div className="col-4">
-        <label className="fontBold">Homers:</label> <span>{item.homers ? item.homers : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Homers:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.homers ? item.homers : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">LTE PDN Sessions:</label> <span>{item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}</span></div>
+        <div className="left">
+        <label className="fontBold">LTE PDN Sessions:</label>
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Real APNs:</label> <span>{item.realApns ? item.realApns : 'No Data Available'}</span></div>
+        <div className="left">
+        <label className="fontBold">Real APNs:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.realApns ? item.realApns : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold">Roamers:</label> <span>{item.roamers ? item.roamers : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Roamers:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.roamers ? item.roamers : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">2G/3G PDN Sessions:</label> <span>{item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">2G/3G PDN Sessions:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Ga CDRs Buffered:</label> <span>{item.gACdrsBuffered ? item.gACdrsBuffered : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Ga CDRs Buffered:</label>
+        </div>
+        <div className="right"> 
+        <input type="text" className="txtBoxHeight" value={item.gACdrsBuffered ? item.gACdrsBuffered : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold">Visitors:</label> <span>{item.visitors ? item.visitors : 'No Data Available'}</span></div>
+        <div className="left">
+        <label className="fontBold">Visitors:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.visitors ? item.visitors : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Total Number of UEs:</label> <span>{item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Total Number of UEs:</label>
+        </div>
+        <div className="right"> 
+        <input type="text" className="txtBoxHeight" value={item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Gy CCRs Buffered:</label> <span>{item.gyCcrsBuffered ? item.gyCcrsBuffered : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Gy CCRs Buffered:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.gyCcrsBuffered ? item.gyCcrsBuffered : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         </div>
       </div>
     </div>
@@ -612,30 +784,84 @@ Hostname: AMS_PROD_CMG
 </div>
 
     <div id="collapseOne" className="collapse show multi-collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div className="card-body">
+    <div className="card-body">
       <div className="row">
         <div className="col-4">
-        <label className="fontBold">Homers:</label> <span>{item.homers ? item.homers : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Homers:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.homers ? item.homers : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">LTE PDN Sessions:</label> <span>{item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}</span></div>
+        <div className="left">
+        <label className="fontBold">LTE PDN Sessions:</label>
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.ltePdnSessions ? item.ltePdnSessions : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Real APNs:</label> <span>{item.realApns ? item.realApns : 'No Data Available'}</span></div>
+        <div className="left">
+        <label className="fontBold">Real APNs:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.realApns ? item.realApns : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold">Roamers:</label> <span>{item.roamers ? item.roamers : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Roamers:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.roamers ? item.roamers : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">2G/3G PDN Sessions:</label> <span>{item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">2G/3G PDN Sessions:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.twoGthreeGPdnSessions ? item.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Ga CDRs Buffered:</label> <span>{item.gACdrsBuffered ? item.gACdrsBuffered : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Ga CDRs Buffered:</label>
+        </div>
+        <div className="right"> 
+        <input type="text" className="txtBoxHeight" value={item.gACdrsBuffered ? item.gACdrsBuffered : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         </div>
         <div className="row">
         <div className="col-4">
-        <label className="fontBold">Visitors:</label> <span>{item.visitors ? item.visitors : 'No Data Available'}</span></div>
+        <div className="left">
+        <label className="fontBold">Visitors:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.visitors ? item.visitors : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Total Number of UEs:</label> <span>{item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Total Number of UEs:</label>
+        </div>
+        <div className="right"> 
+        <input type="text" className="txtBoxHeight" value={item.totalNumberOfUes ? item.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         <div className="col-4">
-        <label className="fontBold">Gy CCRs Buffered:</label> <span>{item.gyCcrsBuffered ? item.gyCcrsBuffered : 'No Data Available'}</span></div>
+          <div className="left">
+        <label className="fontBold">Gy CCRs Buffered:</label> 
+        </div>
+        <div className="right">
+        <input type="text" className="txtBoxHeight" value={item.gyCcrsBuffered ? item.gyCcrsBuffered : 'No Data Available'}  readOnly disabled />
+        </div>
+        </div>
         </div>
       </div>
     </div>
@@ -658,17 +884,41 @@ Hostname: AMS_PROD_CMG
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">Dia Peer Prof:</label> <span>{gyStatistics.diaPeerProf ? gyStatistics.diaPeerProf : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Dia Peer Prof:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gyStatistics.diaPeerProf ? gyStatistics.diaPeerProf : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gyStatistics.peerAddress ? gyStatistics.peerAddress : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Peer Address:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gyStatistics.peerAddress ? gyStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{gyStatistics.pathMgmtState ? gyStatistics.pathMgmtState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Path Mgmt State:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gyStatistics.pathMgmtState ? gyStatistics.pathMgmtState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Detail State:</label> <span>{gyStatistics.detailState ? gyStatistics.detailState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Detail State:</label>
+    </div>
+    <div className="right">
+     <input type="text" className="txtBoxHeight" value={gyStatistics.detailState ? gyStatistics.detailState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     </div>
     )})
     }
-      </div>
+    </div>
     </div>
   </div>
   <div className="card">
@@ -684,22 +934,46 @@ Hostname: AMS_PROD_CMG
       </h5>
     </div>
     <div id="collapseThree" className="collapse show multi-collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div className="card-body">
-      {(item.gxStatisticsList !== null) && item.gxStatisticsList.map((gxStatistics, index) => {
+    <div className="card-body">
+    {(item.gxStatisticsList !== null) && item.gxStatisticsList.map((gxStatistics, index) => {
     return(
     <div className="row" key={index}>
     <div className="col-3">
-    <label className="fontBold">Dia Peer Prof:</label> <span>{gxStatistics.diaPeerProf ? gxStatistics.diaPeerProf : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Dia Peer Prof:</label>
+    </div>
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.diaPeerProf ? gxStatistics.diaPeerProf : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gxStatistics.peerAddress ? gxStatistics.peerAddress : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Peer Address:</label>
+    </div>
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.peerAddress ? gxStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{gxStatistics.pathMgmtState ? gxStatistics.pathMgmtState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Path Mgmt State:</label>
+    </div>
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.pathMgmtState ? gxStatistics.pathMgmtState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     <div className="col-3">
-    <label className="fontBold">Detail State:</label> <span>{gxStatistics.detailState ? gxStatistics.detailState : 'No Data Available'}</span></div>
+    <div className="left">
+    <label className="fontBold">Detail State:</label>
+    </div> 
+    <div className="right">
+    <input type="text" className="txtBoxHeight" value={gxStatistics.detailState ? gxStatistics.detailState : 'No Data Available'}  readOnly disabled />
+    </div>
+    </div>
     </div>
     )})
     }
-      </div>
+    </div>
     </div>
   </div>
   <div className="card">
@@ -715,22 +989,46 @@ Hostname: AMS_PROD_CMG
       </h5>
     </div>
     <div id="collapseFour" className="collapse show multi-collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-      <div className="card-body">
-      {(item.sxStatisticsList !== null) && item.sxStatisticsList.map((sxStatistics, index) => {
-    return(
-    <div className="row" key={index}>
-    <div className="col-3">
-    <label className="fontBold">UP Assosication:</label> <span>{sxStatistics.uPAssociation ? sxStatistics.uPAssociation : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{sxStatistics.peerAddress ? sxStatistics.peerAddress : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Path Mgmt State:</label> <span>{sxStatistics.pathMgmtState ? sxStatistics.pathMgmtState : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Last Change Time:</label> <span>{sxStatistics.lastChangeTime ? sxStatistics.lastChangeTime : 'No Data Available'}</span></div>
-    </div>
-    )})
-    }
-      </div>
+    <div className="card-body">
+  {(item.sxStatisticsList !== null) && item.sxStatisticsList.map((sxStatistics, index) => {
+  return(
+  <div className="row" key={index}>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">UP Assosication:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.uPAssociation ? sxStatistics.uPAssociation : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Peer Address:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.peerAddress ? sxStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Path Mgmt State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.pathMgmtState ? sxStatistics.pathMgmtState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Last Change Time:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={sxStatistics.lastChangeTime ? sxStatistics.lastChangeTime : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  </div>
+  )})
+  }
+  </div>
     </div>
   </div>
   <div className="card">
@@ -746,23 +1044,47 @@ Hostname: AMS_PROD_CMG
       </h5>
     </div>
     <div id="collapseFive" className="collapse show multi-collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-      <div className="card-body">
-      {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
-    return(
-    <div className="row" key={index}>
-    <div className="col-3">
-    <label className="fontBold">Group Name:</label> <span>{radStatistics.groupName ? radStatistics.groupName : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{radStatistics.peerAddress ? radStatistics.peerAddress : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Operation State:</label> <span>{radStatistics.operationState ? radStatistics.operationState : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Admin State:</label> <span>{radStatistics.adminState ? radStatistics.adminState : 'No Data Available'}</span></div>
-    </div>
-    )})
-    }
-      </div>
-    </div>
+    <div className="card-body">
+  {(item.radiusStatisticsList !== null) && item.radiusStatisticsList.map((radStatistics, index) => {
+  return(
+  <div className="row" key={index}>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Group Name:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.groupName ? radStatistics.groupName : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Peer Address:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.peerAddress ? radStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Operation State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.operationState ? radStatistics.operationState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Admin State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={radStatistics.adminState ? radStatistics.adminState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  </div>
+  )})
+  }
+  </div>
+  </div>
   </div>
   <div className="card">
     <div className="card-header" id="headingSix">
@@ -777,22 +1099,46 @@ Hostname: AMS_PROD_CMG
       </h5>
     </div>
     <div id="collapseSix" className="collapse show multi-collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-      <div className="card-body">
-      {(item.gaStatisticsList !== null) && item.gaStatisticsList.map((gaStatistics, index) => {
-    return(
-    <div className="row" key={index}>
-    <div className="col-3">
-    <label className="fontBold">GTP Prim Grp:</label> <span>{gaStatistics.gtpPrimGrp ? gaStatistics.gtpPrimGrp : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Peer Address:</label> <span>{gaStatistics.peerAddress ? gaStatistics.peerAddress : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Operation State:</label> <span>{gaStatistics.operState ? gaStatistics.operState : 'No Data Available'}</span></div>
-    <div className="col-3">
-    <label className="fontBold">Up Time:</label> <span>{gaStatistics.upTime ? gaStatistics.upTime : 'No Data Available'}</span></div>
-    </div>
-    )})
-    }
-      </div>
+    <div className="card-body">
+  {(item.gaStatisticsList !== null) && item.gaStatisticsList.map((gaStatistics, index) => {
+  return(
+  <div className="row" key={index}>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">GTP Prim Grp:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.gtpPrimGrp ? gaStatistics.gtpPrimGrp : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Peer Address:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.peerAddress ? gaStatistics.peerAddress : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Operation State:</label>
+  </div>
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.operState ? gaStatistics.operState : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  <div className="col-3">
+  <div className="left">
+  <label className="fontBold">Up Time:</label>
+  </div> 
+  <div className="right">
+  <input type="text" className="txtBoxHeight" value={gaStatistics.upTime ? gaStatistics.upTime : 'No Data Available'}  readOnly disabled />
+  </div>
+  </div>
+  </div>
+  )})
+  }
+  </div>
     </div>
   </div>
 </div> : "Sorry No Data Available"
@@ -809,12 +1155,6 @@ Hostname: AMS_PROD_CMG
 </div>
 </div>
 </div>
-        </div> 
-        <div className = "tab-pane fade" id = "nav-home" role = "tabpanel" aria-labelledby = "nav-home-tab">
-
-        </div> 
-        <div className = "tab-pane fade" id = "nav-profile" role = "tabpanel" aria-labelledby = "nav-profile-tab" >
-
         </div> 
         </div>
         </div>

@@ -154,7 +154,6 @@ h4 {
     border-radius: 5px;
     background: #fff;
     padding: 5px;
-    width: 100%;
 }
 
 .noBorderTableTD td {
@@ -5616,6 +5615,18 @@ input[type="button"].btn-block {
     top: 281px;
     right: 10%;
     z-index: 99999;
+}
+
+.left {
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+
+.right {
+    width: 65%;
+    margin-left: 10px;
+    float: left;
 }
 
 .nav {
