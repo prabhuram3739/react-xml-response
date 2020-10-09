@@ -54,7 +54,7 @@ return (
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-Hostname: AMS_PROD_CMG
+AMS_PROD_CMG
 </div>
 </div>
 </button>
@@ -673,7 +673,7 @@ Hostname: AMS_PROD_CMG
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-Hostname: AMS_PROD_CMG
+AMS_PROD_CMG
 </div>
 </div>
 </button>
@@ -1169,11 +1169,11 @@ Hostname: AMS_PROD_CMG
 <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
 <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
 <div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
-<a className = "nav-item nav-link greyColorTxt active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> Inventory </a>
+<a className = "nav-item nav-link greyColorTxt active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> AMS_PROD_CMG </a>
 </div>
 <ul className="nav nav-bar nav-tabs dropleft pull-right">
 <li className="nav-item dropdown" style={{marginTop: -6, marginRight: 18}}>
-  <span>Current Date and Time</span>
+  <span>Last Updated On:</span>
 </li>
 </ul>
 </nav>
@@ -1601,7 +1601,7 @@ Hostname: AMS_PROD_CMG
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-Hostname: AMS_PROD_CMG
+AMS_PROD_CMG
 </div>
 </div>
 </button>
@@ -1702,7 +1702,7 @@ Hostname: AMS_PROD_CMG
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-Hostname: AMS_PROD_CMG
+AMS_PROD_CMG
 </div>
 </div>
 </button>
