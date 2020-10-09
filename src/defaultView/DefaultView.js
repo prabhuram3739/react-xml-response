@@ -1296,6 +1296,10 @@ Hostname: AMS_PROD_CMG
 <div className="card-text">
 <div key={index}>
 { (this.state.btnIndex === 0) ?
+<div className="accordion" id="accordionExample">
+<p className="col-12 pull-right">
+<button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseTwo">Collapse/Expand</button>
+</p>
 <div className="card animated fadeIn">
     <div className="card-header" id="headingTwo">
       <h5 className="mb-0">
@@ -1350,7 +1354,11 @@ Hostname: AMS_PROD_CMG
     }
     </div>
     </div>
-  </div> : (this.state.btnIndex === 1) ? 
+  </div></div> : (this.state.btnIndex === 1) ? 
+    <div className="accordion" id="accordionExample">
+    <p className="col-12 pull-right">
+    <button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseThree">Collapse/Expand</button>
+    </p>
     <div className="card animated fadeIn">
     <div className="card-header" id="headingThree">
       <h5 className="mb-0">
@@ -1405,7 +1413,11 @@ Hostname: AMS_PROD_CMG
     }
     </div>
     </div>
-  </div> : (this.state.btnIndex === 2) ? 
+  </div></div> : (this.state.btnIndex === 2) ? 
+  <div className="accordion" id="accordionExample">
+  <p className="col-12 pull-right">
+  <button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseFour">Collapse/Expand</button>
+  </p>
   <div className="card animated fadeIn">
   <div className="card-header" id="headingFour">
     <h5 className="mb-0">
@@ -1460,7 +1472,11 @@ Hostname: AMS_PROD_CMG
   }
   </div>
   </div>
-</div> : (this.state.btnIndex === 3) ? 
+</div></div> : (this.state.btnIndex === 3) ? 
+  <div className="accordion" id="accordionExample">
+  <p className="col-12 pull-right">
+  <button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseSix">Collapse/Expand</button>
+  </p>
   <div className="card animated fadeIn">
   <div className="card-header" id="headingSix">
     <h5 className="mb-0">
@@ -1515,7 +1531,11 @@ Hostname: AMS_PROD_CMG
   }
   </div>
   </div>
-</div> : (this.state.btnIndex === 4) ?
+</div></div> : (this.state.btnIndex === 4) ?
+  <div className="accordion" id="accordionExample">
+  <p className="col-12 pull-right">
+  <button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseFive">Collapse/Expand</button>
+  </p>
   <div className="card animated fadeIn">
   <div className="card-header" id="headingFive">
     <h5 className="mb-0">
@@ -1570,7 +1590,11 @@ Hostname: AMS_PROD_CMG
   }
   </div>
   </div>
-</div>  : (this.state.btnIndex === 5) ?
+</div></div>  : (this.state.btnIndex === 5) ?
+<div className="accordion" id="accordionExample">
+<p className="col-12 pull-right">
+<button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne">Collapse/Expand</button>
+</p>
 <div className="card animated fadeIn">
 <div className="card-header" id="headingOne">
 <h5 className="mb-0">
@@ -1666,7 +1690,7 @@ Hostname: AMS_PROD_CMG
         </div>
       </div>
     </div>
-  </div>
+  </div></div>
   : ((this.state.btnIndex === 6) || (this.state.btnIndex === null)) ?
 <div className="accordion" id="accordionExample">
 <p className="col-12 pull-right">
@@ -2048,8 +2072,10 @@ Hostname: AMS_PROD_CMG
 </div>
 <div className="pt-3">
 <p className="col-12 pull-right">
-                        
+  {  ((this.state.btnIndex === 6) || (this.state.btnIndex === null)) ?                    
   <button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand All</button>
+    : <button className="btn btn-primary pull-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">Collapse/Expand</button>
+}
 </p>
 </div>
 </div>
