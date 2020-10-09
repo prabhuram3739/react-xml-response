@@ -84,7 +84,7 @@ function Searchview() {
                 <rect y="60" width="100" height="20"></rect>
             </svg>
             </a>
-            <div className="dropdown-menu collapse">
+            <div className="dropdown-menu">
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalOneShow(true)}>APN Enable/Disable</button>
                 <ApnEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />
@@ -142,7 +142,7 @@ function Searchview() {
                 <rect y="60" width="100" height="20"></rect>
             </svg>
             </a>
-            <div className="dropdown-menu collapse">
+            <div className="dropdown-menu">
             <span className="dropdown-item">
                 <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalEigthShow(true)}>Subscriber Status - Activate/Deactive</button>
                 <ApnEnableDisableModal show={ModalEigthShow} onHide={() => setModalEigthShow(false)} />

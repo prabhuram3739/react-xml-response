@@ -169,6 +169,22 @@ h4 {
     border-bottom: none !important;
 }
 
+.navbar .nav-item .dropdown-menu {
+    display: none;
+}
+
+.navbar .nav-item:hover .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+}
+
 input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: searchfield-cancel-button;
     margin-right: 30px;
@@ -5589,7 +5605,6 @@ input[type="button"].btn-block {
     color: #495057;
     background-color: #FFFFFF;
     height: 45px;
-    padding: 1rem;
     border-color: #dee2e6 #dee2e6 #FFFFFF;
     font: 300 16px/1 "Open Sans", sans-serif !important;
     font-weight: 900 !important;
