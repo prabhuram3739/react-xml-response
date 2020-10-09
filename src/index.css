@@ -5618,6 +5618,10 @@ input[type="button"].btn-block {
     z-index: 99999;
 }
 
+.nav {
+    padding-left: 6px !important;
+}
+
 .marginLeftBtnAlign {
     margin-left: 4rem !important;
 }

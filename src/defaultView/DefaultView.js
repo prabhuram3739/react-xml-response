@@ -1,5 +1,5 @@
 import React  from 'react';
-import { faSearch, faSyncAlt, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class DefaultView extends React.Component {
@@ -271,7 +271,7 @@ Hostname: AMS_PROD_CMG
         <a className = "nav-item nav-link greyColorTxt" id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> ESIM Inventory </a> 
         </div>
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
-        <li className="nav-item dropdown" style={{marginTop: -6}}>
+        <li className="nav-item dropdown" style={{marginTop: -6, marginRight: 18}}>
           <span>Current Date and Time</span>
         </li>
         </ul>
@@ -382,7 +382,7 @@ Hostname: AMS_PROD_CMG
 <div className="card-body">
 <div className="card-text">
 {/*<button type="button" className="btn btn-primary"><FontAwesomeIcon icon = { faSyncAlt } /> </button> */}
-<button type="button" className="btn btn-primary ml-5" onClick={ () => this.handleBtnSelect(6) }> All Data </button>
+<button type="button" className="btn btn-primary marginLeftBtnAlign" onClick={ () => this.handleBtnSelect(6) }> All Data </button>
 </div>
 </div>
 </div>
