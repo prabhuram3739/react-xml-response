@@ -54,7 +54,7 @@ return (
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-AMS_PROD_CMG
+Hw Summary
 </div>
 </div>
 </button>
@@ -673,7 +673,7 @@ AMS_PROD_CMG
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-AMS_PROD_CMG
+Hw Summary
 </div>
 </div>
 </button>
@@ -774,7 +774,7 @@ AMS_PROD_CMG
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-Hostname: AMS_PROD_CMG
+Hw Summary
 </div>
 </div>
 </button>
@@ -1601,7 +1601,7 @@ Hostname: AMS_PROD_CMG
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-AMS_PROD_CMG
+Hw Summary
 </div>
 </div>
 </button>
@@ -1702,7 +1702,7 @@ AMS_PROD_CMG
 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <div className="row">
 <div className="col-12 removePaddingLeft">
-AMS_PROD_CMG
+Hw Summary
 </div>
 </div>
 </button>
