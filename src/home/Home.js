@@ -32,7 +32,8 @@ function Home() {
 
             <div className="dropdown-menu" >
             <span className="dropdown-item">
-            <input className="reducedPaddingTop" disabled={(autoRefresh === 'Disable') ? true : false} type="checkbox" onChange={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); timeInterval ? setTimeInterval(timeInterval) : setTimeInterval(0); }}/>Auto refresh
+            <input className="reducedPaddingTop" disabled={(autoRefresh === 'Disable') ? true : false} type="checkbox" onChange={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); timeInterval ? setTimeInterval(timeInterval) : setTimeInterval(0); }}/>
+            <span className="autoRefreshTxt ml-1">Auto refresh</span>
             </span>
             <div className="dropdown-divider"></div>
             <span className="dropdown-item">
