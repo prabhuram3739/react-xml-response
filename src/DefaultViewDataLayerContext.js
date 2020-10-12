@@ -10,12 +10,13 @@ export class DefaultViewDataProvider extends Component {
     count: 0,
     loading: true,
     refresh: false,
-    refreshStatus: false
+    refreshStatus: false,
+    timeInterval: 3000
   }
 
   componentDidMount() {
     this.setState({ loading: true }, () => {
-      this.getDefaultViewData(this.props.imsi, this.state.refresh, this.state.refreshStatus);
+      this.getDefaultViewData(this.props.imsi, this.state.refresh, this.state.refreshStatus, this.state.timeInterval);
     });
 }
 
@@ -31,30 +32,32 @@ componentWillUnmount() {
 
 static getDerivedStateFromProps(nextProps, prevState) {
   if(nextProps.refreshStatus !== prevState.refreshStatus) {
-    return {refresh: nextProps.refresh, refreshStatus: nextProps.refreshStatus};
+    return {refresh: nextProps.refresh, refreshStatus: nextProps.refreshStatus, timeInterval: nextProps.timeInterval};
   } else { 
    return null 
   }
 }
 
 componentDidUpdate(prevProps, prevState) {
+  console.log(this.props);
  if(prevProps.refreshStatus !== this.props.refreshStatus) {
    //Perform some operation here
-   this.setState({refresh: prevProps.refresh, refreshStatus: prevState.refreshStatus});
+   this.setState({refresh: prevProps.refresh, refreshStatus: prevState.refreshStatus, timeInterval: prevState.timeInterval});
    if(this.state.refreshStatus === false) {
-    this.getDefaultViewData(this.props.imsi, prevProps.refresh, prevState.refreshStatus);
+    this.getDefaultViewData(this.props.imsi, prevProps.refresh, prevState.refreshStatus, this.props.timeInterval);
   } else {
-    this.getDefaultViewData(this.props.imsi, this.state.refresh, this.state.refreshStatus);
+    this.getDefaultViewData(this.props.imsi, this.state.refresh, this.state.refreshStatus, this.state.timeInterval);
   }
  }
 }
 
-getDefaultViewData = (imsi, refresh, status) => {
+getDefaultViewData = (imsi, refresh, status, timeInterval) => {
   var self = this;
   imsi ="234500010400205";
   refresh = this.state.refresh;
   status = this.state.refreshStatus;
-
+  timeInterval = this.props.timeInterval;
+console.log("Time Interval Selected:", timeInterval);
   axios
     .get(authEndpoint + "/api/diagnosticData/defaultView/" + imsi, {
         "Content-Type": "application/xml; charset=utf-8"
@@ -62,7 +65,7 @@ getDefaultViewData = (imsi, refresh, status) => {
     .then(function(response) {
         self.setState((state, props) => ({ loading: false, data: response.data, count: Object.keys(response.data).length, refresh: refresh, refreshStatus: status }));
         if(status === true && refresh === true) {
-            self.intervalID = setTimeout(self.getDefaultViewData.bind(this), 3000);
+            self.intervalID = setTimeout(self.getDefaultViewData.bind(this), timeInterval);
         }
     })
     .catch(function(error) {
@@ -71,10 +74,10 @@ getDefaultViewData = (imsi, refresh, status) => {
 }
 
   render() {
-    const {data, count, loading, refresh, refreshStatus} = this.state || {};
+    const {data, count, loading, refresh, refreshStatus, timeInterval} = this.state || {};
     const {componentDidMount} = this;
     return(
-      <DefaultViewDataLayerContext.Provider value = {{ data, count, loading, refresh, refreshStatus, componentDidMount }} > { this.props.children } 
+      <DefaultViewDataLayerContext.Provider value = {{ data, count, loading, refresh, refreshStatus, timeInterval, componentDidMount }} > { this.props.children } 
       </DefaultViewDataLayerContext.Provider>
     )
   }
