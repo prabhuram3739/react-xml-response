@@ -5,6 +5,7 @@ import Header from './header/Header';
 import Searchview from './searchView/Searchview';
 import Footer from './footer/Footer';
 import Home from './home/Home';
+import Index from './index/Index';
 
 function App() {
     return ( 
@@ -15,6 +16,9 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+        <Route path="/index">
+            <Index />
+          </Route>
           <Route path="/search">
             <Searchview />
           </Route>
