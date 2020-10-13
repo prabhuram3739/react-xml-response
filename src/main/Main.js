@@ -1,4 +1,6 @@
 import React  from 'react';
+import { faUser, faUsers, faSearch, faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Main.css";
 
 export default class Main extends React.Component {
@@ -26,31 +28,35 @@ export default class Main extends React.Component {
                     //if(item.userType === "admin") {
                     return (
                         <React.Fragment>
-                            <div className="col-12">
-                                <div className="row">
-                                    <h5 className="sideBarTitle">Main Content</h5>
-                                </div>
-                                <div className="row">
+                            <div className="col-12 pl-0">
+                                
                                 <div className="card-deck">
-                        <div className="row">
-                        <div className="col-4 mt-1">
+                        <div className="col-2 mt-1 pl-0">
                         <div className="card mb-3 shadow-soft p-3">
-                        <div className="card-header">Accounts</div>
+                        <div className="card-header"><FontAwesomeIcon icon = { faUser } className="mr-2" />Accounts</div>
                         </div>
                         </div>
-                        <div className="col-4 mt-1">
+                        <div className="col-2 mt-1 pl-0">
                         <div className="card mb-3 shadow-soft p-3">
-                        <div className="card-header">Sub-Accounts</div>
+                        <div className="card-header"><FontAwesomeIcon icon = { faUserFriends } className="mr-2" /> Sub-Accounts</div>
                         </div>
                         </div>
-                        <div className="col-4 mt-1">
+                        <div className="col-2 mt-1 pl-0">
                         <div className="card mb-3 shadow-soft p-3">
-                        <div className="card-header">Connections</div>
+                        <div className="card-header"><FontAwesomeIcon icon = { faUsers } className="mr-2" /> Connections</div>
                         </div>
                         </div>
 
-                    </div></div>
-                                </div>
+</div>
+                                
+                            </div>
+
+                            <div className="col-12 pl-0">
+        <div className = "row topSearchBox" >
+        <div className = "col-12 searchBoxDiv" >
+        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "Search for iccid, imsi, msisdn, account, tag" id = "search-box" aria-label = "Search" required / >
+        <button className = "searchIcon" type="submit"><FontAwesomeIcon icon = { faSearch } /></button>
+        </div> </div>
                             </div>
                         </React.Fragment>
                     )
