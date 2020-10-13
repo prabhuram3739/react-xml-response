@@ -6,7 +6,8 @@ import "./Main.css";
 export default class Main extends React.Component {
     render() {
         // Get the data from the context api to manipulate the data for the circuit view
-       const { data, count, loading } = this.context || {};
+       //const { data, count, loading } = this.context || {};
+       const { data, loading } = this.context || {};
        const finalData = [];
        finalData.push(data);
        // Check if the count is zero or undefined to display the no records message
