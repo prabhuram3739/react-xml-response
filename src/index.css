@@ -76,7 +76,7 @@ section {
 
 body {
     margin: 0;
-    font: 300 16px/1.55 "NokiaPureHeadline", "Arial", "Helvetica", sans-serif !important;
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -126,6 +126,11 @@ h4 {
     text-align: justify;
 }
 
+.marginLeft5 {
+    display: inline-flex !important;
+    justify-content: center;
+}
+
 .headerMsgText {
     color: red;
     font-size: 12px;
@@ -137,7 +142,55 @@ h4 {
 
 .fontBold {
     font-size: 15px;
-    color: gray;
+    color: #007bff;
+}
+
+.txtBoxHeight {
+    height: 25px !important;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #fff;
+    padding: 5px;
+}
+
+.shadowDeck {
+    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.noBorderTableTD td {
+    border: none !important;
+    font: 300 14px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
+}
+
+.card-header {
+    font: 300 14px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
+}
+
+.boldFont {
+    font-weight: bold;
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+.navbar .nav-item .dropdown-menu {
+    display: none;
+}
+
+.navbar .nav-item:hover .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar .nav-item .dropdown-menu {
+    margin-top: 0;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -145,6 +198,61 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-right: 30px;
     font-size: 20px;
     margin-top: -5px;
+}
+
+.searchIcon {
+    margin-top: -36px;
+    float: right;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #495057 !important;
+    border: none !important;
+    cursor: pointer;
+    background: none;
+}
+
+.searchIcon:focus {
+    outline: none !important;
+}
+
+.topSearchBox {
+    margin-top: 3px;
+    border-radius: 3rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem var('--box-shadow-first-color'), -0.5rem -0.5rem 0.5rem var('--box-shadow-second-color');
+    transition: all 250ms ease-in-out;
+    border: none;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+input.searchBox,
+.form-control.searchBox {
+    border: 1px solid #d3d3d3!important;
+    height: calc(1.5em + 0.75rem + 2px) !important;
+    width: 100%;
+    border-radius: 10px !important;
+}
+
+.searchBoxDiv {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.form-control.searchBox:focus {
+    border-radius: 3rem;
+}
+
+.topSearchBox:hover,
+.topSearchBox:focus {
+    outline: none;
+    box-shadow: 1rem 1rem 1rem var('--box-shadow-first-color'), -1rem -1rem 1rem var('--box-shadow-second-color');
+}
+
+.clear-selection {
+    font-size: 1.2rem;
+    color: #fc060f;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 td {
@@ -155,6 +263,14 @@ td {
     color: gray;
     text-align: right;
     font-weight: 400;
+}
+
+.marginLeftAlignCards {
+    display: inline-flex !important;
+}
+
+.shadow-soft {
+    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff!important;
 }
 
 td span {
@@ -289,6 +405,7 @@ li {
     border-radius: 17px;
     min-height: -webkit-fill-available;
     overflow-y: scroll;
+    overflow-x: hidden;
     /*box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, .15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, .2); */
 }
 
@@ -303,6 +420,18 @@ li {
 
 .removePaddingLeft {
     padding-left: 0px !important;
+}
+
+
+/* Dashboard Page CSS*/
+
+.greyColorTxt {
+    color: #878080 !important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    border-bottom: none !important;
 }
 
 
@@ -746,7 +875,8 @@ input:checked+.slider:before {
 @media only screen and (min-width: 1023px) and (max-width: 1280px) {
     .homePageContainer {
         height: 75vh !important;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .detailPageContainer {
         height: 74vh;
@@ -756,7 +886,8 @@ input:checked+.slider:before {
 @media only screen and (min-width: 1280px) {
     .homePageContainer {
         height: 81vh;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .detailPageContainer {
         min-height: 74vh;
@@ -776,6 +907,7 @@ input:checked+.slider:before {
     .content {
         height: 30vh !important;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
     .homePageContainer {
         min-height: 63vh;
@@ -5535,9 +5667,42 @@ input[type="button"].btn-block {
 .nav-tabs .nav-item.show .nav-link {
     color: #495057;
     background-color: #FFFFFF;
+    height: 45px;
+    padding: 1rem;
     border-color: #dee2e6 #dee2e6 #FFFFFF;
     font: 300 16px/1 "Open Sans", sans-serif !important;
-    font-weight: 400 !important;
+    font-weight: 900 !important;
+}
+
+.refreshBtn {
+    position: absolute;
+    top: 319px;
+    right: 10%;
+    z-index: 99999;
+}
+
+.dropdown-menu.show {
+    top: 16px !important;
+}
+
+.left {
+    width: 40%;
+    float: left;
+    text-align: right;
+}
+
+.right {
+    width: 55%;
+    margin-left: 10px;
+    float: left;
+}
+
+.nav {
+    padding-left: 6px !important;
+}
+
+.marginLeftBtnAlign {
+    margin-left: 4rem !important;
 }
 
 .nav-tabs .dropdown-menu {

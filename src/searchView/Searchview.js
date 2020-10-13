@@ -84,49 +84,49 @@ function Searchview() {
                 <rect y="60" width="100" height="20"></rect>
             </svg>
             </a>
-            <div className="dropdown-menu collapse">
+            <div className="dropdown-menu">
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalOneShow(true)}>APN Enable/Disable</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalOneShow(true)}>APN Enable/Disable</span>
                 <ApnEnableDisableModal show={ModalOneShow} onHide={() => setModalOneShow(false)} />
             </span>
             <div className="dropdown-divider"></div>
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalTwoShow(true)}>GI DNS - Add/Modify</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalTwoShow(true)}>GI DNS - Add/Modify</span>
                 <GIDNSModal show={ModalTwoShow} onHide={() => setModalTwoShow(false)} />
             </span>
             
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalThreeShow(true)}>GY Inline</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalThreeShow(true)}>GY Inline</span>
                 <GYInlineModal show={ModalThreeShow} onHide={() => setModalThreeShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
  
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalFourthShow(true)}>GY Bypass</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalFourthShow(true)}>GY Bypass</span>
                 <GYBypassModal show={ModalFourthShow} onHide={() => setModalFourthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalFifthShow(true)}>GX Inline</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalFifthShow(true)}>GX Inline</span>
                 <ApnShutdownInlineModal show={ModalFifthShow} onHide={(value) => setModalFifthShow(value)}  />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalSixthShow(true)}>GX Bypass</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalSixthShow(true)}>GX Bypass</span>
                 <APNShutdownBypassModal show={ModalSixthShow} onHide={(value) => setModalSixthShow(value)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalSeventhShow(true)}>GA - Add/Modify</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalSeventhShow(true)}>GA - Add/Modify</span>
                 <GAModal show={ModalSeventhShow} onHide={() => setModalSeventhShow(false)} />
             </span>
 
@@ -142,105 +142,105 @@ function Searchview() {
                 <rect y="60" width="100" height="20"></rect>
             </svg>
             </a>
-            <div className="dropdown-menu collapse">
+            <div className="dropdown-menu">
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalEigthShow(true)}>Subscriber Status - Activate/Deactive</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalEigthShow(true)}>Subscriber Status - Activate/Deactive</span>
                 <ApnEnableDisableModal show={ModalEigthShow} onHide={() => setModalEigthShow(false)} />
             </span>
             <div className="dropdown-divider"></div>
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalNinthShow(true)}>Voice - Provision/Deprovision</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalNinthShow(true)}>Voice - Provision/Deprovision</span>
                 <GIDNSModal show={ModalNinthShow} onHide={() => setModalNinthShow(false)} />
             </span>
             
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalTenthShow(true)}>Voice MO - Activate/Deactivate</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalTenthShow(true)}>Voice MO - Activate/Deactivate</span>
                 <GYInlineModal show={ModalTenthShow} onHide={() => setModalTenthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
  
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalEleventhShow(true)}>Voice MT - Activate/Deactivate</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalEleventhShow(true)}>Voice MT - Activate/Deactivate</span>
                 <GYBypassModal show={ModalEleventhShow} onHide={() => setModalEleventhShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalTwenlthShow(true)}>SMS MO - Provision/Deprovision</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalTwenlthShow(true)}>SMS MO - Provision/Deprovision</span>
                 <ApnShutdownInlineModal show={ModalTwenlthShow} onHide={(value) => setModalTwenlthShow(value)}  />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalThirteenthShow(true)}>SMS MT - Provision/Deprovision</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalThirteenthShow(true)}>SMS MT - Provision/Deprovision</span>
                 <APNShutdownBypassModal show={ModalThirteenthShow} onHide={(value) => setModalThirteenthShow(value)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalFourteenthShow(true)}>SMS MO - Activate/Deactivate</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalFourteenthShow(true)}>SMS MO - Activate/Deactivate</span>
                 <GAModal show={ModalFourteenthShow} onHide={() => setModalFourteenthShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
             <span className="dropdown-item">
-                <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalTwentySecondShow(true)}>SMS MT - Activate/Deactivate</button>
+                <span className="reducedPaddingTop" type="button" onClick={() => setModalTwentySecondShow(true)}>SMS MT - Activate/Deactivate</span>
                 <GAModal show={ModalTwentySecondShow} onHide={() => setModalTwentySecondShow(false)} />
             </span>
 
             <div className="dropdown-divider"></div>
 
 <span className="dropdown-item">
-    <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalFIfteenthShow(true)}>3G Data - Activate/Deactivate</button>
+    <span className="reducedPaddingTop" type="button" onClick={() => setModalFIfteenthShow(true)}>3G Data - Activate/Deactivate</span>
     <GAModal show={ModalFIfteenthShow} onHide={() => setModalFIfteenthShow(false)} />
 </span>
 
 <div className="dropdown-divider"></div>
 
 <span className="dropdown-item">
-    <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalSixteenthShow(true)}>3G Data Roam - Activate/Deactivate</button>
+    <span className="reducedPaddingTop" type="button" onClick={() => setModalSixteenthShow(true)}>3G Data Roam - Activate/Deactivate</span>
     <GAModal show={ModalSixteenthShow} onHide={() => setModalSixteenthShow(false)} />
 </span>
 
 <div className="dropdown-divider"></div>
 
 <span className="dropdown-item">
-    <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalSeventeenthShow(true)}>4G Data - Activate/Deactivate</button>
+    <span className="reducedPaddingTop" type="button" onClick={() => setModalSeventeenthShow(true)}>4G Data - Activate/Deactivate</span>
     <GAModal show={ModalSeventeenthShow} onHide={() => setModalSeventeenthShow(false)} />
 </span>
 
 <div className="dropdown-divider"></div>
 
 <span className="dropdown-item">
-    <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalEighteenthShow(true)}>SIM Purge</button>
+    <span className="reducedPaddingTop" type="button" onClick={() => setModalEighteenthShow(true)}>SIM Purge</span>
     <GAModal show={ModalEighteenthShow} onHide={() => setModalEighteenthShow(false)} />
 </span>
 
 <div className="dropdown-divider"></div>
 
 <span className="dropdown-item">
-    <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalNinteenthShow(true)}>SIM Swap</button>
+    <span className="reducedPaddingTop" type="button" onClick={() => setModalNinteenthShow(true)}>SIM Swap</span>
     <GAModal show={ModalNinteenthShow} onHide={() => setModalNinteenthShow(false)} />
 </span>
 
 <div className="dropdown-divider"></div>
 
 <span className="dropdown-item">
-    <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalTwentyShow(true)}>3G APN - Provision/Deprovision</button>
+    <span className="reducedPaddingTop" type="button" onClick={() => setModalTwentyShow(true)}>3G APN - Provision/Deprovision</span>
     <GAModal show={ModalTwentyShow} onHide={() => setModalTwentyShow(false)} />
 </span>
 
 <div className="dropdown-divider"></div>
 
 <span className="dropdown-item">
-    <button className="btn btn-primary btn-block reducedPaddingTop" type="button" onClick={() => setModalTwentyFirstShow(true)}>4G APN - Provision/Deprovision</button>
+    <span className="reducedPaddingTop" type="button" onClick={() => setModalTwentyFirstShow(true)}>4G APN - Provision/Deprovision</span>
     <GAModal show={ModalTwentyFirstShow} onHide={() => setModalTwentyFirstShow(false)} />
 </span>
 
@@ -250,7 +250,7 @@ function Searchview() {
 }
         </nav>
         <DataProvider imsi={queryString.parse(location.search).imsi} >
-        <div className = "tab-content noOverflowX" id = "nav-tabContent" >
+        <div className = "tab-content" id = "nav-tabContent" >
         <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <GeneralInfo />
         </div> 

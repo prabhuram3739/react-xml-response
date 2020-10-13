@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 // get our fontawesome imports
-import { faSearch, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DefaultViewDataLayerContext, { DefaultViewDataProvider } from '../DefaultViewDataLayerContext';
 import DefaultView from "../defaultView/DefaultView";
@@ -13,54 +13,76 @@ function Home() {
     let [refreshBoolean, setRefreshBoolean] = useState(false);
     let [refreshStatus, setRefreshStatus] = useState(false);
     let [buttonText, setButtonText] = useState("Enable");
+    let [timeInterval, setTimeInterval] = useState(3000);
+    let [autoRefresh, setAutoRefresh] = useState("Disable");
+    console.log(timeInterval);
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
-        <div className = "row topSearchBox" >
-        <div className = "col-12 searchBoxDiv" >
-        <input type = "search" className = "form-control mr-sm-2 searchBox" name = "imsi" autoComplete = "off" placeholder = "IMSI Search" id = "search-box" aria-label = "Search" required / >
-        <button className = "searchIcon" type="submit">
-        <FontAwesomeIcon icon = { faSearch } /> 
-        </button>
-        </div>
-        </div>
-
-        <div className = "tab-content" id = "myTabContent" >
-        <div className = "tab-pane fade show active" id = "platform" role = "tabpanel" aria-labelledby = "platform-tab" >
         <div className = "row row-sm-offset" >
         <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
-        {/*<nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
-      <div className="navbar-collapse nav nav-tabs" id = "nav-tab" role = "tablist">
-      <a className = "nav-item nav-link active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> 
-      </div>
-    </nav>*/}
-        <div className = "tab-content noOverflowX" id = "nav-tabContent" >
-        <div className = "tab-pane fade show active" id = "nav-general-info" role = "tabpanel" aria-labelledby = "nav-general-info-tab" >
         <div className="row">
-            <div className="col-4">
-                <h4 className="marginLeftAlign">Statistical Data</h4>
+        <div className="col-12">
+        <ul className="nav nav-bar nav-tabs dropleft pull-right refreshBtn">
+        <li className="nav-item dropdown">
+            <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false" style={{borderColor: "white"}}>
+            <button type="button" className='btn btn-primary pull-right'><FontAwesomeIcon icon = { faSyncAlt } /> </button>
+            </a>
+
+            <div className="dropdown-menu" >
+            <span className="dropdown-item">
+            <input className="reducedPaddingTop" disabled={(autoRefresh === 'Disable') ? true : false} type="checkbox" onChange={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); timeInterval ? setTimeInterval(timeInterval) : setTimeInterval(0); }}/>
+            <span className="autoRefreshTxt ml-1">Auto refresh</span>
+            </span>
+            <div className="dropdown-divider"></div>
+            <span className="dropdown-item">
+                <span>Refresh interval</span>
+            </span>
+            
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <input type="radio" checked={timeInterval === 10000 ?  true : false} onChange={ () => { timeInterval === 3000? setTimeInterval(10000) : setTimeInterval(3000); (autoRefresh === 'Disable') ? setAutoRefresh('Enable') : setButtonText('Disable'); }}/> 10 Seconds
+            </span>
+
+            <div className="dropdown-divider"></div>
+ 
+            <span className="dropdown-item">
+            <input type="radio" checked={timeInterval === 60000 ?  true : false} onChange={ () => { timeInterval === 3000? setTimeInterval(60000) : setTimeInterval(3000); (autoRefresh === 'Disable') ? setAutoRefresh('Enable') : setButtonText('Disable'); }}/> 1 Minute
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+            <input type="radio" checked={timeInterval === 120000 ?  true : false} onChange={ () => { timeInterval === 3000? setTimeInterval(120000) : setTimeInterval(3000); (autoRefresh === 'Disable') ? setAutoRefresh('Enable') : setButtonText('Disable'); }}/> 2 Minutes
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+            <input type="radio" checked={timeInterval === 300000 ?  true : false} onChange={ () => { timeInterval === 3000? setTimeInterval(300000) : setTimeInterval(3000); (autoRefresh === 'Disable') ? setAutoRefresh('Enable') : setButtonText('Disable'); }}/> 5 Minutes
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+            <input type="radio" checked={timeInterval === 600000 ?  true : false} onChange={ () => { timeInterval === 3000? setTimeInterval(600000) : setTimeInterval(3000); (autoRefresh === 'Disable') ? setAutoRefresh('Enable') : setButtonText('Disable'); }}/> 10 Minutes
+            </span>
             </div>
-            <div className="col-4">
-                <h4 className="centerAlignText">Dashboard</h4>
-            </div>
-        <div className="col-4">
-        {/*<button type="button" className="btn btn-primary pull-right mr-1" onClick={ () => { setRefreshBoolean(false); setRefreshStatus(false); }}>Disable Auto Refresh <FontAwesomeIcon icon = { faSyncAlt } /> </button>*/}
-        <button type="button" className={ refreshBoolean ? 'btn btn-danger pull-right mr-1' : 'btn btn-primary pull-right mr-1' } onClick={ () => { refreshBoolean ?  setRefreshBoolean(false) : setRefreshBoolean(true); refreshStatus ? setRefreshStatus(false) : setRefreshStatus(true); (buttonText === 'Enable') ? setButtonText('Disable') : setButtonText('Enable'); }}><FontAwesomeIcon icon = { faSyncAlt } /> </button>
+        </li>
+        </ul>
+        
         </div>
         </div>
-        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} >
+        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} timeInterval={timeInterval} >
         <div className = "row" >
         <DefaultView />
         </div>
-        </DefaultViewDataProvider> 
-        </div> 
-        </div> 
+        </DefaultViewDataProvider>   
         </div> 
         </div>
         </div>
-        </div> 
-        </div> 
         </form> 
     </div>
     );

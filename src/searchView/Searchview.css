@@ -1,33 +1,11 @@
-.searchIcon {
-    margin-top: -36px;
-    float: right;
-    font-size: 20px;
-    margin-right: 10px;
-    color: #495057 !important;
-    border: none !important;
-    background: none;
-}
-
-.searchIcon:focus {
-    outline: none !important;
-}
-
-.topSearchBox {
-    margin-top: 3px;
-    border-radius: 3rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem var('--box-shadow-first-color'), -0.5rem -0.5rem 0.5rem var('--box-shadow-second-color');
-    transition: all 250ms ease-in-out;
-    border: none;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-}
-
 .highlight {
     background-color: #d7d7d7;
 }
 
 .reducedPaddingTop {
     padding: 0rem 0.75rem !important;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .dropdown-item {
@@ -50,8 +28,6 @@
     cursor: pointer !important;
 }
 
-.stickyNav {}
-
 .marginLeftTxt {
     margin-left: 15px;
 }
@@ -61,31 +37,8 @@
     border-bottom: 2px solid #cd040b !important;
 }
 
-input.searchBox,
-.form-control.searchBox {
-    border: none !important;
-    height: calc(1.5em + 0.75rem + 2px) !important;
-    width: 100%;
-    border-radius: 10px !important;
-}
-
 .clickMoreDetails {
     font-size: 1.5rem;
-}
-
-.searchBoxDiv {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-}
-
-.form-control.searchBox:focus {
-    border-radius: 3rem;
-}
-
-.topSearchBox:hover,
-.topSearchBox:focus {
-    outline: none;
-    box-shadow: 1rem 1rem 1rem var('--box-shadow-first-color'), -1rem -1rem 1rem var('--box-shadow-second-color');
 }
 
 .form-check-input {
@@ -107,13 +60,6 @@ input[type=checkbox] {
 .thumbnail {
     border: none !important;
     background-color: none !important;
-}
-
-.clear-selection {
-    font-size: 1.2rem;
-    color: #fc060f;
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .modelTypeChk,
