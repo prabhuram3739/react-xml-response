@@ -4,6 +4,8 @@
 
 .reducedPaddingTop {
     padding: 0rem 0.75rem !important;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .dropdown-item {
@@ -25,8 +27,6 @@
     font-size: 1.25rem;
     cursor: pointer !important;
 }
-
-.stickyNav {}
 
 .marginLeftTxt {
     margin-left: 15px;
