@@ -31,17 +31,17 @@ export default class Main extends React.Component {
                             <div className="col-12 pl-0">
                                 
                                 <div className="card-deck">
-                        <div className="col-2 mt-1 pl-0">
+                        <div className="col-3 mt-1 pl-0">
                         <div className="card mb-3 shadow-soft p-3">
                         <div className="card-header"><FontAwesomeIcon icon = { faUser } className="mr-4" />Accounts</div>
                         </div>
                         </div>
-                        <div className="col-2 mt-1 pl-0">
+                        <div className="col-3 mt-1 pl-0">
                         <div className="card mb-3 shadow-soft p-3">
                         <div className="card-header"><FontAwesomeIcon icon = { faUserFriends } className="mr-4" /> Sub-Accounts</div>
                         </div>
                         </div>
-                        <div className="col-2 mt-1 pl-0">
+                        <div className="col-3 mt-1 pl-0">
                         <div className="card mb-3 shadow-soft p-3">
                         <div className="card-header"><FontAwesomeIcon icon = { faUsers } className="mr-4" /> Connections</div>
                         </div>
