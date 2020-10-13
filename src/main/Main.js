@@ -107,31 +107,117 @@ export default class Main extends React.Component {
                             <table className="table table-striped customTable">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ICCID</th>
+      <th scope="col">IMSI</th>
+      <th scope="col">MSISDN</th>
+      <th scope="col">ACCOUNT</th>
+      <th scope="col">APN Group</th>
+      <th scope="col">Data Session</th>
+      <th scope="col">HLR Status</th>
+      <th scope="col">Price Plan</th>
+      <th scope="col">Tag</th>
+      <th scope="col">Actions</th>
+
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
     </tr>
+    <tr>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>89098238424323489243</td>
+      <td>IOT_OLYMPUS_TEST_A</td>
+      <td>jwtwing.test</td>
+      <td>Online</td>
+      <td>Registered</td>
+      <td>Test Plan</td>
+      <td></td>
+      <td>...</td>
+    </tr>
+
   </tbody>
 </table>
 </div>
