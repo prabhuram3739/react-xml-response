@@ -59,6 +59,82 @@ export default class Main extends React.Component {
         <button className = "searchIcon" type="submit"><FontAwesomeIcon icon = { faSearch } /></button>
         </div> </div>
                             </div>
+
+                            <div className="col-12 pl-0 mt-3">
+                                
+                        <div className="card-deck">
+                        <div className="mt-1 pl-0">
+                        <div className="card functionalCards mb-3 shadow-soft p-3">
+                        <div className="card-header"><FontAwesomeIcon icon = { faUser } className="mr-4" />Move SIM</div>
+                        </div>
+                        </div>
+                        <div className="mt-1 pl-0">
+                        <div className="card functionalCards mb-3 shadow-soft p-3">
+                        <div className="card-header"><FontAwesomeIcon icon = { faUserFriends } className="mr-4" /> Purge SIM</div>
+                        </div>
+                        </div>
+                        <div className="mt-1 pl-0">
+                        <div className="card functionalCards mb-3 shadow-soft p-3">
+                        <div className="card-header"><FontAwesomeIcon icon = { faUsers } className="mr-4" /> Unassign SIM</div>
+                        </div>
+                        </div>
+                        <div className="mt-1 pl-0">
+                        <div className="card functionalCards mb-3 shadow-soft p-3">
+                        <div className="card-header"><FontAwesomeIcon icon = { faUsers } className="mr-4" /> Replace SIM</div>
+                        </div>
+                        </div>
+                        <div className="mt-1 pl-0">
+                        <div className="card functionalCards mb-3 shadow-soft p-3">
+                        <div className="card-header"><FontAwesomeIcon icon = { faUsers } className="mr-4" /> Change Price Plan</div>
+                        </div>
+                        </div>
+                        <div className="mt-1 pl-0">
+                        <div className="card functionalCards mb-3 shadow-soft p-3">
+                        <div className="card-header"><FontAwesomeIcon icon = { faUsers } className="mr-4" /> Assign Tag</div>
+                        </div>
+                        </div>
+                        <div className="mt-1 pl-0">
+                        <div className="card functionalCards mb-3 shadow-soft p-3">
+                        <div className="card-header"><FontAwesomeIcon icon = { faUsers } className="mr-4" /> Export</div>
+                        </div>
+                        </div>
+
+</div>
+                                
+                            </div>
+
+<div className="col-12 mt-3">
+                            <table className="table table-striped customTable">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div>
                         </React.Fragment>
                     )
                     /*} else {
