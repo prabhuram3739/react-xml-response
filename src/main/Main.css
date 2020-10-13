@@ -1,6 +1,7 @@
 .functionalCards {
     color: #1266ce;
     cursor: pointer;
+    font: 300 14px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif !important;
 }
 
 .customTable {
