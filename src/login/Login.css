@@ -1,0 +1,41 @@
+.nokia .login-background {
+    width: 100%;
+    height: 100%;
+    padding-top: 0!important;
+    background: url('https://jt-poc.nokiawing.com/VAADIN/themes/nokia/img/login_background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #124191;
+    image-rendering: optimizequality;
+    min-height: 600px;
+    min-width: 380px;
+}
+
+.nokia.v-app,
+.nokia.v-app-loading {
+    font: 300 16px/1.55 "NokiaPureHeadline", "Open Sans", sans-serif;
+    color: #000;
+    background-color: #FFF;
+    cursor: default;
+}
+
+.nokia .v-loading-indicator {
+    position: fixed!important;
+    z-index: 99999;
+    left: 0;
+    right: auto;
+    top: 0;
+    width: 50%;
+    opacity: 1;
+    height: 4px;
+    background-color: #ff3154;
+    pointer-events: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    -webkit-animation: v-progress-start 1000ms 200ms both;
+    -moz-animation: v-progress-start 1000ms 200ms both;
+    animation: v-progress-start 1000ms 200ms both;
+}

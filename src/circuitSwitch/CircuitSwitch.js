@@ -98,7 +98,7 @@ export default class CircuitSwitch extends React.Component {
                         <tr>
                         <td className="textAlignRight"><label className="fontBold">IMSI:</label>
                         </td>
-                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.imsi ? item.circuitSwitch.imsi : 'No Data Available'}  readOnly disabled />
+                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.id ? item.circuitSwitch.id : 'No Data Available'}  readOnly disabled />
                         </td>
                         <td className="textAlignRight"><label className="fontBold">MSIDN:</label>
                         </td>
