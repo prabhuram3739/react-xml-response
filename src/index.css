@@ -102,6 +102,27 @@ body {
     padding: 0px;
 }
 
+@font-face {
+    font-family: NokiaPureHeadline;
+    src: url(./assets/fonts/NokiaPureHeadline_Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: NokiaPureHeadline;
+    src: url(./assets/fonts/NokiaPureHeadline_Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ThemeIcons;
+    font-weight: normal;
+    font-style: normal;
+    src: url(./assets/fonts/themeicons-webfont.woff) format("woff");
+}
+
 h4,
 h5 {
     padding: 0px 0 0px 0px;

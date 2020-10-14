@@ -15,7 +15,6 @@ constructor(props){
 
  handleClick(event){
     var apiBaseUrl = "http://localhost:4000/api/";
-    var self = this;
     var payload={
     "email":this.state.username,
     "password":this.state.password
@@ -42,18 +41,19 @@ constructor(props){
 render() {
     return (
         <React.Fragment>
-<div id="ROOT-2521314" className="v-app nokia mavocenterui"><div tabindex="1" className="v-ui valo-menu-responsive loginview v-scrollable" width-range="1101px- 801px-" style={{width: 100, height: 100}}></div><div className="v-loading-indicator first" ></div><div className="v-customlayout v-layout v-widget logincontent v-customlayout-logincontent v-has-width" style={{borderStyle: "none", margin: 0, padding: 0, width: 100}}><div className="login-background">
+<div id="ROOT-2521314" className="v-app nokia mavocenterui">
+        <div className="login-background">
     <div className="login-panel-container layout horizontal center center-justified">
         <div className="login-panel layout horizontal">
             <div className="nokia-logo layout vertical">
             <img className="login-logo" alt="Nokia" src={"https://jt-poc.nokiawing.com/VAADIN/themes/nokia/layouts/../img/nokia_white.svg"} />
-                <p className="nokia-product">WING Hub</p>
+                <p className="nokia-product">Diagnostic Portal</p>
                 <p className="nokia-descriptor">Enterprise Portal</p>
                 <p className="nokia-version">Release: <span location="app_version"><div className="v-label v-widget login-label v-label-login-label v-label-undef-w">4.3</div></span></p>
                 <p className="flex"></p>
                 <p className="nokia-status">Based on WING © by Nokia</p>
             </div>
-            <div className="login-form layout vertical center-justified" location="login-form"><div className="v-customlayout v-layout v-widget v-has-width" style={{borderStyle: "none", margin: 0, padding: 0, width: 100}}><div className="login-form-content nokia-fields layout vertical center-justified">
+            <div className="login-form layout vertical center-justified" location="login-form"><div className="v-customlayout v-layout v-widget v-has-width" style={{borderStyle: "none", margin: 0, padding: 0}}><div className="login-form-content nokia-fields layout vertical center-justified">
     <div className="flex layout vertical center-justified">
         <div className="login-fields-input">
             <div location="user_name_field"><div className="v-captionwrapper"><div className="v-caption v-caption-inline-icon" id="gwt-uid-3" for="gwt-uid-4"><span className="v-icon IcoMoon-Lindua"></span><div className="v-captiontext">E-mail</div></div><input type="text" className="v-textfield v-widget inline-icon v-textfield-inline-icon" id="gwt-uid-4" aria-labelledby="gwt-uid-3" tabindex="0" /></div></div>
@@ -69,13 +69,13 @@ render() {
     </div>
     <div className="nokia-language layout horizontal center">
         <div style={{paddingBottom: 1}}>Language:</div>
-        <div location="lang_menu"><div tabindex="0" className="v-menubar v-widget borderless v-menubar-borderless language-menu v-menubar-language-menu"><span className="v-menubar-menuitem"><span className="v-menubar-submenu-indicator">►</span><span className="v-menubar-menuitem-caption"><img className="v-icon" src="https://jt-poc.nokiawing.com/VAADIN/themes/nokia/../../shared/images/flags/4x3/en.svg" />English</span></span></div></div>
+        <div location="lang_menu"><div tabindex="0" className="v-menubar v-widget borderless v-menubar-borderless language-menu v-menubar-language-menu"><span className="v-menubar-menuitem"><span className="v-menubar-submenu-indicator">►</span><span className="v-menubar-menuitem-caption">English</span></span></div></div>
     </div>
 </div></div></div>
         </div>
     </div>
 </div>
-</div></div></React.Fragment>
+</div></React.Fragment>
     );
   }
 }
