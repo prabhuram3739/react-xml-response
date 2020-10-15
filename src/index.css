@@ -173,8 +173,13 @@ h4 {
     color: #000;
     font-weight: bold;
     border-radius: 5px;
-    background: #fff;
+    background: #dee2e6;
+    ;
     padding: 5px;
+}
+
+.whiteBackground {
+    background: #FFF;
 }
 
 .shadowDeck {
@@ -415,13 +420,12 @@ li {
 .tabContainer,
 .content {
     font-size: 18px;
-    min-height: 70vh;
+    min-height: 73vh;
     background-color: #fff;
     color: #000;
     /*background: var(--content-background);
   color: var(--on-background);*/
     box-sizing: border-box;
-    margin-top: 6px;
     border: 1px solid rgba(255, 255, 255, 0.20);
     border-radius: 17px;
     min-height: -webkit-fill-available;
@@ -901,7 +905,7 @@ input:checked+.slider:before {
 
 @media only screen and (min-width: 1280px) {
     .homePageContainer {
-        height: 81vh;
+        height: 74vh;
         overflow-y: scroll;
         overflow-x: hidden;
     }

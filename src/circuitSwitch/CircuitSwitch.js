@@ -170,17 +170,21 @@ export default class CircuitSwitch extends React.Component {
                         </td> 
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.threeGDataStatus ? item.circuitSwitch.threeGDataStatus : 'No Data Available'}  readOnly disabled />
                         </td>
-                        <td className="textAlignRight"><label className="fontBold">3G DATA - ROAM:</label>
+                        <td className="textAlignRight"><label className="fontBold">3G Roaming Profile</label>
                         </td> 
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.threeGDataRoamStatus ? item.circuitSwitch.threeGDataRoamStatus : 'No Data Available'}  readOnly disabled />
                         </td>
-                        <td className="textAlignRight"><label className="fontBold">4G DATA - Status:</label>
+                        <td className="textAlignRight"><label className="fontBold">4G Roaming Profile</label>
                         </td> 
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.fourGDataStatus ? item.circuitSwitch.fourGDataStatus : 'No Data Available'}  readOnly disabled />
                         </td>
                         </tr>
 
                         <tr>
+                        <td className="textAlignRight"><label className="fontBold">4G DATA - Status:</label>
+                        </td> 
+                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.fourGDataStatus ? item.circuitSwitch.fourGDataStatus : 'No Data Available'}  readOnly disabled />
+                        </td>
                         <td className="textAlignRight"><label className="fontBold">Prepaid/Camel Data:</label>
                         </td> 
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />

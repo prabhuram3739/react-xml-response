@@ -129,6 +129,23 @@ export default class PacketSwitch extends React.Component {
                         <table className="table table-striped noBorderTableTD" key={index}>
                             <tbody>
                             <tr>
+                            <td className="textAlignRight"><label className="fontBold">Up Time:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.upTime ? item.packetSwitch.upTime : 'No Data Available'}  readOnly disabled /></td>
+                            <td className="textAlignRight"><label className="fontBold">RAT Type:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.ratType ? item.packetSwitch.ratType : 'No Data Available'}  readOnly disabled /></td>
+                            <td className="textAlignRight"><label className="fontBold">Location:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMCCMNC? item.packetSwitch.networkMCCMNC.replace(/[ ,]+/g, ", ") : 'No Data Available'}  readOnly disabled /></td>
+                        </tr>
+                        <tr>
+                            <td className="textAlignRight"><label className="fontBold">Network MCC:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMCC ? item.packetSwitch.networkMCC : 'No Data Available'}  readOnly disabled /></td>
+                            <td className="textAlignRight"><label className="fontBold">Network MNC:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMNC ? item.packetSwitch.networkMNC : 'No Data Available'}  readOnly disabled /></td>
+                            <td className="textAlignRight"><label className="fontBold">Cell ID:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.cellID ? item.packetSwitch.cellID : 'No Data Available'}  readOnly disabled /></td>
+                        </tr>
+                        
+                            <tr>
                                 <td className="textAlignRight"><label className="fontBold">APN Requested:</label></td>
                                 <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.apnRequested ? item.packetSwitch.apnRequested : 'No Data Available'}  readOnly disabled /></td>
                                 <td className="textAlignRight"><label className="fontBold">Virtual APN:</label></td>
@@ -225,8 +242,17 @@ export default class PacketSwitch extends React.Component {
                                 <td className="textAlignRight"><label className="fontBold">Diameter Code:</label></td>
                                 <td><input type="text" className="txtBoxHeight" value={rating.diameterCode ? rating.diameterCode : 'No Data Available'}  readOnly disabled /></td>
                             </tr>
+                            
                             )
-                            })}
+                            }
+                            
+                            )}
+                            <tr>
+                                <td className="textAlignRight"><label className="fontBold">Number of PDN Contexts:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.numbercontexts ? item.packetSwitch.numbercontexts : 'No Data Available'}  readOnly disabled /></td>
+                            <td></td><td></td>
+                            <td></td><td></td>
+                        </tr>
                         </tbody>
                         </table>
                         </div>
