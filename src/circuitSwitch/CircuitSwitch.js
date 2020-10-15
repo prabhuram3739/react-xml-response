@@ -93,7 +93,7 @@ export default class CircuitSwitch extends React.Component {
                     </div>*/}
 
                         <div className="table-responsive">
-                        <table className="table noBorderTableTD" key={index}>
+                        <table className="table table-striped noBorderTableTD" key={index}>
                         <tbody>
                         <tr>
                         <td className="textAlignRight"><label className="fontBold">IMSI:</label>

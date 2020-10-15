@@ -28,7 +28,7 @@ export default class GeneralInfo extends React.Component {
                     return (
                         <React.Fragment key={item.id}>
                         <div className="table-responsive">
-                        <table className="table noBorderTableTD" >
+                        <table className="table table-striped noBorderTableTD" >
                         <tbody>
                         <tr>
                             <td className="textAlignRight"><label className="fontBold">IMSI:</label></td>
@@ -43,17 +43,19 @@ export default class GeneralInfo extends React.Component {
                             <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.upTime ? item.packetSwitch.upTime : 'No Data Available'}  readOnly disabled /></td>
                             <td className="textAlignRight"><label className="fontBold">RAT Type:</label></td>
                             <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.ratType ? item.packetSwitch.ratType : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">Network MCC/Network MNC:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMCCMNC ? item.packetSwitch.networkMCCMNC : 'No Data Available'}  readOnly disabled /></td>
+                            <td className="textAlignRight"><label className="fontBold">Location:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMCCMNC? item.packetSwitch.networkMCCMNC.replace(/[ ,]+/g, ", ") : 'No Data Available'}  readOnly disabled /></td>
                         </tr>
                         <tr>
+                            <td className="textAlignRight"><label className="fontBold">Network MCC:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMCC ? item.packetSwitch.networkMCC : 'No Data Available'}  readOnly disabled /></td>
+                            <td className="textAlignRight"><label className="fontBold">Network MNC:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMNC ? item.packetSwitch.networkMNC : 'No Data Available'}  readOnly disabled /></td>
                             <td className="textAlignRight"><label className="fontBold">Cell ID:</label></td>
                             <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.cellID ? item.packetSwitch.cellID : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">Number of PDN Contexts:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.numbercontexts ? item.packetSwitch.numbercontexts : 'No Data Available'}  readOnly disabled /></td>
-                            <td></td>
-                            <td></td>
                         </tr>
+                        <tr><td className="textAlignRight"><label className="fontBold">Number of PDN Contexts:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.numbercontexts ? item.packetSwitch.numbercontexts : 'No Data Available'}  readOnly disabled /></td></tr>
                         </tbody>
                         </table>
                     </div>

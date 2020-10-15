@@ -126,7 +126,7 @@ export default class PacketSwitch extends React.Component {
 
 
                         <div className="table-responsive">
-                        <table className="table noBorderTableTD" key={index}>
+                        <table className="table table-striped noBorderTableTD" key={index}>
                             <tbody>
                             <tr>
                                 <td className="textAlignRight"><label className="fontBold">APN Requested:</label></td>

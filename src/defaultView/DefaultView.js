@@ -1209,7 +1209,7 @@ Hw Summary
 <div className="text-center py-4 " >
 <div className="boldFont">Total number of APNs</div>
 <div className="card-body">
-    <p className="card-text greenTxt">{item.realApns ? item.realApns : 'No Data Available'}</p>
+    <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}</p>
 </div>
 </div>
 </div>
@@ -1620,24 +1620,6 @@ Hw Summary
         </div>
         </div>
         <div className="col-4">
-        <div className="left">
-        <label className="fontBold">LTE PDN Sessions:</label>
-        </div>
-        <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        <div className="col-4">
-        <div className="left">
-        <label className="fontBold">Real APNs:</label> 
-        </div>
-        <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        </div>
-        <div className="row">
-        <div className="col-4">
           <div className="left">
         <label className="fontBold">Roamers:</label> 
         </div>
@@ -1647,18 +1629,10 @@ Hw Summary
         </div>
         <div className="col-4">
           <div className="left">
-        <label className="fontBold">2G/3G PDN Sessions:</label> 
-        </div>
-        <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        <div className="col-4">
-          <div className="left">
         <label className="fontBold">Ga CDRs Buffered:</label>
         </div>
         <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.gACdrsBuffered ? item.gACdrsBuffered : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
@@ -1668,15 +1642,7 @@ Hw Summary
         <label className="fontBold">Visitors:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.visitors ? item.visitors : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        <div className="col-4">
-          <div className="left">
-        <label className="fontBold">Total Number of UEs:</label>
-        </div>
-        <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.visitors ? item.packetSwitchAdminDefaultHeaderVO.visitors : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1684,7 +1650,7 @@ Hw Summary
         <label className="fontBold">Gy CCRs Buffered:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.gyCcrsBuffered ? item.gyCcrsBuffered : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
@@ -1721,24 +1687,6 @@ Hw Summary
         </div>
         </div>
         <div className="col-4">
-        <div className="left">
-        <label className="fontBold">LTE PDN Sessions:</label>
-        </div>
-        <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions ? item.packetSwitchAdminDefaultHeaderVO.ltePdnSessions : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        <div className="col-4">
-        <div className="left">
-        <label className="fontBold">Real APNs:</label> 
-        </div>
-        <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.realApns ? item.packetSwitchAdminDefaultHeaderVO.realApns : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        </div>
-        <div className="row">
-        <div className="col-4">
           <div className="left">
         <label className="fontBold">Roamers:</label> 
         </div>
@@ -1748,36 +1696,21 @@ Hw Summary
         </div>
         <div className="col-4">
           <div className="left">
-        <label className="fontBold">2G/3G PDN Sessions:</label> 
-        </div>
-        <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions ? item.packetSwitchAdminDefaultHeaderVO.twoGthreeGPdnSessions : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        <div className="col-4">
-          <div className="left">
         <label className="fontBold">Ga CDRs Buffered:</label>
         </div>
         <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.gACdrsBuffered ? item.gACdrsBuffered : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gACdrsBuffered : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
         <div className="row">
+
         <div className="col-4">
         <div className="left">
         <label className="fontBold">Visitors:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.visitors ? item.visitors : 'No Data Available'}  readOnly disabled />
-        </div>
-        </div>
-        <div className="col-4">
-          <div className="left">
-        <label className="fontBold">Total Number of UEs:</label>
-        </div>
-        <div className="right"> 
-        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.visitors ? item.packetSwitchAdminDefaultHeaderVO.visitors : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         <div className="col-4">
@@ -1785,7 +1718,7 @@ Hw Summary
         <label className="fontBold">Gy CCRs Buffered:</label> 
         </div>
         <div className="right">
-        <input type="text" className="txtBoxHeight" value={item.gyCcrsBuffered ? item.gyCcrsBuffered : 'No Data Available'}  readOnly disabled />
+        <input type="text" className="txtBoxHeight" value={item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered ? item.packetSwitchAdminDefaultHeaderVO.gyCcrsBuffered : 'No Data Available'}  readOnly disabled />
         </div>
         </div>
         </div>
