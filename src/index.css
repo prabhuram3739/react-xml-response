@@ -450,11 +450,6 @@ li {
     color: #878080 !important;
 }
 
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link {
-    border-bottom: none !important;
-}
-
 
 /* Scrollbar with the smooth transition */
 
@@ -5697,13 +5692,21 @@ input[type="button"].btn-block {
 
 .refreshBtn {
     position: absolute;
-    top: 319px;
-    right: 10%;
-    z-index: 99999;
+    top: -1683px;
+    right: 8%;
+}
+
+.centerAlign {
+    justify-content: center;
 }
 
 .dropdown-menu.show {
     top: 16px !important;
+    z-index: 9999999;
+}
+
+.dropDownMenu.show {
+    top: 5px !important;
 }
 
 .left {

@@ -50,8 +50,6 @@ render() {
             <div className="nokia-logo layout vertical">
             <img className="login-logo" alt="Nokia" src={"https://jt-poc.nokiawing.com/VAADIN/themes/nokia/layouts/../img/nokia_white.svg"} />
                 <p className="nokia-product">Diagnostic Portal</p>
-                <p className="nokia-descriptor">Enterprise Portal</p>
-                <p className="nokia-version">Release: <span location="app_version"><div className="v-label v-widget login-label v-label-login-label v-label-undef-w">4.3</div></span></p>
                 <p className="flex"></p>
                 <p className="nokia-status">Based on WING © by Nokia</p>
             </div>

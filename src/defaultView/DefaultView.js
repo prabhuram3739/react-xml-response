@@ -1,19 +1,97 @@
-import React  from 'react';
+import React from 'react';
 import { faSearch, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ApnEnableDisableModal from '../apnEnableDisableModal/ApnEnableDisableModal';
+import GIDNSModal from '../giDNSModal/GIDNSModal';
+import GYInlineModal from '../gyInlineModal/GYInlineModal';
+import GYBypassModal from '../gyBypassModal/GYBypassModal';
+import GAModal from '../gaModal/GAModal';
+import ApnShutdownInlineModal from '../apnShutdownInlineModal/APNShutdownInlineModal';
+import APNShutdownBypassModal from '../apnShutdownBypassModal/APNShutdownBypassModal';
 
 export default class DefaultView extends React.Component {
-  //let [btnIndex, setBtnIndex] = React.useState(0);
   constructor(props) {
     super(props);
     this.state = {
-      btnIndex: null
+      btnIndex: null,
+      ModalOneShow: false, 
+      setModalOneShow: false,
+      ModalTwoShow: false, 
+      setModalTwoShow: false,
+      ModalThreeShow: false, 
+      setModalThreeShow: false,
+      ModalFourthShow: false, 
+      setModalFourthShow: false,
+      ModalFifthShow: false, 
+      setModalFifthShow: false,
+      ModalSixthShow: false, 
+      setModalSixthShow: false,
+      ModalSeventhShow: false, 
+      setModalSeventhShow: false,
+      tabIndex: 0,
+      setTabIndex: 0
     };
   }
   handleBtnSelect(index) {
     this.setState({btnIndex : index});
     return this.state.btnIndex;
 }
+
+handleTabSelect = (index) => {
+  this.setState({tabIndex: index});
+  this.setState({setTabIndex: index});
+  return this.state.tabIndex;
+}
+
+openModalOne = () => {
+  this.setState({ ModalOneShow: true });
+};
+
+closeModalOne = () => {
+  this.setState({ ModalOneShow: false });
+};
+openModalTwo = () => {
+  this.setState({ ModalTwoShow: true });
+};
+
+closeModalTwo = () => {
+  this.setState({ ModalTwoShow: false });
+};
+openModalThree = () => {
+  this.setState({ ModalThreeShow: true });
+};
+
+closeModalThree = () => {
+  this.setState({ ModalThreeShow: false });
+};
+openModalFour = () => {
+  this.setState({ ModalFourthShow: true });
+};
+
+closeModalFour = () => {
+  this.setState({ ModalFourthShow: false });
+};
+openModalFive = () => {
+  this.setState({ ModalFifthShow: true });
+};
+
+closeModalFive = () => {
+  this.setState({ ModalFifthShow: false });
+};
+openModalSix = () => {
+  this.setState({ ModalSixthShow: true });
+};
+
+closeModalSix = () => {
+  this.setState({ ModalSixthShow: false });
+};
+openModalSeven = () => {
+  this.setState({ ModalSeventhShow: true });
+};
+
+closeModalSeven = () => {
+  this.setState({ ModalSeventhShow: false });
+};
     render() {
       // Get the data from the context api to manipulate the data for the default view
       const { data, count, loading } = this.context || {};
@@ -1217,7 +1295,7 @@ Hw Summary
 <div className="border-light text-center py-4 " >
 <div className="boldFont">System Uptime</div>
 <div className="card-body">
-    <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes : 'No Data Available'}</p>
+    <p className="card-text greenTxt">{item.packetSwitchAdminDefaultHeaderVO.totalNumberOfUes ? 'dd:hh:mm:ss' : 'dd:hh:mm:ss'}</p>
 </div>
 </div>
 </div>
@@ -1225,7 +1303,66 @@ Hw Summary
 <div className="border-light text-center py-4 " >
 <div className="boldFont"></div>
 <div className="card-body">
-    <p className="card-text"><FontAwesomeIcon className="fontCursorPointer" icon = { faEllipsisV } /></p>
+    <div className="card-text">
+
+    <ul className="nav nav-bar nav-tabs dropleft centerAlign">
+        <li className="nav-item dropdown">
+            <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
+            <FontAwesomeIcon className="fontCursorPointer" icon = { faEllipsisV }  />
+            </a>
+            <div className="dropdown-menu dropDownMenu">
+            <span className="dropdown-item">
+                <span className="reducedPaddingTop" type="button" onClick={this.openModalOne}>APN Enable/Disable</span>
+                <ApnEnableDisableModal show={this.state.ModalOneShow} onHide={this.closeModalOne} />
+            </span>
+            <div className="dropdown-divider"></div>
+            <span className="dropdown-item">
+                <span className="reducedPaddingTop" type="button" onClick={this.openModalTwo}>GI DNS - Add/Modify</span>
+                <GIDNSModal show={this.state.ModalTwoShow} onHide={this.closeModalTwo} />
+            </span>
+            
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <span className="reducedPaddingTop" type="button" onClick={this.openModalThree}>GY Inline</span>
+                <GYInlineModal show={this.state.ModalThreeShow} onHide={this.closeModalThree} />
+            </span>
+
+            <div className="dropdown-divider"></div>
+ 
+            <span className="dropdown-item">
+                <span className="reducedPaddingTop" type="button" onClick={this.openModalFour}>GY Bypass</span>
+                <GYBypassModal show={this.state.ModalFourthShow} onHide={this.closeModalFour} />
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <span className="reducedPaddingTop" type="button" onClick={this.openModalFive}>GX Inline</span>
+                <ApnShutdownInlineModal show={this.state.ModalFifthShow} onHide={this.closeModalFive}  />
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <span className="reducedPaddingTop" type="button" onClick={this.openModalSix}>GX Bypass</span>
+                <APNShutdownBypassModal show={this.state.ModalSixthShow} onHide={this.closeModalSix} />
+            </span>
+
+            <div className="dropdown-divider"></div>
+
+            <span className="dropdown-item">
+                <span className="reducedPaddingTop" type="button" onClick={this.openModalSeven}>GA - Add/Modify</span>
+                <GAModal show={this.state.ModalSeventhShow} onHide={this.closeModalSeven} />
+            </span>
+
+            </div>
+            
+        </li>
+        </ul> 
+    
+    
+    </div>
 </div>
 </div>
 </div>

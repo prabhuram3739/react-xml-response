@@ -19,14 +19,6 @@ import { useLocation } from 'react-router';
 import queryString from 'query-string';
 
 function Searchview() {
-    //Primary Core Details Data Enrichment Modals
-    const [ModalOneShow, setModalOneShow] = React.useState(false);
-    const [ModalTwoShow, setModalTwoShow] = React.useState(false);
-    const [ModalThreeShow, setModalThreeShow] = React.useState(false);
-    const [ModalFourthShow, setModalFourthShow] = React.useState(false);
-    const [ModalFifthShow, setModalFifthShow] = React.useState(false);
-    const [ModalSixthShow, setModalSixthShow] = React.useState(false);
-    const [ModalSeventhShow, setModalSeventhShow] = React.useState(false);
 
     //Circuit Core Details Data Enrichment Modals
     const [ModalEigthShow, setModalEigthShow] = React.useState(false);
@@ -74,7 +66,7 @@ function Searchview() {
         <a className = "nav-item nav-link" onClick={() => handleTabSelect(2)} id = "nav-profile-tab" data-toggle = "tab" href = "#nav-profile" role = "tab" aria-controls = "nav-profile" aria-selected = "false"> Circuit Core Details </a> 
         {/*<a className = "nav-item nav-link" id = "nav-data-mod-tab" data-toggle = "tab" href = "#nav-data-mod" role = "tab" aria-controls = "nav-data-mod" aria-selected = "false"> Data Modifications </a>  */}
         </div>
-        { (tabIndex === 1) ?
+       {/*} { (tabIndex === 1) ?
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
         <li className="nav-item dropdown" style={{marginTop: -6}}>
             <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
@@ -132,7 +124,7 @@ function Searchview() {
 
             </div>
         </li>
-        </ul> : (tabIndex === 2) ?
+        </ul> : */}  { (tabIndex === 2) ?
         <ul className="nav nav-bar nav-tabs dropleft pull-right">
         <li className="nav-item dropdown" style={{marginTop: -6}}>
             <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false">
