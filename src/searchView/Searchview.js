@@ -40,7 +40,6 @@ function Searchview() {
     }
     return (
     <div className = "home" >
-        <form className = "mbr-form diagnostic-tool-form" data-form-title = "Model store Form" id = "model-store-form" >
         <DataProvider imsi={queryString.parse(location.search).imsi} >
         <div className = "row topSearchBox" >
         <div className = "col-12 searchBoxDiv" >
@@ -260,7 +259,7 @@ function Searchview() {
         </div> 
         </div> 
         </DataProvider> 
-        </form> 
+
     </div>
     );
 }

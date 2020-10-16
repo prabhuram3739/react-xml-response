@@ -51,12 +51,14 @@ return (
 <React.Fragment key={item.id}>
 <div className="table-responsive">
 <table className="table table-striped noBorderTableTD mb-0 whiteBackground" >
+<thead>
 <tr>
 <th>Parameter</th>
 <th>Current Status</th>
 <th>Operations</th>
 <th>Result</th>
 </tr>
+</thead>
 <tbody>
 <tr>
 <td><input type="text" className="txtBoxHeight" value="Subscriber Status"  readOnly disabled /></td>
@@ -64,7 +66,7 @@ return (
 <td className="p-0">
 <BootstrapSwitchButton checked={item.circuitSwitch.subscriberStatus === true ? true : false} onlabel='Active' offlabel='Inactive' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
 </td>
-<td><textarea value={item.circuitSwitch.subscriberStatus === true ? 'IMSI Active' : 'IMSI Inactive'} ></textarea></td>
+<td><textarea value={item.circuitSwitch.subscriberStatus === true ? 'IMSI Active' : 'IMSI Inactive'} readOnly></textarea></td>
 </tr>
 
 <tr>

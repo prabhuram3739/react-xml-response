@@ -1,4 +1,6 @@
 import React  from 'react';
+import AsyncCSV from '../exportApiResponse/AsyncCSV';
+import DataLayerContext, { DataProvider } from '../DataLayerContext';
 
 export default class CircuitSwitch extends React.Component {
     render() {
@@ -6,6 +8,8 @@ export default class CircuitSwitch extends React.Component {
        const { data, count, loading } = this.context || {};
        const finalData = [];
        finalData.push(data);
+       const authResult = new URLSearchParams(window.location.search); 
+const imsi = authResult.get('imsi')
        // Check if the count is zero or undefined to display the no records message
        if(!loading) {
        if((count === 0) || (count === undefined)) {
@@ -189,11 +193,29 @@ export default class CircuitSwitch extends React.Component {
                         </td> 
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
                         </td>
-                        <td></td>
-                        <td></td>
+                        <td className="textAlignRight"><label className="fontBold">CS Raoming Profile:</label>
+                        </td> 
+                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td className="textAlignRight"><label className="fontBold">PS Roaming Profile:</label>
+                        </td> 
+                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
+                        </td>
+                        <td className="textAlignRight"><label className="fontBold">EPS Roaming Profile:</label>
+                        </td> 
+                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
+                        </td>
+                        <td>
+                        
+                        </td>
                         </tr>
                         </tbody>
                         </table>
+                        <DataProvider imsi={imsi}>
+                        <AsyncCSV csvData={finalData}/>
+                        </DataProvider>
                         </div>
                         </React.Fragment>
                     )
@@ -206,3 +228,5 @@ export default class CircuitSwitch extends React.Component {
     );
     }
 }
+
+AsyncCSV.contextType = DataLayerContext;
