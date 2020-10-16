@@ -64,7 +64,7 @@ return (
 <td className="p-0">
 <BootstrapSwitchButton checked={item.circuitSwitch.subscriberStatus === true ? true : false} onlabel='Active' offlabel='Inactive' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
 </td>
-<td><textarea value={item.circuitSwitch.subscriberStatus ? item.circuitSwitch.subscriberStatus : 'No Data Available'} ></textarea></td>
+<td><textarea value={item.circuitSwitch.subscriberStatus === true ? 'IMSI Active' : 'IMSI Inactive'} ></textarea></td>
 </tr>
 
 <tr>
