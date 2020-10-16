@@ -15,7 +15,7 @@ function Home() {
     let [buttonText, setButtonText] = useState("Enable");
     let [timeInterval, setTimeInterval] = useState(3000);
     let [autoRefresh, setAutoRefresh] = useState("Disable");
-    console.log(timeInterval);
+
     return (
     <div className = "home" >
         <form className = "mbr-form diagnostic-tool-form" action="search/" data-form-title = "Model store Form" id = "model-store-form" >
@@ -24,6 +24,11 @@ function Home() {
         <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
         <div className="row">
         <div className="col-12">
+        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} timeInterval={timeInterval} >
+        <div className = "row" >
+        <DefaultView />
+        </div>
+        </DefaultViewDataProvider> 
         <ul className="nav nav-bar nav-tabs dropleft pull-right refreshBtn">
         <li className="nav-item dropdown">
             <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false" style={{borderColor: "white"}}>
@@ -72,14 +77,10 @@ function Home() {
             </div>
         </li>
         </ul>
-        
+
         </div>
         </div>
-        <DefaultViewDataProvider imsi={queryString.parse(location.search).imsi}  refresh={refreshBoolean} refreshStatus={refreshStatus} timeInterval={timeInterval} >
-        <div className = "row" >
-        <DefaultView />
-        </div>
-        </DefaultViewDataProvider>   
+  
         </div> 
         </div>
         </div>
