@@ -20,7 +20,7 @@ export default class GeneralInfo extends React.Component {
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 // Display loader till the response appears and check for the validity of the data If exists
-                loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
+                !loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData
                 .map((item, index) => {
@@ -28,34 +28,16 @@ export default class GeneralInfo extends React.Component {
                     return (
                         <React.Fragment key={item.id}>
                         <div className="table-responsive">
-                        <table className="table table-striped noBorderTableTD" >
+                        <table className="table noBorderTableTD mb-0 whiteBackground" >
                         <tbody>
                         <tr>
                             <td className="textAlignRight"><label className="fontBold">IMSI:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.imsi ? item.packetSwitch.imsi : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">MSISDN:</label></td>
+                            <td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.id ? item.circuitSwitch.id : 'No Data Available'}  readOnly disabled /></td>
+                            <td className="textAlignRight"><label className="fontBold">MSIDN:</label></td>
                             <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.msisdn ? item.packetSwitch.msisdn : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">IMEI:</label></td>
+                            <td className="textAlignRight"><label className="fontBold">ICID:</label></td>
                             <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.imei ? item.packetSwitch.imei : 'No Data Available'}  readOnly disabled /></td>
                         </tr>
-                        <tr>
-                            <td className="textAlignRight"><label className="fontBold">Up Time:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.upTime ? item.packetSwitch.upTime : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">RAT Type:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.ratType ? item.packetSwitch.ratType : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">Location:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMCCMNC? item.packetSwitch.networkMCCMNC.replace(/[ ,]+/g, ", ") : 'No Data Available'}  readOnly disabled /></td>
-                        </tr>
-                        <tr>
-                            <td className="textAlignRight"><label className="fontBold">Network MCC:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMCC ? item.packetSwitch.networkMCC : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">Network MNC:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.networkMNC ? item.packetSwitch.networkMNC : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">Cell ID:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.cellID ? item.packetSwitch.cellID : 'No Data Available'}  readOnly disabled /></td>
-                        </tr>
-                        <tr><td className="textAlignRight"><label className="fontBold">Number of PDN Contexts:</label></td>
-                            <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.numbercontexts ? item.packetSwitch.numbercontexts : 'No Data Available'}  readOnly disabled /></td></tr>
                         </tbody>
                         </table>
                     </div>
