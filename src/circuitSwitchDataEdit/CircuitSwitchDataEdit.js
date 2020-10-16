@@ -133,7 +133,23 @@ return (
 <td><textarea value={item.circuitSwitch.threeGDataStatus ? item.circuitSwitch.threeGDataStatus : 'No Data Available'} ></textarea></td>
 </tr>
 <tr>
-<td><input type="text" className="txtBoxHeight" value="Voice MO Activate/Deactivate"  readOnly disabled /></td>
+<td><input type="text" className="txtBoxHeight" value="3G Data Roam - Activate/Deactivate"  readOnly disabled /></td>
+<td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.threeGDataRoamStatus ? item.circuitSwitch.threeGDataRoamStatus : 'No Data Available'}  readOnly disabled /></td>
+<td className="p-0">
+<BootstrapSwitchButton checked={item.circuitSwitch.threeGDataRoamStatus === 'Roaming Not allowed for 3G Data' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
+</td>
+<td><textarea value={item.circuitSwitch.threeGDataRoamStatus ? item.circuitSwitch.threeGDataRoamStatus : 'No Data Available'} ></textarea></td>
+</tr>
+<tr>
+<td><input type="text" className="txtBoxHeight" value="4G Data - Activate/Deactivate"  readOnly disabled /></td>
+<td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.fourGDataStatus ? item.circuitSwitch.fourGDataStatus : 'No Data Available'}  readOnly disabled /></td>
+<td className="p-0">
+<BootstrapSwitchButton checked={item.circuitSwitch.fourGDataStatus === '4G Not provisioned' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
+</td>
+<td><textarea value={item.circuitSwitch.fourGDataStatus ? item.circuitSwitch.fourGDataStatus : 'No Data Available'} ></textarea></td>
+</tr>
+<tr>
+<td><input type="text" className="txtBoxHeight" value="SIM Purge"  readOnly disabled /></td>
 <td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}  readOnly disabled /></td>
 <td className="p-0">
 <BootstrapSwitchButton checked={item.circuitSwitch.outgoingCallStatus === 'O/G call Unbarred' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
@@ -141,7 +157,7 @@ return (
 <td><textarea value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'} ></textarea></td>
 </tr>
 <tr>
-<td><input type="text" className="txtBoxHeight" value="Voice MO Activate/Deactivate"  readOnly disabled /></td>
+<td><input type="text" className="txtBoxHeight" value="SIM Swap"  readOnly disabled /></td>
 <td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}  readOnly disabled /></td>
 <td className="p-0">
 <BootstrapSwitchButton checked={item.circuitSwitch.outgoingCallStatus === 'O/G call Unbarred' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
@@ -149,31 +165,15 @@ return (
 <td><textarea value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'} ></textarea></td>
 </tr>
 <tr>
-<td><input type="text" className="txtBoxHeight" value="Voice MO Activate/Deactivate"  readOnly disabled /></td>
+<td><input type="text" className="txtBoxHeight" value="3G APN - Provision/Deprovision"  readOnly disabled /></td>
 <td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}  readOnly disabled /></td>
 <td className="p-0">
-<BootstrapSwitchButton checked={item.circuitSwitch.outgoingCallStatus === 'O/G call Unbarred' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
+<BootstrapSwitchButton checked={item.circuitSwitch.outgoingCallStatus === 'O/G call Unbarred' ? true : false} onlabel='Provision' offlabel='Deprovision' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
 </td>
 <td><textarea value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'} ></textarea></td>
 </tr>
 <tr>
-<td><input type="text" className="txtBoxHeight" value="Voice MO Activate/Deactivate"  readOnly disabled /></td>
-<td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}  readOnly disabled /></td>
-<td className="p-0">
-<BootstrapSwitchButton checked={item.circuitSwitch.outgoingCallStatus === 'O/G call Unbarred' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
-</td>
-<td><textarea value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'} ></textarea></td>
-</tr>
-<tr>
-<td><input type="text" className="txtBoxHeight" value="Voice MO Activate/Deactivate"  readOnly disabled /></td>
-<td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}  readOnly disabled /></td>
-<td className="p-0">
-<BootstrapSwitchButton checked={item.circuitSwitch.outgoingCallStatus === 'O/G call Unbarred' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
-</td>
-<td><textarea value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'} ></textarea></td>
-</tr>
-<tr>
-<td><input type="text" className="txtBoxHeight" value="Voice MO Activate/Deactivate"  readOnly disabled /></td>
+<td><input type="text" className="txtBoxHeight" value="4G APN - Provision/Deprovision"  readOnly disabled /></td>
 <td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.outgoingCallStatus ? item.circuitSwitch.outgoingCallStatus : 'No Data Available'}  readOnly disabled /></td>
 <td className="p-0">
 <BootstrapSwitchButton checked={item.circuitSwitch.outgoingCallStatus === 'O/G call Unbarred' ? true : false} onlabel='Activate' offlabel='Deactivate' onChange={(checked) => {this.setState({  })}} onstyle="success" offstyle="danger" width={150} />
