@@ -898,19 +898,26 @@ input:checked+.slider:before {
         overflow-y: scroll;
         overflow-x: hidden;
     }
-    .detailPageContainer {
-        height: 74vh;
+    .searchPageContainer {
+        height: 74vh !important;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .homePageContainer {
-        height: 74vh;
+        height: 83vh;
         overflow-y: scroll;
         overflow-x: hidden;
     }
     .detailPageContainer {
         min-height: 74vh;
+    }
+    .searchPageContainer {
+        height: 74vh !important;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
 
@@ -935,6 +942,11 @@ input:checked+.slider:before {
     }
     .detailPageContainer {
         min-height: 74vh;
+    }
+    .searchPageContainer {
+        height: 74vh !important;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .multi-horizontal {
         max-width: 100% !important;

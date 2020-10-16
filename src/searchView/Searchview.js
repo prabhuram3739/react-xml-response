@@ -61,7 +61,7 @@ function Searchview() {
         <div className = "row row-sm-offset" >
         {/*<div className = "col-md-7 col-sm-12 col-lg-7 col-xl-8 multi-horizontal" data-for = "" > */}
         <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
-        <div className = "tabContainer scrollbar mobile-content-panel homePageContainer" >
+        <div className = "tabContainer scrollbar mobile-content-panel searchPageContainer" >
         <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
         <div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
         { /*<a className = "nav-item nav-link active" onClick={() => handleTabSelect(0)} id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> General Information </a> */}
