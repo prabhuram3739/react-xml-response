@@ -8,21 +8,15 @@ import PacketSwitch from "../packetSwitch/PacketSwitch";
 import GeneralInfo from '../generalInfo/GeneralInfo';
 //import DataModifications from '../dataModifications/DataModifications';
 import DataLayerContext, { DataProvider } from '../DataLayerContext';
-import ApnEnableDisableModal from '../apnEnableDisableModal/ApnEnableDisableModal';
-import GIDNSModal from '../giDNSModal/GIDNSModal';
-import GYInlineModal from '../gyInlineModal/GYInlineModal';
-import GYBypassModal from '../gyBypassModal/GYBypassModal';
-import GAModal from '../gaModal/GAModal';
-import ApnShutdownInlineModal from '../apnShutdownInlineModal/APNShutdownInlineModal';
-import APNShutdownBypassModal from '../apnShutdownBypassModal/APNShutdownBypassModal';
 import { useLocation } from 'react-router';
 import queryString from 'query-string';
+import CircuitSwitchDataEdit from "../circuitSwitchDataEdit/CircuitSwitchDataEdit";
 
 function Searchview() {
 
     //Circuit Core Details Data Enrichment Modals
     const [ModalEigthShow, setModalEigthShow] = React.useState(false);
-    const [ModalNinthShow, setModalNinthShow] = React.useState(false);
+    /*const [ModalNinthShow, setModalNinthShow] = React.useState(false);
     const [ModalTenthShow, setModalTenthShow] = React.useState(false);
     const [ModalEleventhShow, setModalEleventhShow] = React.useState(false);
     const [ModalTwenlthShow, setModalTwenlthShow] = React.useState(false);
@@ -35,7 +29,7 @@ function Searchview() {
     const [ModalNinteenthShow, setModalNinteenthShow] = React.useState(false);
     const [ModalTwentyShow, setModalTwentyShow] = React.useState(false);
     const [ModalTwentyFirstShow, setModalTwentyFirstShow] = React.useState(false);
-    const [ModalTwentySecondShow, setModalTwentySecondShow] = React.useState(false);
+    const [ModalTwentySecondShow, setModalTwentySecondShow] = React.useState(false);*/
 
     const location = useLocation();
     let [tabIndex, setTabIndex] = React.useState(0);
@@ -139,6 +133,10 @@ function Searchview() {
             </a>
             <div className="dropdown-menu">
             <span className="dropdown-item">
+            <span className="reducedPaddingTop" type="button" onClick={() => setModalEigthShow(true)}>Circuit Core Data Edit</span>
+            <CircuitSwitchDataEdit imsi={queryString.parse(location.search).imsi} show={ModalEigthShow} onHide={() => setModalEigthShow(false)} />
+            </span>
+            {/*<span className="dropdown-item">
                 <span className="reducedPaddingTop" type="button" onClick={() => setModalEigthShow(true)}>Subscriber Status - Activate/Deactive</span>
                 <ApnEnableDisableModal show={ModalEigthShow} onHide={() => setModalEigthShow(false)} />
             </span>
@@ -237,7 +235,7 @@ function Searchview() {
 <span className="dropdown-item">
     <span className="reducedPaddingTop" type="button" onClick={() => setModalTwentyFirstShow(true)}>4G APN - Provision/Deprovision</span>
     <GAModal show={ModalTwentyFirstShow} onHide={() => setModalTwentyFirstShow(false)} />
-</span>
+</span>*/}
 
             </div>
         </li>
@@ -269,4 +267,5 @@ function Searchview() {
 GeneralInfo.contextType = DataLayerContext;
 PacketSwitch.contextType = DataLayerContext;
 CircuitSwitch.contextType = DataLayerContext;
+CircuitSwitchDataEdit.contextType = DataLayerContext;
 export default Searchview;

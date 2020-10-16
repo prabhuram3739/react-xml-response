@@ -1,0 +1,8 @@
+.topAlign {
+    margin-top: -12px;
+}
+
+.heightAlign {
+    height: 70vh;
+    overflow-y: scroll;
+}

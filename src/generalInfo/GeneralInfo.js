@@ -35,7 +35,7 @@ export default class GeneralInfo extends React.Component {
                             <td><input type="text" className="txtBoxHeight" value={item.circuitSwitch.id ? item.circuitSwitch.id : 'No Data Available'}  readOnly disabled /></td>
                             <td className="textAlignRight"><label className="fontBold">MSIDN:</label></td>
                             <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.msisdn ? item.packetSwitch.msisdn : 'No Data Available'}  readOnly disabled /></td>
-                            <td className="textAlignRight"><label className="fontBold">ICID:</label></td>
+                            <td className="textAlignRight"><label className="fontBold">ICCID:</label></td>
                             <td><input type="text" className="txtBoxHeight" value={item.packetSwitch.imei ? item.packetSwitch.imei : 'No Data Available'}  readOnly disabled /></td>
                         </tr>
                         </tbody>
