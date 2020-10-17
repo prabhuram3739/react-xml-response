@@ -8,6 +8,7 @@ import GYBypassModal from '../gyBypassModal/GYBypassModal';
 import GAModal from '../gaModal/GAModal';
 import ApnShutdownInlineModal from '../apnShutdownInlineModal/APNShutdownInlineModal';
 import APNShutdownBypassModal from '../apnShutdownBypassModal/APNShutdownBypassModal';
+import Loader from 'react-loader-spinner';
 
 export default class DefaultView extends React.Component {
   constructor(props) {
@@ -113,7 +114,7 @@ closeModalSeven = () => {
 {
 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
 // Display loader till the response appears and check for the validity of the data If exists
-loading ? <div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div>  :
+loading ? <div><div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div><Loader className="centerDisplayDefaultView mt-5" type="Circles" color="#00BFFF" height={40} width={40} /></div>  :
 (finalData && finalData.length > 0) &&
 finalData.map((item, index) => {
 return (
@@ -1246,7 +1247,7 @@ Hw Summary
 <div className = "row row-sm-offset" >
 <div className = "col-md-12 col-sm-12 col-lg-12 col-xl-12 multi-horizontal" data-for = "" >
 <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-light noPadding">
-<div className="navbar-collapse nav nav-tabs fontReduce" id = "nav-tab" role = "tablist">
+<div className="navbar-collapse nav nav-tabs fontReduce pl-0" id = "nav-tab" role = "tablist">
 <a className = "nav-item nav-link greyColorTxt active" id = "nav-general-info-tab" data-toggle = "tab" href = "#nav-general-info" role = "tab" aria-controls = "nav-general-info" aria-selected = "true"> AMS_PROD_CMG </a>
 </div>
 <ul className="nav nav-bar nav-tabs dropleft pull-right">

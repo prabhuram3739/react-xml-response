@@ -1,4 +1,5 @@
 import React from 'react';
+import Loader from 'react-loader-spinner';
 
 export default class GeneralInfo extends React.Component {
     render() {
@@ -20,7 +21,7 @@ export default class GeneralInfo extends React.Component {
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading... </span> </div> </div>  :
                 // Display loader till the response appears and check for the validity of the data If exists
-                loading ? <div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div>  :
+                loading ? <div><div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div><Loader className="centerDisplaySearchView" type="Circles" color="#00BFFF" height={40} width={40} /></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData
                 .map((item, index) => {

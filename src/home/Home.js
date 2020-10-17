@@ -29,7 +29,7 @@ function Home() {
         <DefaultView />
         </div>
         </DefaultViewDataProvider> 
-        <ul className="nav nav-bar nav-tabs dropleft pull-right refreshBtn">
+        <ul className="nav nav-bar nav-tabs dropleft pull-right refreshBtn pl-0">
         <li className="nav-item dropdown">
             <a className="nav-link" data-toggle="dropdown" href="test" role="button" aria-haspopup="true" aria-expanded="false" style={{borderColor: "white"}}>
             <button type="button" className='btn btn-primary pull-right'><FontAwesomeIcon icon = { faSyncAlt } /> </button>

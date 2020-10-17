@@ -709,6 +709,27 @@ h2 {
     animation: v-progress-delay 10.8s forwards !important;
 }
 
+.centerDisplayDefaultView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 480%;
+    left: 50%;
+}
+
+.centerDisplaySearchView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerDisplayPacketView {
+    position: absolute;
+    top: 40%;
+    left: 49%;
+}
+
 .v-loading-indicator {
     position: fixed !important;
     z-index: 99999;

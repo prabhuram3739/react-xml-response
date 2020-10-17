@@ -1,4 +1,5 @@
 import React  from 'react';
+import Loader from 'react-loader-spinner';
 
 export default class PacketSwitch extends React.Component {
     render() {
@@ -19,7 +20,7 @@ export default class PacketSwitch extends React.Component {
         <div className="container-fluid noPadding fontChange">
             {
                 // Display loader till the response appears and check for the validity of the data If exists
-                loading ? <div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div>  :
+                loading ? <div><div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div><Loader className="centerDisplaySearchView centerDisplayPacketView mt-5" type="Circles" color="#00BFFF" height={40} width={40} /></div> :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
                     if(item.userType === "admin") {

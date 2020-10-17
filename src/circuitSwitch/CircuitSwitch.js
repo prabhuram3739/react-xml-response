@@ -1,6 +1,7 @@
 import React  from 'react';
 import AsyncCSV from '../exportApiResponse/AsyncCSV';
 import DataLayerContext, { DataProvider } from '../DataLayerContext';
+import Loader from 'react-loader-spinner';
 
 export default class CircuitSwitch extends React.Component {
     render() {
@@ -24,7 +25,7 @@ const imsi = authResult.get('imsi')
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading...   readOnly disabled /> </div> </div>  :
                 // Display loader till the response appears and check for the validity of the data If exists
-                loading ? <div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div>  :
+                loading ? <div><div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div><Loader className="centerDisplaySearchView centerDisplayPacketView mt-5" type="Circles" color="#00BFFF" height={40} width={40} /></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
                     if(item.userType === "admin") {
