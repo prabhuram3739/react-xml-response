@@ -684,26 +684,33 @@ h2 {
 }
 
 .v-loading-indicator[style*="none"] {
-    display: block!important;
-    width: 100%!important;
+    display: block !important;
+    width: 100%;
     opacity: 0;
     -webkit-animation: none;
     -moz-animation: none;
     animation: none;
-    -webkit-transition: opacity 5s 3s, width 3s;
-    -moz-transition: opacity 5s 3s, width 3s;
-    transition: opacity 5s 3s, width 3s;
+    -webkit-transition: opacity 5s 3s, width 1s;
+    -moz-transition: opacity 5s 3s, width 1s;
+    transition: opacity 5s 3s, width 1s;
+}
+
+.v-loading-indicator-wait {
+    width: 96%;
+    -webkit-animation: v-progress-wait 5s forwards, v-progress-wait-pulse 1s 4s infinite backwards !important;
+    -moz-animation: v-progress-wait 5s forwards, v-progress-wait-pulse 1s 4s infinite backwards !important;
+    animation: v-progress-wait 5s forwards, v-progress-wait-pulse 1s 4s infinite backwards !important;
 }
 
 .v-loading-indicator-delay {
     width: 100%;
-    -webkit-animation: v-progress-delay 5.8s forwards;
-    -moz-animation: v-progress-delay 5.8s forwards;
-    animation: v-progress-delay 5.8s forwards;
+    -webkit-animation: v-progress-delay 10.8s forwards !important;
+    -moz-animation: v-progress-delay 10.8s forwards !important;
+    animation: v-progress-delay 10.8s forwards !important;
 }
 
 .v-loading-indicator {
-    position: fixed!important;
+    position: fixed !important;
     z-index: 99999;
     left: 0;
     right: auto;

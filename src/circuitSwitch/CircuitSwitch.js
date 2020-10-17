@@ -24,7 +24,7 @@ const imsi = authResult.get('imsi')
             {
                 //loading ? <div className = "d-flex justify-content-center custom-loader" ><div className = "spinner-border text-primary" role = "status" ><span className = "sr-only" > Loading...   readOnly disabled /> </div> </div>  :
                 // Display loader till the response appears and check for the validity of the data If exists
-                loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
+                loading ? <div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
                     if(item.userType === "admin") {

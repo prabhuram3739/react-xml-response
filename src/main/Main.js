@@ -23,7 +23,7 @@ export default class Main extends React.Component {
         <div className="container-fluid noPadding fontChange border-right main">
             {
                 // Display loader till the response appears and check for the validity of the data If exists
-                loading ? <div className="v-loading-indicator second v-loading-indicator-delay" ></div>  :
+                loading ? <div className="v-loading-indicator second v-loading-indicator-delay v-loading-indicator-wait" ></div>  :
                 (finalData && finalData.length > 0) &&
                 finalData.map((item, index) => {
                     //if(item.userType === "admin") {
