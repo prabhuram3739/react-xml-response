@@ -44,11 +44,11 @@ class AsyncCSV extends Component {
       data={this.props.csvData}
         asyncOnClick={true}
         ><button
-        className="btn btn-primary pull-right"
+        className="btn btn-primary pull-right mr-4"
         color="primary"
         onClick={this.downloadReport}
     >
-        Export to CSV (Async)
+        Export to CSV
         </button>
       </CSVLink>
     );
