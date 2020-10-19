@@ -10,7 +10,7 @@ export default class CircuitSwitch extends React.Component {
        const finalData = [];
        finalData.push(data);
        const authResult = new URLSearchParams(window.location.search); 
-const imsi = authResult.get('imsi')
+       const imsi = authResult.get('imsi');
        // Check if the count is zero or undefined to display the no records message
        if(!loading) {
        if((count === 0) || (count === undefined)) {
@@ -96,7 +96,9 @@ const imsi = authResult.get('imsi')
                         </div>
                         </div>
                     </div>*/}
-
+                        <DataProvider imsi={imsi}>
+                        <AsyncCSV name="circuitSwitch" csvData={finalData}/>
+                        </DataProvider>
                         <div className="table-responsive">
                         <table className="table table-striped noBorderTableTD" key={index}>
                         <tbody>
@@ -209,9 +211,6 @@ const imsi = authResult.get('imsi')
                         </tr>
                         </tbody>
                         </table>
-                        <DataProvider imsi={imsi}>
-                        <AsyncCSV name="circuitSwitch" csvData={finalData}/>
-                        </DataProvider>
                         </div>
                         </React.Fragment>
                     )

@@ -129,7 +129,9 @@ export default class PacketSwitch extends React.Component {
                         </div>
                         </div> */}
 
-
+                        <DataProvider imsi={imsi}>
+                        <AsyncCSV name="packetSwitch" csvData={finalData}/>
+                        </DataProvider>
                         <div className="table-responsive">
                         <table className="table table-striped noBorderTableTD" key={index}>
                             <tbody>
@@ -260,9 +262,6 @@ export default class PacketSwitch extends React.Component {
                         </tr>
                         </tbody>
                         </table>
-                        <DataProvider imsi={imsi}>
-                        <AsyncCSV name="packetSwitch" csvData={finalData}/>
-                        </DataProvider>
                         </div>
                         </React.Fragment>
                     ) 

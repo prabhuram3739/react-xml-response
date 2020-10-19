@@ -718,6 +718,22 @@ h2 {
     left: 50%;
 }
 
+.alignPlacement {
+    position: absolute !important;
+    right: 20px !important;
+    top: -60px !important;
+    z-index: 9999 !important;
+    font-size: 25px !important;
+    color: #cd040b !important;
+    animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
 .centerDisplaySearchView {
     display: flex;
     justify-content: center;

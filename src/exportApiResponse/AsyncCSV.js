@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { CSVLink } from "react-csv";
+import { faFileExport } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const headers = [
   { label: "First Name", key: "firstName" },
@@ -53,11 +55,11 @@ class AsyncCSV extends Component {
       data={this.props.name === 'circuitSwitch' ? [this.props.csvData[0].circuitSwitch, ...this.props.csvData[0].circuitSwitch.threeGApnDataList, ...this.props.csvData[0].circuitSwitch.fourGApnDataList] : [this.props.csvData[0].packetSwitch,  ...this.props.csvData[0].packetSwitch.ratingGroupDataList]}
         asyncOnClick={true}
         ><button
-        className="btn btn-primary pull-right mr-4"
+        className="btn pull-right mr-2 alignPlacement"
         color="primary"
         onClick={this.downloadReport}
     >
-        Export to CSV
+        <FontAwesomeIcon icon = { faFileExport } />
         </button>
       </CSVLink>
     );
