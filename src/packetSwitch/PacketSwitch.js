@@ -1,5 +1,7 @@
 import React  from 'react';
 import Loader from 'react-loader-spinner';
+import AsyncCSV from '../exportApiResponse/AsyncCSV';
+import DataLayerContext, { DataProvider } from '../DataLayerContext';
 
 export default class PacketSwitch extends React.Component {
     render() {
@@ -7,6 +9,8 @@ export default class PacketSwitch extends React.Component {
        const { data, count, loading } = this.context || {};
        const finalData = [];
        finalData.push(data);
+       const authResult = new URLSearchParams(window.location.search); 
+       const imsi = authResult.get('imsi');
        // Check if the count is zero or undefined to display the no records message
        if(!loading) {
        if((count === 0) || (count === undefined)) {
@@ -256,6 +260,9 @@ export default class PacketSwitch extends React.Component {
                         </tr>
                         </tbody>
                         </table>
+                        <DataProvider imsi={imsi}>
+                        <AsyncCSV name="packetSwitch" csvData={finalData}/>
+                        </DataProvider>
                         </div>
                         </React.Fragment>
                     ) 
@@ -268,3 +275,5 @@ export default class PacketSwitch extends React.Component {
     );
     }
 }
+
+AsyncCSV.contextType = DataLayerContext;

@@ -23,12 +23,17 @@ class AsyncCSV extends Component {
   }
 
   downloadReport = (event, done) => {
-
+    var data = "";
+    if(this.props.name === 'circuitSwitch') {
+      data = this.props.csvData[0].circuitSwitch;
+    } else if(this.props.name === 'packetSwitch') {
+      data = this.props.csvData[0].packetSwitch;
+    }
     // API call to get data 
     const objReport = {
-      filename: 'Circuit_Switch_API_Response_Data.csv',
+      filename: 'Circuit_Core_API_Response.csv',
       headers: headers,
-      data: this.props.csvData[0].circuitSwitch
+      data: data
     };
     this.setState({ csvReport: objReport }, () => {
       console.log("Successfully exported");
@@ -44,8 +49,8 @@ class AsyncCSV extends Component {
 
   render() {
     return (
-      <CSVLink
-      data={[this.props.csvData[0].circuitSwitch, ...this.props.csvData[0].circuitSwitch.threeGApnDataList, ...this.props.csvData[0].circuitSwitch.fourGApnDataList]}
+      <CSVLink filename={this.props.name === 'circuitSwitch' ? 'Circuit_Core_API_Response.csv' : 'Packet_Core_API_Response.csv'}
+      data={this.props.name === 'circuitSwitch' ? [this.props.csvData[0].circuitSwitch, ...this.props.csvData[0].circuitSwitch.threeGApnDataList, ...this.props.csvData[0].circuitSwitch.fourGApnDataList] : [this.props.csvData[0].packetSwitch,  ...this.props.csvData[0].packetSwitch.ratingGroupDataList]}
         asyncOnClick={true}
         ><button
         className="btn btn-primary pull-right mr-4"

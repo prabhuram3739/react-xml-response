@@ -210,7 +210,7 @@ const imsi = authResult.get('imsi')
                         </tbody>
                         </table>
                         <DataProvider imsi={imsi}>
-                        <AsyncCSV csvData={finalData}/>
+                        <AsyncCSV name="circuitSwitch" csvData={finalData}/>
                         </DataProvider>
                         </div>
                         </React.Fragment>
