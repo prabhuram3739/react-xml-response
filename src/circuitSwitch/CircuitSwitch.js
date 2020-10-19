@@ -101,13 +101,21 @@ const imsi = authResult.get('imsi')
                         <table className="table table-striped noBorderTableTD" key={index}>
                         <tbody>
                         <tr>
-                        <td className="textAlignRight"><label className="fontBold">IMSI:</label>
+                        {/*<td className="textAlignRight"><label className="fontBold">IMSI:</label>
                         </td>
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.id ? item.circuitSwitch.id : 'No Data Available'}  readOnly disabled />
                         </td>
                         <td className="textAlignRight"><label className="fontBold">MSIDN:</label>
                         </td>
                         <td>  <input type="text" className="txtBoxHeight" value={item.circuitSwitch.msidn ? item.circuitSwitch.msidn : 'No Data Available'}  readOnly disabled />
+                </td>*/}
+                <td className="textAlignRight"><label className="fontBold">PS Roaming Profile:</label>
+                        </td> 
+                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
+                        </td>
+                        <td className="textAlignRight"><label className="fontBold">EPS Roaming Profile:</label>
+                        </td> 
+                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
                         </td>
                         <td className="textAlignRight"><label className="fontBold">Subscriber Status:</label> </td>
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.subscriberStatus === true ? 'IMSI Active' : 'IMSI Inactive'}  readOnly disabled /></td>
@@ -198,20 +206,6 @@ const imsi = authResult.get('imsi')
                         </td> 
                         <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
                         </td>
-                        </tr>
-                        <tr>
-                        <td className="textAlignRight"><label className="fontBold">PS Roaming Profile:</label>
-                        </td> 
-                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
-                        </td>
-                        <td className="textAlignRight"><label className="fontBold">EPS Roaming Profile:</label>
-                        </td> 
-                        <td> <input type="text" className="txtBoxHeight" value={item.circuitSwitch.camelSubscriptionStatus ? item.circuitSwitch.camelSubscriptionStatus : 'No Data Available'}  readOnly disabled />
-                        </td>
-                        <td>
-                        
-                        </td>
-                        <td></td>
                         </tr>
                         </tbody>
                         </table>
