@@ -32,7 +32,7 @@ class AsyncCSV extends Component {
       data: this.props.csvData
     };
     this.setState({ csvReport: objReport }, () => {
-      done();
+      console.log("Successfully exported");
     });
   }
 
