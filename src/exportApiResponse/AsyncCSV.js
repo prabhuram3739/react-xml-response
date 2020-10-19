@@ -43,8 +43,13 @@ class AsyncCSV extends Component {
       <CSVLink
       data={this.props.csvData}
         asyncOnClick={true}
-        onClick={this.downloadReport}>
+        ><button
+        className="btn btn-primary pull-right"
+        color="primary"
+        onClick={this.downloadReport}
+    >
         Export to CSV (Async)
+        </button>
       </CSVLink>
     );
   }
